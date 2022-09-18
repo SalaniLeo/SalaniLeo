@@ -1,0 +1,348 @@
+:root{
+
+    background-color: #303030;
+
+}
+
+.text{
+
+    color: white;
+
+}
+
+#info{
+    margin: auto;
+    width: 35%;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', sans-serif;
+    border-bottom: 1px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color:  rgba(255, 255, 255, 0.521);
+
+}
+
+#appimagecreatorbtn{
+
+
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    color: rgb(143, 143, 143);
+    cursor: pointer;
+
+}
+
+.sidebar {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding-top: 16px;
+    transition-duration: 0.5s;
+    line-height: 30px;
+
+  }
+
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    text-anchor: end;
+    height: 50px;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+    margin-left: 160px;
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+
+   #github {
+       position: absolute;
+    --hover-shadows: 16px 16px 33px #121212,
+                      -16px -16px 33px #303030;
+    --accent: fuchsia;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 0.1em;
+    top: 10px;
+    right: 10px;
+    text-underline-offset: -47498378090px;
+    border: none;
+    border-radius: 1.1em;
+    background-color: #212121;
+    color: white;
+    padding: 1em 2em;
+    transition: box-shadow ease-in-out 0.3s,
+                background-color ease-in-out 0.1s,
+                letter-spacing ease-in-out 0.1s,
+                transform ease-in-out 0.1s;
+    box-shadow: 13px 13px 10px #1c1c1c,
+                -13px -13px 10px #262626;
+   }
+   
+   #github:hover {
+    box-shadow: var(--hover-shadows);
+   }
+   
+   #github:active {
+    box-shadow: var(--hover-shadows),
+                 var(--accent) 0px 0px 30px 5px;
+    background-color: var(--accent);
+    transform: scale(0.95);
+   }
+
+   .title{
+
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: sticky;
+
+   }
+
+   .description{
+
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+   }
+
+
+   #AppImageCreator{
+
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    top: 150px;
+    height: 800px;
+
+   }
+
+   #aicdesc{
+
+    position: absolute;
+    left: 70%;
+    top: 250px;
+    width: 35%;
+
+   }
+
+   #aicleanguage{
+
+    color: orange;
+    position: absolute;
+    top: 400px;
+    width: 30%;
+    text-align: center;
+    left: 75%;
+
+   }
+
+   #aicshortcut{
+
+    max-width: 150px;
+    position: absolute;
+    top: 0px;
+    width: auto;
+    height: auto;
+
+   }
+
+#CPUProperties{
+
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  top: 1000px;
+  height: 800px;
+
+
+}
+
+ #cpupdesc{
+
+  position: absolute;
+  left: 70%;
+  top: 250px;
+  width: 35%;
+
+ }
+
+ #cpupimage{
+
+  position: absolute;
+  left: 10%;
+
+ }
+
+ #cpupleanguage{
+
+  color: orange;
+  position: absolute;
+  top: 400px;
+  width: 30%;
+  text-align: center;
+  left: 75%;
+
+ }
+
+ #cpupshortcut{
+
+  position: absolute;
+  top: 100px;
+  width: auto;
+  height: auto;
+
+ }
+
+
+ #NasWebInterface{
+
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  top: 1850px;
+  height: 800px;
+  /* background-color: aquamarine; */
+
+ }
+
+ #nwipdesc{
+
+  /* background-color: wheat; */
+  position: absolute;
+  width: 40%;
+  left: 30%;
+  text-align: center;
+  top: 100px;
+
+ }
+
+ #nwiimage{
+
+  position: absolute;
+  left: 10%;
+
+ }
+
+ #nwileanguage{
+
+  color: darksalmon;
+  position: absolute;
+  top: 400px;
+  width: 40%;
+  text-align: center;
+  left: 30%;
+
+ }
+
+ #nwishortcut{
+
+  position: absolute;
+  top: 200px;
+  width: auto;
+  height: auto;
+
+ }
+
+   .leanguage{
+
+    font-size: 25px;
+
+   }
+
+
+
+   @media (max-width: 1600px) {
+
+    #aicimage{
+ 
+     display: none;
+     position: absolute;
+     top: 20%;
+     left: 5%;
+ 
+    }
+ 
+    #aicdesc{
+ 
+     width: 60%;
+     top: 100px;
+     left: 20%;
+     position: absolute;
+ 
+    }
+ 
+ 
+    #aicleanguage{
+ 
+     position: absolute;
+     width: 60%;
+     text-align: center;
+     left: 20%;
+     top: 300px;
+ 
+    }
+ 
+
+    #CPUProperties{
+
+      position: absolute;
+      left: 10%;
+      width: 80%;
+      top: 600px;
+      height: 800px;
+    
+    
+    }
+
+
+    #cpupimage{
+
+     display: none;
+ 
+    }
+ 
+    #cpupdesc{
+
+     width: 60%;
+     top: 100px;
+     left: 20%;
+     position: absolute;
+ 
+    }
+ 
+ 
+    #cpupleanguage{
+
+     position: absolute;
+     width: 60%;
+     text-align: center;
+     left: 20%;
+     top: 300px;
+ 
+    }
+ 
+ }
