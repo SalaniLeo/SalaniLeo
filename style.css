@@ -84,7 +84,7 @@
     letter-spacing: 0.1em;
     top: 10px;
     right: 10px;
-    text-underline-offset: -47498378090px;
+    text-underline-offset: calc(-10000%);
     border: none;
     border-radius: 1.1em;
     background-color: #212121;
@@ -302,7 +302,7 @@
      width: 60%;
      text-align: center;
      left: 20%;
-     top: 300px;
+     top: 310px;
  
     }
  
@@ -341,8 +341,134 @@
      width: 60%;
      text-align: center;
      left: 20%;
-     top: 300px;
+     top: 220px;
  
     }
+
+    #NasWebInterface{
+
+      top: 1100px;
+
+    }
+
+    #nwileanguage{
+
+      top: 550px;
+  
+    }
+
  
  }
+
+ @media (max-width: 700px) {
+
+  #aicdesc{
+
+   top: 120px;
+   width: 90%;
+   text-align: center;
+   left: 5%;
+   position: absolute;
+
+  }
+
+
+  #aicleanguage{
+
+   position: absolute;
+   width: 60%;
+   text-align: center;
+   left: 20%;
+   top: 340px;
+
+  }
+
+
+  #CPUProperties{
+
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    top: 700px;
+    height: 800px;
+  
+  
+  }
+
+  #cpupdesc{
+
+    top: 100px;
+   top: 130px;
+   width: 80%;
+   left: 10%;
+   position: absolute;
+
+  }
+
+
+  #cpupleanguage{
+
+   position: absolute;
+   width: 60%;
+   text-align: center;
+   left: 20%;
+   top: 230px;
+
+  }
+
+  .sidebar{
+
+    animation: retrieve 0.5s;
+    animation-fill-mode: forwards;
+
+  }
+
+  #github{
+
+    padding: 1em 1em;
+    text-align: center;
+    
+
+  }
+
+  #NasWebInterface{
+
+    top: 1100px;
+    width: 100%;
+    left: 0%;
+
+  }
+
+  #nwipdesc{
+
+    width: 80%;
+    left: 10%;
+
+  }
+
+  #nwileanguage{
+
+    top: 400px;
+
+  }
+
+}
+
+@keyframes retrieve {
+100%{
+
+  left: -400px;
+
+}
+
+}
+
+@keyframes show {
+  100%{
+  
+    left: 0px;
+  
+  }
+  
+  }
+  
