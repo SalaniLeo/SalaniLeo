@@ -176,9 +176,43 @@ projects showcase
     padding: 0px 10px;
   }
   
-  @media screen and (max-height: 450px) {
+  @media screen and (max-height: 700px) {
     .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
+    .sidebar {min-height: 270px;}
+    #navBar{
+      animation: hide 0.5s forwards;
+    }
+    
+    @keyframes hide {
+      from {}
+      to {      
+        top: -100px;
+        position: absolute;
+
+      }
+    }
+  }
+
+  @media screen and (min-height: 700px) {
+
+    #navBar{
+      animation: showNavBar 0.5s forwards;
+    }
+    
+    /* @keyframes showNavBar {
+      from {top: -100px;position: absolute;color: rgb(183, 0, 255);border-top-right-radius: 30px;border-bottom-right-radius: 30px;}
+      to {      
+        top: 20px;
+        border-radius: 30px;
+        height: 50px;
+        width: 90%;
+        background-color: #111;
+        left: 5%;
+        position: absolute;
+        z-index: 3;
+      } */
+    /* } */
+
   }
 
 
@@ -549,12 +583,4 @@ projects showcase
 
 }
 
-}
-
-@keyframes show {
-  100%{
-  
-    left: 0px;
-  
-  }
 }
