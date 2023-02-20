@@ -1,3 +1,4 @@
 ### Hi there 👋
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=SalaniLeo&theme=tokyonight" alt="mystreak"/>    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=SalaniLeo&show_icons=true&locale=en&layout=compact&theme=chartreuse-light" alt="ovi" />
+<p align="center"> <img src="https://github-readme-streak-stats.herokuapp.com/?user=SalaniLeo&theme=dark" alt="mystreak"/>
+<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=SalaniLeo&show_icons=true&theme=gotham" alt="abhisheknaiidu" />
