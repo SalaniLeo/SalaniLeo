@@ -7,6 +7,6 @@
 
 ### Leanguages:<br><br>
 
-# [![My Skills](https://skillicons.dev/icons?i=python,html,css,javascript,c,java)](https://skillicons.dev)
-
+[![My Skills](https://skillicons.dev/icons?i=python,html,css,javascript,c,java,bash)](https://skillicons.dev)
+  
 </div>
