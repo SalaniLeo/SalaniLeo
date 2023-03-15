@@ -30,12 +30,6 @@
 
  }
 
-/*
-
-main page
-
-*/
-
 #navBar{
 
   top: 20px;
@@ -51,40 +45,46 @@ main page
 
 #projects{
 
-  display: inline-block;
-  outline: 0;
-  cursor: pointer;
-  border: 0px solid #000;
-  color: #fff;
+  text-align: center;
+  cursor: default;
   background-color: rgba(255, 255, 255, 0.0);
-  font-size: 20px;
-  line-height: 28px;
   height: 30px;
-  padding: 10px 15px;
   position: absolute;
-  right: 0%;
-  text-align:center;
+  top: -6px;
+  width: 200px;
+  right: 0px;
   transition-duration: .15s;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(.4,0,.2,1);
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  text-decoration: none;
+  overflow: hidden;
 }
 
 
 #projects:hover{
-  color: rgb(183, 0, 255);
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+  background-color: #111;
+  height: 120px;
+  border-radius: 20px;
+}
+
+#projects tl{
+  border-bottom-color: #f1f1f1;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding-bottom: 14px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+#projects a{
+  cursor: pointer;
+  font-size: 17px;
+  color: rgb(192, 192, 192);
+  text-decoration: none;
+
 }
 
 #home{
 
-  display: inline-block;
-  outline: 0;
   cursor: pointer;
-  border: 0px solid #000;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.0);
   font-size: 20px;
@@ -92,14 +92,8 @@ main page
   height: 30px;
   padding: 10px 15px;
   position: absolute;
-  left: 0%;
   text-align:center;
   transition-duration: .15s;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(.4,0,.2,1);
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  text-decoration: none;
 
 }
 
@@ -112,115 +106,62 @@ main page
 #showcase{
 
   position: absolute;
-  top: 100px;
-  width: 80%;
-  left: 10%;
-  height: 50%;
+  top: 150px;
+  left: 10vw;
 
 }
 
-/*
+#whoami{
+  background-color: #111;
+  border-radius: 25px;
+  height: 200px;
+  width: 500px;
+  padding: 25px;
+  transition: 0.25s;
+  min-width: 250px;
+}
 
-projects showcase
+#whoami:hover{
 
-*/
-
-
-#info{
-    margin: auto;
-    width: 35%;
-    text-align: center;
-    font-family: 'Trebuchet MS', sans-serif;
-    border-bottom: 1px;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color:  rgba(255, 255, 255, 0.521);
+  box-shadow: 0px 0px 20px #121212;
 
 }
 
-#innerinfo{
-  top: 100px;
+#icon{
+  height: 200px;
+  border-radius: 50%;
 }
 
-.sidebar {
+#name{
+  color: #dadada;
+  font-size: 30px;
+  position: relative;
+  left: 225px;
+  top: -235px;
+  width: 250px;
+}
 
-    height: 75%;
-    width: 100px;
-    border-top-right-radius:10px;
-    border-bottom-right-radius:10px;
-    position: fixed;
-    z-index: 1;
-    top: 10%;
-    left: 0;
-    background-color: #111;
-    padding-top: 16px;
-    transition-duration: 1s;
-    line-height: 30px;
-    line-height: 20px;
-  }
+#about{
+  line-height: 30px;
+  color: #bdbdbd;
+  font-size: 20px;
+  position: relative;
+  left: 225px;
+  top: -240px;
+  width: 250px;
 
-  .sidebar a {
-    /* padding: 10px 10px 11px 16px; */
-    text-decoration: none;
-    font-size: 15px;
-    color: #818181;
-    text-align: center;
-  }
-  
-  .sidebar a:hover {
-    color: #f1f1f1;
-  }
-  
-  .main {
-    margin-left: 160px;
-    padding: 0px 10px;
-  }
-  
-  @media screen and (max-height: 700px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar {min-height: 270px;}
-    #navBar{
-      animation: hide 0.5s forwards;
-    }
-    
-    @keyframes hide {
-      from {}
-      to {      
-        top: -100px;
-        position: absolute;
+}
 
-      }
-    }
-  }
+#skills{
+  position: relative;
+  top: 300px;
+}
 
-  @media screen and (min-height: 700px) {
-
-    #navBar{
-      animation: showNavBar 0.5s forwards;
-    }
-    
-    /* @keyframes showNavBar {
-      from {top: -100px;position: absolute;color: rgb(183, 0, 255);border-top-right-radius: 30px;border-bottom-right-radius: 30px;}
-      to {      
-        top: 20px;
-        border-radius: 30px;
-        height: 50px;
-        width: 90%;
-        background-color: #111;
-        left: 5%;
-        position: absolute;
-        z-index: 3;
-      } */
-    /* } */
-
-  }
-
-
-   #github {
+#github {
        position: absolute;
     --hover-shadows: 16px 16px 33px #121212,
                       -16px -16px 33px #303030;
-    --accent: fuchsia;
+    --accent: rgba(255, 0, 255, 0.137);
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: 0.1em;
@@ -249,337 +190,53 @@ projects showcase
                  var(--accent) 0px 0px 30px 5px;
     background-color: var(--accent);
     transform: scale(0.95);
-   }
+}
 
+@media (max-width: 720px) {
 
-   #AppImageCreator{
+#navBar{
 
-    position: absolute;
-    left: 10%;
-    width: 80%;
-    top: 150px;
-    height: 800px;
+  top: 0px;
+  height: 50px;
+  background-color: #111;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  left: 0px;
+  border-radius: 0%;
+  
+}
+  
 
-   }
-
-   #aicdesc{
-
-    position: absolute;
-    left: 70%;
-    top: 250px;
-    width: 35%;
-
-   }
-
-   #aicleanguage{
-
-    color: orange;
-    position: absolute;
-    top: 400px;
-    width: 30%;
-    text-align: center;
-    left: 75%;
-
-   }
-
-   #aicshortcut{
-
-    position: absolute;
-    top: 20px;
-    height: auto;
-    width: auto;
-
-   }
-
-#CPUProperties{
-
+#whoami{
   position: absolute;
-  left: 10%;
-  width: 80%;
-  top: 1000px;
-  height: 800px;
-
+  top: -50px;
+  width: 200px;
 
 }
 
- #cpupdesc{
-
-  position: absolute;
-  left: 70%;
-  top: 250px;
-  width: 35%;
-
- }
-
- #cpupimage{
-
-  position: absolute;
-  left: 10%;
-
- }
-
- #cpupleanguage{
-
-  color: orange;
-  position: absolute;
-  top: 400px;
-  width: 30%;
-  text-align: center;
-  left: 75%;
-
- }
-
- #cpupshortcut{
-
-  position: absolute;
-  top: 100px;
-  width: auto;
-  height: auto;
-
- }
-
-
- #NasWebInterface{
-
-  position: absolute;
-  left: 10%;
-  width: 80%;
-  top: 1850px;
-  height: 800px;
-  /* background-color: aquamarine; */
-
- }
-
- #nwipdesc{
-
-  /* background-color: wheat; */
-  position: absolute;
-  width: 40%;
-  left: 30%;
-  text-align: center;
-  top: 100px;
-
- }
-
- #nwiimage{
-
-  position: absolute;
-  left: 10%;
-
- }
-
- #nwileanguage{
-
-  color: darksalmon;
-  position: absolute;
-  top: 400px;
-  width: 40%;
-  text-align: center;
-  left: 30%;
-
- }
-
- #nwishortcut{
-
-  position: absolute;
-  top: 200px;
-  width: auto;
-  height: auto;
-
- }
-
-   .leanguage{
-
-    font-size: 25px;
-
-   }
-
-
-
-   @media (max-width: 1600px) {
-
-    #aicimage{
- 
-     display: none;
-     position: absolute;
-     top: 20%;
-     left: 5%;
- 
-    }
- 
-    #aicdesc{
- 
-     width: 60%;
-     top: 100px;
-     left: 20%;
-     position: absolute;
- 
-    }
- 
- 
-    #aicleanguage{
- 
-     position: absolute;
-     width: 60%;
-     text-align: center;
-     left: 20%;
-     top: 310px;
- 
-    }
- 
-
-    #CPUProperties{
-
-      position: absolute;
-      left: 10%;
-      width: 80%;
-      top: 600px;
-      height: 800px;
-    
-    
-    }
-
-
-    #cpupimage{
-
-     display: none;
- 
-    }
- 
-    #cpupdesc{
-
-     width: 60%;
-     top: 100px;
-     left: 20%;
-     position: absolute;
- 
-    }
- 
- 
-    #cpupleanguage{
-
-     position: absolute;
-     width: 60%;
-     text-align: center;
-     left: 20%;
-     top: 220px;
- 
-    }
-
-    #NasWebInterface{
-
-      top: 1100px;
-
-    }
-
-    #nwileanguage{
-
-      top: 550px;
-  
-    }
-
- 
- }
-
- @media (max-width: 700px) {
-
-  #aicdesc{
-
-
-   top: 120px;
-   width: 90%;
-   text-align: center;
-   left: 5%;
-   position: absolute;
-
-  }
-
-
-  #aicleanguage{
-
-   position: absolute;
-   width: 60%;
-   text-align: center;
-   left: 20%;
-   top: 340px;
-
-  }
-
-
-  #CPUProperties{
-
-    position: absolute;
-    left: 10%;
-    width: 80%;
-    top: 700px;
-    height: 800px;
-  
-  
-  }
-
-  #cpupdesc{
-
-    top: 100px;
-   top: 130px;
-   width: 80%;
-   left: 10%;
-   position: absolute;
-
-  }
-
-
-  #cpupleanguage{
-
-   position: absolute;
-   width: 60%;
-   text-align: center;
-   left: 20%;
-   top: 230px;
-
-  }
-
-  .sidebar{
-
-    animation: retrieve 0.5s;
-    animation-fill-mode: forwards;
-
-  }
-
-  #github{
-
-    padding: 1em 1em;
-    text-align: center;
-    
-
-  }
-
-  #NasWebInterface{
-
-    top: 1100px;
-    width: 100%;
-    left: 0%;
-
-  }
-
-  #nwipdesc{
-
-    width: 80%;
-    left: 10%;
-
-  }
-
-  #nwileanguage{
-
-    top: 400px;
-
-  }
-
+#icon{
+  height: 100px;
+  border-radius: 50%;
 }
 
-@keyframes retrieve {
-100%{
+#name{
+  color: #dadada;
+  font-size: 18px;
+  position: relative;
+  left: 110px;
+  top: -120px;
+  width: 170px;
+}
 
-  left: -400px;
+#about{
+  line-height: 23px;
+  color: #bdbdbd;
+  font-size: 15px;
+  position: relative;
+  left: 110px;
+  top: -85px;
+  width: 110px;
 
 }
 
