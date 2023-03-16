@@ -241,3 +241,17 @@
 }
 
 }
+
+@media only screen and (max-device-width: 1480px) {
+  #about{
+    line-height: 23px;
+    color: #ff0000;
+    font-size: 15px;
+    position: relative;
+    left: 110px;
+    top: -85px;
+    width: 110px;
+  
+  }
+  
+}
