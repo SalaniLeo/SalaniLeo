@@ -1,3 +1,9 @@
+:root{
+
+  overflow: hidden;
+
+}
+
 #container{
 
     position: fixed;
@@ -50,8 +56,8 @@
   width: 90%;
   background-color: #40050F;
   left: 5%;
-  position: absolute;
-  z-index: 3;
+  position: fixed;
+  z-index: 999;
 
 }
 
@@ -118,18 +124,6 @@
 
 }
 
-#whoami{
-  position: fixed;
-  left: 20vw;
-  background-color: #5F280B;
-  border-radius: 20px;
-  height: 200px;
-  width: 500px;
-  padding: 25px;
-  min-width: 250px;
-  cursor: move;
-}
-
 #icon{
   height: 200px;
   margin-right: 10px;
@@ -144,6 +138,21 @@
 
 }
 
+#whoami{
+  position: absolute;
+  left: 20vw;
+  background-color: #5F280B;
+  border-radius: 20px;
+  height: 200px;
+  width: 500px;
+  padding: 25px;
+  min-width: 250px;
+  cursor: move;
+  transition-duration: 0.25s;
+  z-index: -1;
+
+}
+
 
 #skills{
   top: 520px;
@@ -155,6 +164,8 @@
   right: 10vw;
   padding: 25px;
   cursor: move;
+  transition-duration: 0.25s;
+  
 }
 
 #projects{
@@ -167,6 +178,9 @@
   left: 10vw;
   padding: 25px;
   cursor: move;
+  transition-duration: 0.25s;
+
+
 }
 
 #projects:hover, #skills:hover, #whoami:hover{
