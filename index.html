@@ -3,42 +3,66 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://kit.fontawesome.com/70afaa55a0.js" crossorigin="anonymous"></script>
     <head>
-    <title>SalaniLeo's website</title>
-    <div id="navBar"> 
-      <p id="projects"> 
-        
-        <tl>projects</tl>
-        <br>
-        
-        <pr>
-        <a href="immagini">Immagini</i> </a>
-        </pr>
-
-      </p>
-
-      <a href="./" id="home"><i class="fa fa-fw fa-home"></i> </a>
-    </div>
+    <link rel="icon" href="assets/icons/icon.png">
+    <title>SalaniLeo</title>
   </head>
   <body>
+    <div id="container" onmousemove="getCursor(event)">
+      <div id="navBar"> 
+        <div id="projectsbar"> 
+          
+          <tl>projects</tl>
+          <br>
+          
+          <pr>
+          <a href="immagini">Immagini</i> </a>
+          </pr>
 
-    <div id="showcase">
+          <!-- <a href="https://github.com/SalaniLeo" id="gihub"><img src="assets/icons/github-mark.svg" alt="icon"></a> -->
 
-      <div id="whoami" class="flex-container">
+        </div>
 
-        <img src="assets/icons/icon.png" alt="icon" id="icon"> 
-        <p id="name">Leonardo Salani</p>
-        <p id="about">16y old<br><i class="fa-solid fa-location-dot"></i> Ferrara, Italy<br><br>Developer</p>
-
+        <a href="./" id="home"><i class="fa fa-fw fa-home"></i> </a>
       </div>
 
-      <div id="skills" class="flex-container">
+      <div id="showcase">
 
-        <p id="about">Work in progress</p>
+        <div id="whoami" class="flex-container">
 
+          <img src="assets/icons/icon.png" alt="icon" id="icon"> 
+          <tl>Leonardo Salani</tl>
+
+          <pr>
+          <p class="subtitle">16y old<br><i class="fa-solid fa-location-dot"></i> Ferrara, Italy<br><br>Developer</p>
+          </pr>
+
+        </div>
+
+      <div id="skills">
+
+        <tl>Languages:</tl>
+
+        <pr>
+        <img src="https://skillicons.dev/icons?i=python,html,css,javascript,c,java,bash" alt="Languages">
+        </pr>
+        
       </div>
 
+      <div id="projects">
+
+        <tl>Projects:</tl>
+
+        <pr>
+        <p class="subtitle">Immagini  -  Lets you manage you AppImages</p>
+        </pr>
+        
+      </div>
+
+        <p id="mouse"></p>
+
+      </div>
     </div>
 </body>
 <footer>
-  <p><a href="https://github.com/SalaniLeo" id="github"><img src="assets/icons/github-mark.svg" alt="icon" id="gitico"></a> </p>
 </footer>
+<script type="text/javascript" src="logic.js"></script>

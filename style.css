@@ -1,14 +1,26 @@
-:root{
+#container{
 
-    background-color: #172230;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin-top: -8px;
+    margin-left: -8px;
+    background-color: #CE9C69;
+
+}
+
+#canvas{
+
+  opacity: 0%;
 
 }
 
 .text,
-.description{
+.subtitle{
 
-    color: rgb(255, 255, 255);
-    font-size: 15px;
+  line-height: 30px;
+  color: #bdbdbd;
+  font-size: 20px;
 
 }
 
@@ -36,21 +48,22 @@
   border-radius: 30px;
   height: 50px;
   width: 90%;
-  background-color: #111;
+  background-color: #40050F;
   left: 5%;
   position: absolute;
   z-index: 3;
 
 }
 
-#projects{
+#projectsbar{
 
   text-align: center;
   cursor: default;
   background-color: rgba(255, 255, 255, 0.0);
-  height: 30px;
+  height: 35px;
   position: absolute;
-  top: -10px;
+  border-radius: 50%;
+  top: 5px;
   width: 200px;
   right: 0px;
   transition-duration: .15s;
@@ -59,20 +72,20 @@
 }
 
 
-#projects:hover{
-  background-color: #111;
+#projectsbar:hover{
+  background-color: #40050F;
   height: 120px;
   border-radius: 20px;
 }
 
-#projects tl{
+#projectsbar tl{
   padding-bottom: 14px;
   color: #fff;
   font-size: 20px;
   line-height: 28px;
 }
 
-#projects a{
+#projectsbar a{
   cursor: pointer;
   font-size: 17px;
   text-decoration: none;
@@ -102,44 +115,28 @@
 
   position: absolute;
   top: 150px;
-  left: 10vw;
 
 }
 
 #whoami{
-  background-color: rgb(38, 97, 84, 0.5);
-  border-radius: 25px;
+  position: fixed;
+  left: 20vw;
+  background-color: #5F280B;
+  border-radius: 20px;
   height: 200px;
   width: 500px;
   padding: 25px;
-  transition: 0.25s;
   min-width: 250px;
-}
-
-#whoami:hover{
-
-  box-shadow: 0px 0px 20px #121212;
-
+  cursor: move;
 }
 
 #icon{
   height: 200px;
+  margin-right: 10px;
   border-radius: 50%;
 }
 
-#name{
-  color: #dadada;
-  font-size: 30px;
-  position: relative;
-  left: 225px;
-  top: -235px;
-  width: 250px;
-}
-
 #about{
-  line-height: 30px;
-  color: #bdbdbd;
-  font-size: 20px;
   position: relative;
   left: 225px;
   top: -240px;
@@ -147,30 +144,53 @@
 
 }
 
+
 #skills{
-  position: relative;
-  top: 300px;
+  top: 520px;
+  position: fixed;
+  background-color: #5F280B;
+  border-radius: 25px;
+  height: 200px;
+  width: 500px;
+  right: 10vw;
+  padding: 25px;
+  cursor: move;
 }
 
-#github {
+#projects{
+  top: 60vh;
+  position: fixed;
+  background-color: #5F280B;
+  border-radius: 25px;
+  height: 200px;
+  width: 500px;
+  left: 10vw;
+  padding: 25px;
+  cursor: move;
+}
+
+#projects:hover, #skills:hover, #whoami:hover{
+
+  box-shadow: 0px 0px 20px #121212;
+  scale: 110%;
+
+}
+
+#projects tl, #skills tl, #whoami tl{
   position: absolute;
-  bottom: 100px;
-  right: 20px;
-  background-color: #396e75;
-  border-radius: 50%;
-  height: 10px;
-  box-shadow: none;
-  }
-   
-   #github:hover {
-    box-shadow: var(--hover-shadows);
-   }
-   
-   #github:active {
-    box-shadow: var(--hover-shadows),
-                 var(--accent) 0px 0px 30px 5px;
-    background-color: var(--accent);
-    transform: scale(0.95);
+    padding-bottom: 14px;
+    color: #fff;
+    font-size: 30px;
+}
+
+#projects pr, #skills pr, #whoami pr{
+
+  position: absolute;
+  top: 75px;
+  font-size: 40px;
+  text-decoration: none;
+  color: #bdbdbd;
+
 }
 
 @media screen and (max-width: 980px) {
@@ -179,7 +199,6 @@
 
   top: 0px;
   height: 100px;
-  background-color: #111;
   position: fixed;
   z-index: 3;
   width: 100%;
@@ -211,7 +230,7 @@
   position: absolute;
   left: 35vw;
   top: 0px;
-  width: 400px;
+  width: 50vw;
 }
 
 #about{
@@ -221,25 +240,26 @@
   position: relative;
   left: 35vw;
   top: 8vw;
-  width: 400px;
+  width: 30vw;
 
 }
 
-#projects{
+#projectsbar{
 
   text-align: center;
   cursor: default;
   background-color: rgba(255, 255, 255, 0.0);
   position: fixed;
-  top: 15px;
+  top: 0px;
   right: 10px;
-  height: 40px;
+  height: 75px;
   transition-duration: .15s;
+  padding-top: 30px;
+
 }
 
 
-#projects:hover{
-  background-color: #111;
+#projectsbar:hover{
   height: auto;
   border-radius: 20px;
   height: 100%;
@@ -247,17 +267,17 @@
   right: 0px;
 }
 
-#projects pr a{
+#projectsbar pr a{
 
   position: relative;
   top: 75px;
   font-size: 40px;
   text-decoration: none;
-  color: #396e75;
+  color: #a7a6a6;
 
 }
 
-#projects tl{
+#projectsbar tl{
   padding-bottom: 14px;
   color: #fff;
   font-size: 30px;
@@ -273,6 +293,13 @@
   padding: 25px 15px;
   transition-duration: .15s;
 
+}
+
+#gihub{
+  position: absolute;
+  bottom: 100px;
+  right: 25px;
+  display: flex;
 }
 
 }
