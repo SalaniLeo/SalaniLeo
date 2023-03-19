@@ -1,6 +1,5 @@
 :root{
 
-  overflow: hidden;
 
 }
 
@@ -27,16 +26,33 @@
   line-height: 30px;
   color: #bdbdbd;
   font-size: 20px;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
+
+}
+
+.link{
+
+  text-decoration: none;
+  color: rgba(127, 255, 212, 0.678);
+  user-select: none;
 
 }
 
 .title{
 
-  color: rgb(255, 255, 255);
-  text-align: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  position: sticky;
-  font-size: 40px;
+  font-size: 35px;
+  user-select: none;
+  position: absolute;
+  padding-bottom: 14px;
+  color: #fff;
+  width: 400px;
 
  }
 
@@ -56,6 +72,7 @@
   width: 90%;
   background-color: #40050F;
   left: 5%;
+
   position: fixed;
   z-index: 999;
 
@@ -139,7 +156,7 @@
 }
 
 #whoami{
-  position: absolute;
+  position: fixed;
   left: 20vw;
   background-color: #5F280B;
   border-radius: 20px;
@@ -149,13 +166,13 @@
   min-width: 250px;
   cursor: move;
   transition-duration: 0.25s;
-  z-index: -1;
+  z-index: 0;
 
 }
 
 
 #skills{
-  top: 520px;
+  top: 40vh;
   position: fixed;
   background-color: #5F280B;
   border-radius: 25px;
@@ -165,7 +182,7 @@
   padding: 25px;
   cursor: move;
   transition-duration: 0.25s;
-  
+
 }
 
 #projects{
@@ -183,18 +200,11 @@
 
 }
 
-#projects:hover, #skills:hover, #whoami:hover{
+.draggable:hover{
 
   box-shadow: 0px 0px 20px #121212;
   scale: 110%;
 
-}
-
-#projects tl, #skills tl, #whoami tl{
-  position: absolute;
-    padding-bottom: 14px;
-    color: #fff;
-    font-size: 30px;
 }
 
 #projects pr, #skills pr, #whoami pr{
@@ -220,12 +230,37 @@
   border-radius: 0%;
   
 }
+
+.draggable:hover{
+
+  box-shadow: none;
+  scale: none;
+
+}
   
 
 #whoami{
   position: absolute;
-  left: -5vw;
-  top: 50px;
+  left: 7.5vw;
+  top: 0vh;
+  width: 75vw;
+  height: 35vw;
+
+}
+
+#skills{
+  position: absolute;
+  left: 7.5vw;
+  top: 30vh;
+  width: 75vw;
+  height: 35vw;
+
+}
+
+#projects{
+  position: absolute;
+  left: 7.5vw;
+  top: 60vh;
   width: 75vw;
   height: 35vw;
 
@@ -238,23 +273,20 @@
   top: 30px;
 }
 
-#name{
-  color: #dadada;
-  font-size: 5vw;
+#projects tl, #skills tl, #whoami tl{
   position: absolute;
-  left: 35vw;
-  top: 0px;
-  width: 50vw;
+    padding-bottom: 14px;
+    color: #fff;
+    font-size: 30px;
 }
 
-#about{
-  line-height: 5vw;
+#projects pr, #skills pr, #whoami pr{
+
+  position: absolute;
+  top: 75px;
+  font-size: 4vw;
+  text-decoration: none;
   color: #bdbdbd;
-  font-size: 3vw;
-  position: relative;
-  left: 35vw;
-  top: 8vw;
-  width: 30vw;
 
 }
 
