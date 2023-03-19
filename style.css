@@ -1,38 +1,26 @@
-:root{
-
-
-}
-
 #container{
 
     position: fixed;
     width: 100%;
     height: 100%;
+    overflow: scroll;
     margin-top: -8px;
     margin-left: -8px;
-    background-color: #CE9C69;
-
+    /* background-color: #CE9C69; */
+    background-image: url(assets/blob-scene-haikei.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
 }
 
-#canvas{
-
-  opacity: 0%;
-
-}
-
-.text,
-.subtitle{
+.text, .subtitle{
 
   line-height: 30px;
   color: #bdbdbd;
   font-size: 20px;
+  width: 500px;
   user-select: none;
-  -webkit-user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  pointer-events: none;
 
 }
 
@@ -48,9 +36,7 @@
 
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 35px;
-  user-select: none;
   position: absolute;
-  padding-bottom: 14px;
   color: #fff;
   width: 400px;
 
@@ -72,46 +58,8 @@
   width: 90%;
   background-color: #40050F;
   left: 5%;
-
-  position: fixed;
-  z-index: 999;
-
-}
-
-#projectsbar{
-
-  text-align: center;
-  cursor: default;
-  background-color: rgba(255, 255, 255, 0.0);
-  height: 35px;
   position: absolute;
-  border-radius: 50%;
-  top: 5px;
-  width: 200px;
-  right: 0px;
-  transition-duration: .15s;
-  overflow: hidden;
-  line-height: 40px;
-}
-
-
-#projectsbar:hover{
-  background-color: #40050F;
-  height: 120px;
-  border-radius: 20px;
-}
-
-#projectsbar tl{
-  padding-bottom: 14px;
-  color: #fff;
-  font-size: 20px;
-  line-height: 28px;
-}
-
-#projectsbar a{
-  cursor: pointer;
-  font-size: 17px;
-  text-decoration: none;
+  z-index: 999;
 
 }
 
@@ -134,30 +82,16 @@
   color: rgb(104, 104, 104);
 }
 
-#showcase{
-
-  position: absolute;
-  top: 150px;
-
-}
-
 #icon{
   height: 200px;
   margin-right: 10px;
   border-radius: 50%;
 }
 
-#about{
-  position: relative;
-  left: 225px;
-  top: -240px;
-  width: 250px;
-
-}
-
 #whoami{
-  position: fixed;
+  top: 15vh;
   left: 20vw;
+  position: absolute;
   background-color: #5F280B;
   border-radius: 20px;
   height: 200px;
@@ -166,65 +100,111 @@
   min-width: 250px;
   cursor: move;
   transition-duration: 0.25s;
-  z-index: 0;
-
 }
 
-
 #skills{
-  top: 40vh;
-  position: fixed;
+  top: 60vh;
+  left: 10vw;
+  position: absolute;
   background-color: #5F280B;
   border-radius: 25px;
   height: 200px;
   width: 500px;
-  right: 10vw;
   padding: 25px;
   cursor: move;
   transition-duration: 0.25s;
-
 }
 
 #projects{
-  top: 60vh;
-  position: fixed;
+  top: 35vh;
+  left: 55vw;
+  position: absolute;
   background-color: #5F280B;
   border-radius: 25px;
   height: 200px;
   width: 500px;
-  left: 10vw;
   padding: 25px;
   cursor: move;
   transition-duration: 0.25s;
-
-
 }
 
 .draggable:hover{
-
   box-shadow: 0px 0px 20px #121212;
   scale: 110%;
-
 }
 
 #projects pr, #skills pr, #whoami pr{
-
   position: absolute;
   top: 75px;
   font-size: 40px;
   text-decoration: none;
   color: #bdbdbd;
+}
+
+
+#about{
+
+  position: absolute;
+  right: -1100px;
+  top: 20vh;
+  background-color: #5F280B;
+  border-radius: 25px;
+  height: 50vh;
+  min-height: 300px;
+  width: 40vw;
+  text-align: center;
+  transition-duration: 1s;
+
+}
+#about h1{
+  font-size: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #dbdbdb;
+}
+#about p{
+
+  width: 40vw;
+
+}
+
+#whoami.slideOut, #skills.slideOut, #projects.slideOut{
+
+  left:-1000px;
+
+}
+
+.slideIn{
+
+  left:-700px;
 
 }
 
 @media screen and (max-width: 980px) {
 
+.title{
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 10vw;
+  position: absolute;
+  padding-bottom: 14px;
+  color: #fff;
+  width: 400px;
+
+}
+
+.subtitle{
+
+  position: relative;
+  font-size: 3.5vw;
+  line-height: 4vw;
+
+}
+
 #navBar{
 
   top: 0px;
   height: 100px;
-  position: fixed;
-  z-index: 3;
+  position: absolute;
   width: 100%;
   left: 0px;
   border-radius: 0%;
