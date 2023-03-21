@@ -1,331 +1,170 @@
-#container{
-
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: scroll;
-    margin-top: -8px;
-    margin-left: -8px;
-    /* background-color: #CE9C69; */
-    background-image: url(assets/blob-scene-haikei.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
-}
 
 .text, .subtitle{
-
-  line-height: 30px;
-  color: #bdbdbd;
-  font-size: 20px;
-  width: 500px;
-  user-select: none;
-
-}
-
-.link{
-
-  text-decoration: none;
-  color: rgba(127, 255, 212, 0.678);
-  user-select: none;
-
-}
-
-.title{
-
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 35px;
-  position: absolute;
-  color: #fff;
-  width: 400px;
-
- }
-
- .description{
-
-  text-align: center;
-  line-height: 25px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
- }
-
-#navBar{
-
-  top: 20px;
-  border-radius: 30px;
-  height: 50px;
-  width: 90%;
-  background-color: #40050F;
-  left: 5%;
-  position: absolute;
-  z-index: 999;
-
-}
-
-#home{
-
-  cursor: pointer;
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.0);
-  font-size: 20px;
-  line-height: 28px;
-  height: 30px;
-  padding: 10px 15px;
-  position: absolute;
-  text-align:center;
-  transition-duration: .15s;
-
-}
-
-#home:hover{
-  color: rgb(104, 104, 104);
-}
-
-#icon{
-  height: 200px;
-  margin-right: 10px;
-  border-radius: 50%;
-}
-
-#whoami{
-  top: 15vh;
-  left: 20vw;
-  position: absolute;
-  background-color: #5F280B;
-  border-radius: 20px;
-  height: 200px;
-  width: 500px;
-  padding: 25px;
-  min-width: 250px;
-  cursor: move;
-  transition-duration: 0.25s;
-}
-
-#skills{
-  top: 60vh;
-  left: 10vw;
-  position: absolute;
-  background-color: #5F280B;
-  border-radius: 25px;
-  height: 200px;
-  width: 500px;
-  padding: 25px;
-  cursor: move;
-  transition-duration: 0.25s;
-}
-
-#projects{
-  top: 35vh;
-  left: 55vw;
-  position: absolute;
-  background-color: #5F280B;
-  border-radius: 25px;
-  height: 200px;
-  width: 500px;
-  padding: 25px;
-  cursor: move;
-  transition-duration: 0.25s;
-}
-
-.draggable:hover{
-  box-shadow: 0px 0px 20px #121212;
-  scale: 110%;
-}
-
-#projects pr, #skills pr, #whoami pr{
-  position: absolute;
-  top: 75px;
-  font-size: 40px;
-  text-decoration: none;
-  color: #bdbdbd;
-}
-
-
-#about{
-
-  position: absolute;
-  right: -1100px;
-  top: 20vh;
-  background-color: #5F280B;
-  border-radius: 25px;
-  height: 50vh;
-  min-height: 300px;
-  width: 40vw;
-  text-align: center;
-  transition-duration: 1s;
-
-}
-#about h1{
-  font-size: 40px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: #dbdbdb;
-}
-#about p{
-
-  width: 40vw;
-
-}
-
-#whoami.slideOut, #skills.slideOut, #projects.slideOut{
-
-  left:-1000px;
-
-}
-
-.slideIn{
-
-  left:-700px;
-
-}
-
-@media screen and (max-width: 980px) {
-
-.title{
-
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 10vw;
-  position: absolute;
-  padding-bottom: 14px;
-  color: #fff;
-  width: 400px;
-
-}
-
-.subtitle{
-
-  position: relative;
-  font-size: 3.5vw;
-  line-height: 4vw;
-
-}
-
-#navBar{
-
-  top: 0px;
-  height: 100px;
-  position: absolute;
-  width: 100%;
-  left: 0px;
-  border-radius: 0%;
+    line-height: 30px;
+    color: #bdbdbd;
+    font-size: 20px;
+    user-select: none;
+    position: relative;
+    top: 50px;
+  }
   
-}
-
-.draggable:hover{
-
-  box-shadow: none;
-  scale: none;
-
-}
+  .link{
+    text-decoration: none;
+    color: rgba(127, 255, 212, 0.678);
+    user-select: none;
+  }
   
-
-#whoami{
-  position: absolute;
-  left: 7.5vw;
-  top: 0vh;
-  width: 75vw;
-  height: 35vw;
-
-}
-
-#skills{
-  position: absolute;
-  left: 7.5vw;
-  top: 30vh;
-  width: 75vw;
-  height: 35vw;
-
-}
-
-#projects{
-  position: absolute;
-  left: 7.5vw;
-  top: 60vh;
-  width: 75vw;
-  height: 35vw;
-
-}
-
-#icon{
-  position: absolute;
-  height: 30vw;
-  border-radius: 50%;
-  top: 30px;
-}
-
-#projects tl, #skills tl, #whoami tl{
-  position: absolute;
-    padding-bottom: 14px;
+  .title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    position: absolute;
     color: #fff;
-    font-size: 30px;
-}
+   }
 
-#projects pr, #skills pr, #whoami pr{
+.card{
 
-  position: absolute;
-  top: 75px;
-  font-size: 4vw;
-  text-decoration: none;
-  color: #bdbdbd;
-
-}
-
-#projectsbar{
-
-  text-align: center;
-  cursor: default;
-  background-color: rgba(255, 255, 255, 0.0);
-  position: fixed;
-  top: 0px;
-  right: 10px;
-  height: 75px;
-  transition-duration: .15s;
-  padding-top: 30px;
+    background: #331407 100%;    
+    transition-duration: 0.25s;
+    border-radius: 25px;
+    padding: 20px;
+    margin-top: 50px;
 
 }
 
+.card:hover{
 
-#projectsbar:hover{
-  height: auto;
-  border-radius: 20px;
-  height: 100%;
-  width: 400px;
-  right: 0px;
-}
-
-#projectsbar pr a{
-
-  position: relative;
-  top: 75px;
-  font-size: 40px;
-  text-decoration: none;
-  color: #a7a6a6;
+    box-shadow:
+    0px 0px 50px #8a3f13;      
+    scale: 105%;
+    border-radius: 25px;
+    padding: 20px;
+    margin-top: 50px;
 
 }
 
-#projectsbar tl{
-  padding-bottom: 14px;
-  color: #fff;
-  font-size: 30px;
+#stars{
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: -1;
 }
 
-#home{
+#headerbar{
 
-  cursor: pointer;
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.0);
-  font-size: 40px;
-  height: 30px;
-  padding: 25px 15px;
-  transition-duration: .15s;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    background-color: #40050F;
+    z-index: 999;
+
+}
+
+#logo{
+
+    position: fixed;
+    margin-top: 15px;
+    margin-left: 15px; 
+    cursor: pointer;
+    margin-bottom: 100px;
+    height: 45px;
+    border-radius: 50%;
 
 }
 
-#gihub{
-  position: absolute;
-  bottom: 100px;
-  right: 25px;
-  display: flex;
-}
+.mainbody {
+
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    background: #200c0c; 
+    gap: 250px;
+    z-index: -1;
+
+  }
+
+  #cards{
+
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 250px;
+    transition-duration: 0.25s;
+
+    
+  }
+
+  #cards:hover{
+
+    gap: 200px;
+
+  }
+
+  #whoami{
+
+    height: 500px;
+    width: 350px;
+
+  }
+  
+  #skills{
+
+    height: 450px;
+    width: 400px;
+
+  }
+  
+  #projects{
+
+    height: 450px;
+    width: 400px;
 
 }
+
+  #next{
+
+    bottom: 50px;
+    height: 75px;
+    width: 75px;
+    position: fixed;
+    background-color: #574214;
+    border-radius: 50%;
+    animation: updown 10s 10s infinite;
+    font-size: 35px;
+    text-align: center;
+    transition-duration: 0.25s;
+    cursor: pointer;
+
+  }
+
+  #next:hover{
+
+    box-shadow:
+    0px 0px 10px #574214;      
+    scale: 120%;
+
+}
+
+
+  @keyframes updown {
+    0%{
+        bottom: 50px;
+    }
+    50%{
+        bottom: 100px;
+    }
+    100%{
+        bottom: 50px;
+    }
+  }
