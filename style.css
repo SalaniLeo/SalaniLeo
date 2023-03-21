@@ -141,10 +141,11 @@
     background-color: #574214;
     border-radius: 50%;
     animation: updown 10s 10s infinite;
-    font-size: 35px;
+    font-size: 40px;
     text-align: center;
     transition-duration: 0.25s;
     cursor: pointer;
+    border: none;
 
   }
 
