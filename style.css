@@ -1,3 +1,246 @@
-body{
-    background-color: white;
+@import url('https://fonts.cdnfonts.com/css/source-code-pro');
+
+p, .subtitle{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 30px;
+    color: #bdbdbd;
+    font-size: 20px;
+    user-select: none;
+  }
+  
+  .link{
+    text-decoration: none;
+    color: rgba(127, 255, 212, 0.678);
+    user-select: none;
+  }
+  
+  .title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    color: #d4d4d4;
+   }
+
+body {
+
+  background-color: rgb(36, 36, 36);
+  transition-duration: 0.5s;
+
+}
+
+:root{
+
+  /* background: #242424;  */
+  scroll-snap-type: y mandatory;  
+
+}
+
+.page{
+
+  height: 110vh;
+  scroll-snap-align: start;
+}
+
+#terminalBox{
+
+  position: absolute;
+  left: 17.5vw;
+  top: -40px;
+
+}
+
+#terminalText{
+
+  font-family: 'Source Code Pro', sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+
+}
+
+#textShowcase{
+
+  position: absolute;
+  top: 130px;
+  height: 40px;
+  width: 1100px;
+  left: 90px;
+  /* outline: auto; */
+
+}
+
+#terminal{
+
+  user-select: none;
+
+}
+
+#headerbar{
+
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    z-index: 999;
+    transition-duration: 2s;
+    align-items: center;
+
+}
+
+#tTopBar{
+
+  position: relative;
+  left: 65px;
+  top: 100px;
+  cursor: move;
+  height: 40px;
+  z-index: 313721873;
+
+}
+
+#menuButton{
+
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 100px;
+  right: 143.5px;
+  border-radius: 4px;
+  transition-duration: 0.2s;
+
+}
+
+#menuButton:hover{
+
+  background-color: hsla(0, 0%, 74%, 0.11);
+
+}
+
+#downArrow{
+
+  position: relative;
+  top: 0px;
+  font-size: 50px;
+  opacity: 0;
+  color: #bdbdbd;
+  /* left: -320px; */
+  animation: wave 8s 10s infinite, show 1s 7.5s forwards;
+
+}
+
+#more{
+
+  position: absolute;
+
+  top: 625px;
+  width: 30vw;
+  right: 35vw;
+  text-align: center;
+
+}
+
+@keyframes wave {
+  0%{
+    top: 0px;
+  }
+  50%{
+    top: 40px;
+  }
+  100%{
+    top: 0px;
+  }
+}
+
+@keyframes show {
+  to{
+
+    opacity: 1;
+
+  }
+}
+
+#github{
+
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 35px;
+  color: white;
+
+}
+
+
+#logo{
+
+  position: absolute;
+    margin-top: 15px;
+    margin-left: 15px; 
+    cursor: pointer;
+    margin-bottom: 100px;
+    height: 45px;
+    border-radius: 50%;
+
+}
+
+#keepGoing{
+
+  position: absolute;
+  bottom: 30px;
+  width: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#projectsShowcase{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+#immagini{
+
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#immaginiDesc{
+
+  text-align: center;
+  position: relative;
+  top: 100px;
+
+}
+
+#immaginiBox{
+
+  position: absolute;
+  top: 140vh;
+
+
+}
+
+#iTopBar{
+
+  position: relative;
+  width: 745px;
+  left: 65px;
+  top: 100px;
+  cursor: move;
+  height: 40px;
+  z-index: 313721873;
+
+}
+
+#immaginiWindow{
+
+  user-select: none;
+
 }

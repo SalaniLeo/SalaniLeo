@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://kit.fontawesome.com/70afaa55a0.js" crossorigin="anonymous"></script>
 
   <head>
+    <link rel="icon" href="assets/icons/icon.png">
     <title>SalaniLeo</title>
   </head>
 
 
 <body>
-  
+
+    <header>
+
+      <div id="headerbar">
+          <!-- <img src="assets/icons/icon.png" alt="icon" id="logo"></img> -->
+          <a class="link" href="https://github.com/SalaniLeo"><img src="assets/icons/github-mark.svg" alt="icon" id="github"></img></i> </a>
+      </div>
+
+    </header>
+
+  <div class="page" id="firstPage">
+
+    <div id="terminalBox">
+
+      <div id="tTopBar"></div>
+      <div id="menuButton" onclick="showMenu();"></div>
+      <img src="assets/terminal.png" alt="terminal" id="terminal">
+
+      <h1 id="textShowcase"><a class="typewrite" id="terminalText" data-period="2000" data-type='[ 
+        "I am a 16 years old italian guy", 
+        "Linux > Windows ", 
+        "I live in Ferrara, Italy", 
+        "Studying at IIS Copernico Carpeggiani", 
+        "Gnome > Kde",
+        "neofetch",
+        "Studying to become a succesfull open-source developer", 
+        "I use Arch btw 🤓"
+        
+        ]'></a></h1>
+
+      <div id="menu"></div>
+
+    </div>
+
+    <div id="keepGoing">
+      <i id="downArrow" class="fa-solid fa-chevron-down"></i>
+    </div>
+
+    <div id="more">
+      <p class="title">Interested in my projects?</p>
+      <p class="subtitle">If you are interested to see my projects, you can go <br>
+        on my <a class="link" href="https://github.com/SalaniLeo">GitHub page</i></a> or scroll down.
+      </p>
+
+    </div>
+
+
+  </div>
+
+  <div class="page" id="secondPage"> 
+
+    <div id="projectsShowcase">
+
+      <div id="immagini">
+          <div id="immaginiBox">
+            <div id="iTopBar"></div>
+            <img src="assets/Immagini.png" alt="Immagini" id="immaginiWindow">
+          </div>
+
+
+        <div id="immaginiDesc">
+          <p class="title">Immagini</p>
+          <p class="subtitle">Management app for AppImage applications<br>
+                                Immagini serves as a gtk user interface to manage and create AppImage applications easily.<br>
+                                Read the <a class="link" href="https://github.com/SalaniLeo">documentation</i></a> to for more details</p>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
 </body>
+  
+<script type="text/javascript" src="logic.js"></script>

@@ -1,69 +1,54 @@
-const Star = function(x, y, z) {
+let scene, camera, renderer;
 
-  this.x = x; this.y = y; this.z = z;
+function init() {
 
-  this.size = 3;
+  scene = new THREE.Scene();
+  scene.background = new THREE.Color(0xdddddd);
 
-};
+  camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
+  camera.rotation.y = 45/180*Math.PI;
+  camera.position.x = 800;
+  camera.position.y = 100;
+  camera.position.z = 1000;
 
-var context = document.querySelector("canvas").getContext("2d");
+  controls = new THREE.OrbitControls(camera);
+  controls.addEventListener('change', renderer);
 
-var height = document.documentElement.clientHeight;
-var width  = document.documentElement.clientWidth;
+  hlight = new THREE.AmbientLight (0x404040,100);
+  scene.add(hlight);
 
-var stars = new Array();
+  directionalLight = new THREE.DirectionalLight(0xffffff,100);
+  directionalLight.position.set(0,1,0);
+  directionalLight.castShadow = true;
+  scene.add(directionalLight);
+  light = new THREE.PointLight(0xc4c4c4,10);
+  light.position.set(0,300,500);
+  scene.add(light);
+  light2 = new THREE.PointLight(0xc4c4c4,10);
+  light2.position.set(500,100,0);
+  scene.add(light2);
+  light3 = new THREE.PointLight(0xc4c4c4,10);
+  light3.position.set(0,100,-500);
+  scene.add(light3);
+  light4 = new THREE.PointLight(0xc4c4c4,10);
+  light4.position.set(-500,300,500);
+  scene.add(light4);
 
-var max_depth = 100000;
+  renderer = new THREE.WebGLRenderer({antialias:true});
+  renderer.setSize(window.innerWidth,window.innerHeight);
+  document.body.appendChild(renderer.domElement);
 
-for(let index = 0; index < 200; index ++) stars[index] = new Star(Math.random() * width, Math.random() * height, index * (max_depth / 200));
-
-function loop() {
-
-  window.requestAnimationFrame(loop);
-
-  height = document.documentElement.clientHeight;
-  width  = document.documentElement.clientWidth;
-
-  context.canvas.height = height;
-  context.canvas.width  = width;
-
-  context.fillStyle = "#000000";
-  context.fillRect(0, 0, width, height);
-
-  for (let index = stars.length - 1; index > -1; index --) {
-
-    let star = stars[index];
-
-    star.z -= 5;
-
-    if (star.z < 0) {
-
-      stars.push(stars.splice(index, 1)[0]);
-      star.z = max_depth;
-      continue;
-
-    }
-
-    let translate_x = width * 0.5;
-    let translate_y = height * 0.5;
-
-    let field_of_view = (height + width) * 8;
-
-    let star_x = (star.x - translate_x) / (star.z / field_of_view) + translate_x;
-    let star_y = (star.y - translate_y) / (star.z / field_of_view) + translate_y;
-
-    let scale = field_of_view / (field_of_view + star.z);
-
-    let color = Math.floor(scale * 256);
-
-    context.fillStyle = "rgb(" + color + "," + color + "," + color + ")";
-    context.fillRect(star_x, star_y, star.size * scale, star.size * scale);
-
-  }
-
+  let loader = new THREE.GLTFLoader();
+  loader.load('earth.glb', function(gltf){
+    car = gltf.scene.children[0];
+    car.scale.set(0.5,0.5,0.5);
+    scene.add(gltf.scene);
+    animate();
+  });
 }
-function temperatureConverter(valNum) {
-  valNum = parseFloat(valNum);
-  document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+function animate() {
+  renderer.render(scene,camera);
+  requestAnimationFrame(animate);
 }
-loop();
+
+init();

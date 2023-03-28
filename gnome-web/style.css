@@ -1,0 +1,91 @@
+#addShortcut{
+
+    position: fixed;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: #57758f;
+    outline: auto;
+
+}
+
+#firstPage{
+
+    background-color: #242424;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+}
+
+#searchBar{
+
+    position: fixed;
+    top: 40vh;
+    width: 50vw;
+    height: 40px;
+    left: 25vw;
+    border-radius: 10px;
+    background-color: #393939;
+    border: none;
+    color: #e8e8e8;
+    padding-left: 10px;
+    padding-right: 10px;
+    user-select: none;
+
+}
+
+#hometext{
+
+    position: absolute;
+    user-select: none;
+
+}
+
+#searchBar:focus{
+
+    outline: solid 2px #57758f;
+    user-select: none;
+
+}
+
+.shortcut{
+
+    position: fixed;
+    top: 50vh;
+    width: 85px;
+    height: 85px;
+    left: 30vw;
+    border-radius: 10px;
+    background-color: #393939;
+    border: none;
+    text-align: center;
+    align-items: center;
+    user-select: none;
+
+
+}
+
+.shortcut i{
+
+    position: relative;
+    top: 22%;
+    color: #696969;
+    font-size: 50px;
+    user-select: none;
+    cursor: pointer;
+
+}
+
+.shortcut i:hover{
+
+    position: relative;
+    top: 22%;
+    color: #7a7a7a;
+    font-size: 50px;
+    user-select: none;
+
+}
