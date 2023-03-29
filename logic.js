@@ -7,11 +7,13 @@ var immaginiBox = document.getElementById("immaginiBox")
 var menu = document.getElementById("menuButton")
 var body = document.getElementsByClassName('body')
 var screenRect = document.body.getBoundingClientRect();
+var projectsShowcase = document.getElementById("projectsShowcase")
+var downArrow = document.getElementById("downArrow")
+var secondPage = document.getElementById("secondPage")
 
 var stage = 0
 let lastKnownScrollPosition = 0;
 let ticking = false;
-var secondPage = false
 var secondPagePos = 200
 
 var baseBackground = 'rgb(36, 36, 36)'
@@ -34,36 +36,30 @@ moveItem(tTopBar, terminalBox)
 moveItem(iTopBar, immaginiBox)
 
 
-// window.addEventListener('scroll', () => {
-//   let y = window.scrollY
+window.addEventListener('scroll', () => {
+
+    if(checkVisible(secondPage)){
+
+        console.log("aaaaaaaaaaaaaaaaaa")
+        downArrow.classList.remove('show')
+        downArrow.classList.add('hide')
+
+    } else {
+
+        console.log("vvvvvvvvvvvvvvvvvvv")
+        downArrow.classList.remove('hide')
+        downArrow.classList.add('show')
+
+    }
+
+})
 
 
-//     console.log(vh(100))
-//     console.log(y)
-
-//     if(y>vh(10)){
-//         document.body.style.background = secondBackground
-//     } else if(y<vh(100)) {
-//         document.body.style.background = baseBackground
-//     }
-
-//   isInViewport('#secondPage')
-// })
-
-
-function isInViewport(id) {
-
-  const box = document.querySelector(id);
-  const rect = box.getBoundingClientRect();
-
-}
-
-
-function showMenu(){
-
-
-
-}
+function checkVisible(elm) {
+    var rect = elm.getBoundingClientRect();
+    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+  }
 
 
 var TxtType = function(el, toRotate, period) {
