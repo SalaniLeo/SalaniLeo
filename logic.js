@@ -10,6 +10,10 @@ var screenRect = document.body.getBoundingClientRect();
 var projectsShowcase = document.getElementById("projectsShowcase")
 var downArrow = document.getElementById("downArrow")
 var secondPage = document.getElementById("secondPage")
+var firstPage = document.getElementById("firstPage")
+var immaginiDesc = document.getElementById("immaginiDesc")
+var immagini = document.getElementById("immagini")
+
 
 var stage = 0
 let lastKnownScrollPosition = 0;
@@ -32,28 +36,22 @@ function vh(percent) {
     return (percent * w) / 100;
   }
 
-moveItem(tTopBar, terminalBox)
-moveItem(iTopBar, immaginiBox)
-
+moveItem(tTopBar, terminalBox, firstPage)
+moveItem(iTopBar, immaginiBox, immagini)
 
 window.addEventListener('scroll', () => {
-
     if(checkVisible(secondPage)){
-
-        console.log("aaaaaaaaaaaaaaaaaa")
         downArrow.classList.remove('show')
         downArrow.classList.add('hide')
+        document.body.style.overflowX = 'scroll'
 
     } else {
-
-        console.log("vvvvvvvvvvvvvvvvvvv")
         downArrow.classList.remove('hide')
         downArrow.classList.add('show')
+        document.body.style.overflowX = 'hidden'
 
     }
-
 })
-
 
 function checkVisible(elm) {
     var rect = elm.getBoundingClientRect();
@@ -124,50 +122,53 @@ window.onload = function() {
           new TxtType(elements[i], JSON.parse(toRotate), period);
         }
     }
-    // INJECT CSS
+
     var css = document.createElement("style");
 
     css.innerHTML = ".typewrite > .wrap { padding-right:5px; border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
 
-function moveItem(item, parent){
+function moveItem(item, parent, container){
 
-    item.onmousedown = function(event) {
+        item.onmousedown = function(event) {
 
-            let shiftX = event.clientX - item.getBoundingClientRect().left;
-            let shiftY = event.clientY - item.getBoundingClientRect().top;
+                let shiftX = event.clientX - item.getBoundingClientRect().left;
+                let shiftY = event.clientY - item.getBoundingClientRect().top;
 
-            parent.style.zIndex = "34223423"
-            parent.style.position = 'absolute'
+                parent.style.zIndex = "34223423"
+                // parent.style.position = 'absolute'
 
-            function moveAt(pageX, pageY) {
-                if(screenRect.width>pageX&&0<pageX){
-                    // item.style.left = pageX - shiftX + 'px';
-                    // item.style.top = pageY - shiftY + 'px';
+                function moveAt(pageX, pageY) {
+                    if(screenRect.width>pageX&&0<pageX){
 
-                    console.log(pageX)
-                    console.log(pageY)
-                    parent.style.left = pageX - 65 - shiftX + 'px';
-                    parent.style.top = pageY - 100 - shiftY + 'px';
+                        parent.style.left = pageX - offset(container).left - 65 - shiftX + 'px';
+                        parent.style.top = pageY - offset(container).top - 100 - shiftY + 'px';
 
-                }
-        
-            }
-            function onMouseMove(event) {
-                moveAt(event.pageX, event.pageY);
+                    }
             
-            }
-            document.addEventListener('mousemove', onMouseMove);
-            item.onmouseup = function() {
-                document.removeEventListener('mousemove', onMouseMove);
-                item.style.transitionDuration = '0.25s';
-            };
+                }
+                function onMouseMove(event) {
+                    moveAt(event.pageX, event.pageY);
+                
+                }
+                document.addEventListener('mousemove', onMouseMove);
+                item.onmouseup = function() {
+                    document.removeEventListener('mousemove', onMouseMove);
+                    item.style.transitionDuration = '0.25s';
+                };
 
-    };
+        };
     
     item.ondragstart = function() {
       return false;
     };
   
+}
+
+function offset(el) {
+    var rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
 }
