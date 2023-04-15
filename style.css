@@ -209,15 +209,6 @@ body {
   align-items: center;
 }
 
-#projectsShowcase{
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200vw;
-
-}
-
 #immaginiDesc{
 
   text-align: center;
@@ -251,15 +242,43 @@ body {
 
 }
 
-
+/* 
 .showcase{
 
   position: relative;
   margin-top: 10vh;
   height: 80vh;
-  width: 2000px;
+  width: auto;
+  outline: auto;
+  left: 18%;
+} */
+
+/* #projectsShowcase{
+
+  position:absolute;
+  display:block;
+  top:0;
+  left:0;
+  width:80px;
+  max-height:500px;
+  margin:0;
+  background:#abc;
+  overflow-y:auto;
+  overflow-x:hidden;
+  transform:rotate(-90deg) translateY(-80px);
+  transform-origin:right top;
 
 }
+
+#projectsShowcase > .showcase{
+
+  display:block;
+  padding:5px;
+  background:#cab;
+  transform:rotate(90deg);
+  transform-origin: right top;
+
+} */
 
 
 /* 
