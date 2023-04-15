@@ -33,7 +33,6 @@ body {
 
   background-color: rgb(36, 36, 36);
   transition-duration: 0.5s;
-  overflow-x: scroll;
 
 }
 
@@ -46,17 +45,20 @@ body {
 
 .page{
 
-  height: 100vh;
-  min-height: 950px;
+  height: 110vh;
   scroll-snap-align: start;
-  width: 100vw;
+  overflow: hidden;
+  min-height: 950px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
 #terminalBox{
 
-  position: relative;
-  text-align: center;
+  position: absolute;
+  top: -40px;
 
 }
 
@@ -94,6 +96,7 @@ body {
 
   position: relative;
   left: 65px;
+  width: 1125px;
   top: 100px;
   cursor: move;
   height: 40px;
@@ -209,18 +212,38 @@ body {
   align-items: center;
 }
 
+#projectsShowcase{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+#immagini{
+
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 #immaginiDesc{
 
   text-align: center;
-  position: relative;
-  top: 0px;
+  position: absolute;
+  top: 120vh;
 
 }
 
 #immaginiBox{
 
-  position: relative;
-  text-align: center;
+  position: absolute;
+  top: 150vh;
+
 
 }
 
@@ -241,134 +264,6 @@ body {
   user-select: none;
 
 }
-
-/* 
-.showcase{
-
-  position: relative;
-  margin-top: 10vh;
-  height: 80vh;
-  width: auto;
-  outline: auto;
-  left: 18%;
-} */
-
-/* #projectsShowcase{
-
-  position:absolute;
-  display:block;
-  top:0;
-  left:0;
-  width:80px;
-  max-height:500px;
-  margin:0;
-  background:#abc;
-  overflow-y:auto;
-  overflow-x:hidden;
-  transform:rotate(-90deg) translateY(-80px);
-  transform-origin:right top;
-
-}
-
-#projectsShowcase > .showcase{
-
-  display:block;
-  padding:5px;
-  background:#cab;
-  transform:rotate(90deg);
-  transform-origin: right top;
-
-} */
-
-
-/* 
-
-      WEATHER WIDGET ---- -----
-
- */
-
-#weatherWidget{
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-#weatherOptions{
-
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 100px
-
-}
-
-#wllabel{
-
-  position: relative;
-  top: 0px;
-
-} 
-
-#wlinput{
-
-  position: relative;
-  top: 0px;
-
-}
-
-.weatherSquare {
-
-  position: relative;
-  top: 10px;
-  width: 220px;
-  height: 220px;
-  padding: 10px;
-  border-radius: 40px;
-  background-color: #bdbdbd;
-  transition: 0.25s;
-
-  }
-
-.weatherSquare:hover {
-  width: 270px;
-  height: 250px;
-  border-radius: 25px;
-  box-shadow: 5px 5px 20px #00000085;
-
-}
-
-.weatherSquare p {
-  position: relative;
-  width: 100%;
-  min-width: 120px;
-  text-align: center;
-  font-family: "Nunito",sans-serif;
-  font-size: 15px;
-  color: white;
-  transition: 0.25s;
-}
-
-.weatherSquare:hover p{
-  font-size: 18px;
-}
-
-.weatherSquare:hover h2{
-  font-size: 22px;
-}
-
-.weatherSquare h2 {
-
-  text-align: center;
-  font-family: "Nunito",sans-serif;
-  font-size: 18px;
-  color: white;
-  transition: 0.25s;
-}
-
 
 @media only screen and (max-width: 1130px), only screen and (max-device-width: 1130px) {
 
