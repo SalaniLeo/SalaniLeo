@@ -1,0 +1,251 @@
+
+@import url('https://fonts.googleapis.com/css?family=Cantarell');
+
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cantarell', sans-serif;
+    color: #e8e8e8;
+
+}
+
+#addShortcut{
+
+    position: fixed;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: #57758f;
+    outline: auto;
+
+}
+
+#firstPage{
+
+    background-color: #242424;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+#shFilter{
+
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+}
+
+#title{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#title p{
+
+    font-weight: bolder;
+    font-size: 40px;
+    color: #bebebe;
+
+}
+
+#searchIcon{
+
+    /* filter: invert(42%) sepia(93%) saturate(0%) hue-rotate(87deg) brightness(60%) contrast(119%); */
+    height: 150px;
+
+}
+
+#searchBar{
+
+    position: relative;
+    width: 50vw;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #393939;
+    border: none;
+    color: #e8e8e8;
+    padding-left: 10px;
+    padding-right: 10px;
+    user-select: none;
+    font-size: 18px;
+
+}
+
+#searchBar:focus{
+
+    outline: solid 2px #57758f;
+    user-select: none;
+
+}
+
+.shortcut{
+
+    width: 85px;
+    height: 85px;
+    border-radius: 10px;
+    background-color: #393939;
+    border: none;
+    text-align: center;
+    align-items: center;
+    user-select: none;
+    flex: 0 0 85px; /* explanation below */
+
+}
+
+.shortcut i{
+
+    position: relative;
+    top: 22%;
+    color: #696969;
+    font-size: 50px;
+    user-select: none;
+    cursor: pointer;
+
+}
+
+.shortcut i:hover{
+
+    position: relative;
+    top: 22%;
+    color: #7a7a7a;
+    font-size: 50px;
+    user-select: none;
+
+}
+
+#shortcuts{
+
+    width: 40vw;
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+}
+
+#addShPage{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#addShPage.show{
+
+    position: fixed;
+    align-self: self-start;
+    top: 50px;
+    height: 300px;
+    width: 700px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    border: solid 1px #393939;
+
+}
+
+#addShPage h1{
+
+    top: -30px;   
+
+}
+
+#input{
+
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.inputBar{
+
+    width: 450px;
+    background-color: #393939;
+    height: 10px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    color: #e8e8e8;
+
+}
+
+.inputBar:focus{
+
+    outline: solid 2px #57758f;
+    user-select: none;
+
+}
+
+.button{
+
+    width: 67px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    transition-duration: 0.25s;
+    color: #e8e8e8;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 5px;
+
+}
+
+#buttons{
+
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #303030;
+}
+
+#closeButton{
+
+    background-color: #4f4f4f;
+    left: 0px;
+    align-self: self-end;
+
+}
+
+#closeButton:hover{
+
+    background-color: #575757;
+
+}
+
+
+#saveButton{
+
+    background-color: #26a269;
+    right: 0px;
+    align-self: flex-end;
+
+}
+
+#saveButton:hover{
+
+    background-color: #3bab78;
+
+}
