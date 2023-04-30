@@ -7,7 +7,7 @@
 
   #
   
-### Leanguages:<br><br>
+### Languages:<br><br>
   
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SalaniLeo&layout=compact&theme=transparent&hide_border=true&border_radius=15)](https://github.com/anuraghazra/github-readme-stats)<br><br>
 
