@@ -8,7 +8,4 @@
   ![](https://komarev.com/ghpvc/?username=SalaniLeo&color=orange)
   <br>
   
-  <a href="https://ko-fi.com/salanileo"> <img align="center" src="https://storage.ko-fi.com/cdn/brandasset/kofi_bg_tag_dark.png" margin=12 height=60/></a>
-
-     
 </div>
