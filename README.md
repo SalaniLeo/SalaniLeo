@@ -1,6 +1,6 @@
 <div id="header" align="center">
 
-# Hi there👋 <h3>Visit <a class="link" href="https://salaniLeo.dev">salaniLeo.dev</a><br>
+# Hi there👋 <h3>Check out <a class="link" href="https://salaniLeo.dev">salaniLeo.dev</a><br>
 <h3>Working on <a class="link" href="https://github.com/SalaniLeo/Forecast">Forecast</a><br> <br> 
 
 
