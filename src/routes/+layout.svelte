@@ -57,10 +57,17 @@
 <div class="topbar">
   <div class="btncontainer">
     <a href="/" class="button hover">home</a>
+
+    <div class="dropdown button hover">
+      <span>subdomains</span>
+      <div class="dropdown-content">
+        <a href="https://home.salanileo.dev">homepage</a>
+        <a href="https://weather.salanileo.dev">weather</a>
+      </div>
+    </div>
   </div>
 
   <div class="btncontainer">
-    <!-- <a href="/work" class="button hover">work</a> -->
     <a href="/about" class="button hover">about</a>
   </div>
 </div>
@@ -82,6 +89,41 @@
 <slot />
 
 <style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    transform: translate(-103px, 5px);
+    background-color: var(--body-color-light);
+    /* min-width: 160px; */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* padding: 12px 16px; */
+    z-index: 1;
+    /* gap: 10px; */
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: grid;
+  }
+  .dropdown-content a {
+    color: black;
+    transition-duration: 0.1s;
+    background-color: var(--background-color);
+    padding: 10px;
+    text-align: center;
+  }
+
+  .dropdown-content a:hover {
+    color: black;
+    background-color: #6d6d6d;
+    padding: 10px;
+    text-align: center;
+  }
+
   .custom-cursor {
     --background-color: "black";
     --mix-blend-mode: "difference";
