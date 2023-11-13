@@ -4,7 +4,6 @@ setTimeout(() => {
     animate = false;
 }, 4000);
 
-
 export { animate }
 
 function scrollIntoView({ target }) {
@@ -16,12 +15,3 @@ el.scrollIntoView({
 }
 
 export { scrollIntoView }
-
-let light = false;
-
-function setDark(){
-  light = false
-}
-
-export { setDark }
-export { light }

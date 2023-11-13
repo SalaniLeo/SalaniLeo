@@ -8,13 +8,6 @@
   import { scrollIntoView } from "$lib/index";
 </script>
 
-<head>
-  <link
-    href="./../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
-    rel="stylesheet"
-  />
-</head>
-
 <div class="root">
   <div id="scrollview">
     <div id="Home" class="full border">
