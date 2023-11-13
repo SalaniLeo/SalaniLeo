@@ -7,7 +7,7 @@
 
 <div class="container">
   <div id="left">
-    <p class="title">Linux and web developer</p>
+    <p class="title" style="font-size: 50px;">Linux and web developer</p>
     <p class="subtitle" style="transform: translateY(-30px);">
       16 year old student at <a
         href="http://www.iiscopernico.edu.it/"
@@ -28,7 +28,7 @@
         <img
           src={matrix}
           alt="matrix"
-          width="40"
+          width="35px"
           style="cursor: pointer;"
           on:click={gotoMatrix}
         />
@@ -51,12 +51,8 @@
 <style>
   #icons {
     display: grid;
-    grid-row-gap: -20px;
     width: min-content;
-    text-align: center;
-    z-index: 100;
   }
-
   .icon {
     padding: 0px;
     margin: 0px;

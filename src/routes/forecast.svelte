@@ -11,6 +11,7 @@
     <img
       src="https://raw.githubusercontent.com/SalaniLeo/Forecast/master/data/images/app1.png"
       alt="screenshot"
+      class="screenshot"
       width="80%"
     />
     <p>Made during the summer of 2023</p>

@@ -16,15 +16,15 @@
     <img
       src={weather}
       alt="weather"
-      width="80%"
+      class="screenshot"
       style="
-    position:relative;
-    top:30px;
-    left:30px;
+    width:90%;
+    position: relative;
+    left: 2.5%;
     margin-bottom:30px;
-    border-radius: 30px;
+    border-radius: 3%;
     border-collapse: collapse;
-    border: 1px solid rgba(0, 0, 0, 0);"
+    border: 10px solid #242424;"
     />
     <p>Made during the end of october 2023</p>
   </div>

@@ -18,31 +18,39 @@
   const cx = height / 2;
   const cy = width / 2;
 
-  onMount(() => {
-    const initCursor = () => {
-      document.addEventListener("mousemove", (e) => {
-        x = e.clientX;
-        y = e.clientY;
-      });
-      const hoverables = document.querySelectorAll(".hover, .link, .button");
-      hoverables.forEach((hoverable) => {
-        hoverable.addEventListener("mouseenter", () => {
-          shape = "polygon(0% 0%, 10% 90%, 28% 55%, 70% 50%)";
-          height += 10;
-          width += 10;
-          trans = "all 0s cubic-bezier(0.28, 0.8, 0.36, 1)";
-          document.body.style.cursor = "none";
-        });
-        hoverable.addEventListener("mouseleave", () => {
-          trans = " all 0s cubic-bezier(0.28, 0.8, 0.36, 1)";
-          shape = "circle(50% at 50% 50%)";
-          height -= 10;
-          width -= 10;
-        });
-      });
-    };
+  function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+  }
 
-    initCursor();
+  onMount(() => {
+    if (!isMobile()) {
+      const initCursor = () => {
+        document.addEventListener("mousemove", (e) => {
+          x = e.clientX;
+          y = e.clientY;
+        });
+        const hoverables = document.querySelectorAll(".hover, .link, .button");
+        hoverables.forEach((hoverable) => {
+          hoverable.addEventListener("mouseenter", () => {
+            shape = "polygon(0% 0%, 10% 90%, 28% 55%, 70% 50%)";
+            height += 10;
+            width += 10;
+            trans = "all 0s cubic-bezier(0.28, 0.8, 0.36, 1)";
+            document.body.style.cursor = "none";
+          });
+          hoverable.addEventListener("mouseleave", () => {
+            trans = " all 0s cubic-bezier(0.28, 0.8, 0.36, 1)";
+            shape = "circle(50% at 50% 50%)";
+            height -= 10;
+            width -= 10;
+          });
+        });
+      };
+
+      initCursor();
+    }
   });
 </script>
 

@@ -13,10 +13,14 @@
   }
 
   .container{
-    height: 100vh;
+    height: fit-content;
     padding: 40px;
-    min-height: 700px;
     width: 50vw;
+  }
+
+  .full{
+    height: 100vh;
+    max-height: 1080px;
   }
 
   * {
@@ -57,6 +61,12 @@
   .title {
     color: var(--text-color);
     font-size: 50px;
+  }
+
+  .screenshot{
+    width: 100%;
+    position: relative;
+    left: -10px;
   }
 
   .button {
@@ -131,6 +141,25 @@
     transform: scaleX(1);
   }
 
-  @media screen and (max-width: 768px) {
-
+  @media screen and (max-width: 900px) {
+    #rightcontent {
+      display: none;
+    }
+    #scrollview {
+      width: 100vw !important;
+    }
+    .container{
+      padding: 10px;
+      padding-top: 20px;
+      width: 100vw;
+    }
+    #list {
+      display: grid;
+      color: var(--link-color);
+      position: relative;
+      left: -20px;
+    }
+    .border{
+      border-bottom: 2px solid #242424;
+    }
   }

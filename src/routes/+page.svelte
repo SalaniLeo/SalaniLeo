@@ -17,19 +17,19 @@
 
 <div class="root">
   <div id="scrollview">
-    <div id="Home">
+    <div id="Home" class="full border">
       <Home />
     </div>
-    <div id="Forecast">
+    <div id="Forecast" class="border">
       <Forecast />
     </div>
-    <div id="Weather">
+    <div id="Weather" class="border">
       <Weather />
     </div>
-    <div id="Immagini">
+    <div id="Immagini" class="border">
       <Immagini />
     </div>
-    <div id="Other">
+    <div id="Other" class="full">
       <Other />
     </div>
   </div>
@@ -67,7 +67,8 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr);
-    width: 50vw;
+    width: fit-content;
+    height: 10px;
   }
   .root {
     display: grid;
@@ -78,7 +79,8 @@
   }
   #rightcontent {
     position: fixed;
-    top: 250px;
+    top: 35%;
+    transform: translateY(-50%);
     right: 10%;
     max-width: 250px;
   }

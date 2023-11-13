@@ -13,7 +13,7 @@
       >.
     </p>
     <p>Here is a list of what I coded:</p>
-    <div id="list" style="transform: translateX(20px);">
+    <div id="list">
       <a
         class="link pr"
         href="https://github.com/SalaniLeo/weather.salanileo.dev"
@@ -48,10 +48,11 @@
   #list {
     display: grid;
     color: var(--link-color);
+    transform: translateX(20px);
   }
   .pr {
-    width: fit-content;
     font-size: 20px;
     padding: 5px;
+    width: fit-content;
   }
 </style>
