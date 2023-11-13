@@ -1,8 +1,7 @@
 <script>
   import matrix from "$lib/icons/matrix.png";
-  function gotoMatrix() {
-    window.open("https://app.element.io/#/user/@salanileo:matrix.org", "_self");
-  }
+  import linkedin from "$lib/icons/linkedin.png";
+  import github from "$lib/icons/github.png";
 </script>
 
 <div class="container">
@@ -18,21 +17,28 @@
       <a href="/projects" style="color: black;">Learn more...</a>
     </p>
     <div id="icons">
-      <a class="icon hover" href="https://www.github.com/salanileo"
-        ><i class="fa-brands fa-square-github" /></a
-      >
-      <a class="icon hover" href="https://www.linkedin.com/in/leonardo-salani/"
-        ><i class="fa-brands fa-linkedin" /></a
-      >
-      <p class="icon hover">
+      <a class="icon hover" href="https://www.github.com/salanileo">
         <img
-          src={matrix}
-          alt="matrix"
+          src={github}
+          alt="github"
           width="35px"
           style="cursor: pointer;"
-          on:click={gotoMatrix}
+        /></a
+      >
+      <a class="icon hover" href="https://www.linkedin.com/in/leonardo-salani/">
+        <img
+          src={linkedin}
+          alt="linkedin"
+          width="35px"
+          style="cursor: pointer;"
         />
-      </p>
+      </a>
+      <a
+        class="icon hover"
+        href="https://app.element.io/#/user/@salanileo:matrix.org"
+      >
+        <img src={matrix} alt="matrix" width="35px" style="cursor: pointer;" />
+      </a>
     </div>
     <div id="github-stats">
       <p>GitHub most used languages:</p>
