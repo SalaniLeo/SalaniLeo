@@ -50,7 +50,8 @@
         -20px, -40px
       );"
         alt="stats"
-        src="https://github-readme-stats.vercel.app/api/top-langs/?username=salaniLeo&text_color=ffffff&show_icons&layout=donut&hide_border=true&theme=swift&hide_title=true&bg_color=00000000&langs_count=8&hide=jupyter%20notebook,tex,css,php&exclude_repo=Pacman-AI"
+        class="icon"
+        src="https://github-readme-stats.vercel.app/api/top-langs/?username=salaniLeo&text_color=000000&show_icons&layout=donut&hide_border=true&theme=swift&hide_title=true&bg_color=00000000&langs_count=8"
       /> <br />
     </div>
   </div>
