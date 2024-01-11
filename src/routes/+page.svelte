@@ -83,7 +83,7 @@
     display: grid;
     height: 200px;
     padding: 40px;
-    background-color: var(--body-color-light);
+    background-color: var(--background-color);
   }
 
   #projects::after {
@@ -98,10 +98,10 @@
     border-radius: inherit;
     background-image: linear-gradient(
       45deg,
-      rgba(0, 0, 0, 1) 5%,
-      var(--body-color-light) 20%,
-      var(--body-color-light) 80%,
-      rgba(0, 0, 0, 1) 95%
+      var(--secondary-color) 5%,
+      var(--background-color) 20%,
+      var(--background-color) 80%,
+      var(--secondary-color) 95%
     );
   }
 

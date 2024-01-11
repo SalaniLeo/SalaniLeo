@@ -13,9 +13,11 @@
         class="link">IIS Copernico</a
       ><br />Learning Linux stuff
     </p>
-    <p class="button hover">
-      <a href="/projects" style="color: black;">Learn more...</a>
-    </p>
+    <!-- <p class="button hover">
+      <a href="/projects" style="color: var(--text-color-seondary)"
+        >Learn more...</a
+      >
+    </p> -->
     <div id="icons">
       <a class="icon hover" href="https://www.github.com/salanileo">
         <img
@@ -48,7 +50,7 @@
         -20px, -40px
       );"
         alt="stats"
-        src="https://github-readme-stats.vercel.app/api/top-langs/?username=salaniLeo&layout=donut&hide_border=true&theme=swift&hide_title=true&bg_color=00000000&langs_count=6&hide=jupyter%20notebook,tex,css,php&exclude_repo=Pacman-AI"
+        src="https://github-readme-stats.vercel.app/api/top-langs/?username=salaniLeo&text_color=ffffff&show_icons&layout=donut&hide_border=true&theme=swift&hide_title=true&bg_color=00000000&langs_count=8&hide=jupyter%20notebook,tex,css,php&exclude_repo=Pacman-AI"
       /> <br />
     </div>
   </div>
@@ -63,10 +65,10 @@
     padding: 0px;
     margin: 0px;
     font-size: 40px;
-    color: black;
+    color: var(--text-color-seondary);
   }
   p {
-    color: #2a2a2a;
+    color: var(--text-color);
   }
   .link {
     width: min-content;
@@ -74,13 +76,5 @@
   .link:hover {
     transform-origin: left;
     transform: scaleX(1);
-  }
-  .button {
-    text-align: center;
-    width: max-content;
-    height: 30px;
-    line-height: 30px;
-    transform: translateY(-30px);
-    color: #242424 !important;
   }
 </style>

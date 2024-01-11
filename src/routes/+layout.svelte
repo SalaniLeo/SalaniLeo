@@ -1,8 +1,10 @@
 <script>
   import "../app.css";
   import Background from "$lib/background.svelte";
-
+  import Modal from "../lib/Modal.svelte";
+  import "@fortawesome/fontawesome-free/css/all.min.css";
   import { onMount } from "svelte";
+  import { getCookie, setCookie, themes } from "$lib";
 
   export let color = "white";
   export let mixBlendMode = "difference";
@@ -52,6 +54,22 @@
       initCursor();
     }
   });
+  let showModal = false;
+  let currentTheme = "";
+  onMount(() => {
+    if (getCookie("theme") != "") {
+      currentTheme = getCookie("theme");
+      document.documentElement.dataset.theme == currentTheme;
+      setTheme(currentTheme, false);
+    }
+  });
+
+  const setTheme = (theme, save) => {
+    document.documentElement.dataset.theme = theme;
+    currentTheme = theme;
+    console.log(theme);
+    if (save) setCookie("theme", theme);
+  };
 </script>
 
 <div class="topbar">
@@ -69,8 +87,41 @@
 
   <div class="btncontainer">
     <a href="/about" class="button hover">about</a>
+    <div class="dropdown button hover">
+      <span>themes</span>
+      <div class="dropdown-content" style="transform: translate(-6px, 6px)">
+        {#each themes as theme, i}
+          <a href="#" on:click={() => setTheme(theme, true)}>{theme}</a><br />
+        {/each}
+      </div>
+    </div>
+    <!-- <button
+      id="settingsBtn"
+      class="button hover"
+      style="padding: 7px; !important"
+      on:click={() => (showModal = true)}
+    >
+      <i class="fa-solid fa-gear"></i>
+    </button> -->
   </div>
 </div>
+
+<!-- <Modal bind:showModal>
+  <h2 slot="header">
+    Settings <i
+      class="fa-solid fa-circle"
+      style="scale: 40%; top: 3px; position: relative;"
+    ></i>
+    <i
+      class="fa-solid fa-arrow-turn-up"
+      style="rotate: 90deg; top: 5px; position: relative; margin-left: 5px; margin-right: 5px"
+    ></i> to apply
+  </h2>
+  <div id="grid">
+    <div class="settingsGrid"></div>
+    <div class="settingsGrid"></div>
+  </div>
+</Modal> -->
 
 <div
   class="custom-cursor"
@@ -89,41 +140,6 @@
 <slot />
 
 <style>
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    transform: translate(-103px, 5px);
-    background-color: var(--body-color-light);
-    /* min-width: 160px; */
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    /* padding: 12px 16px; */
-    z-index: 1;
-    /* gap: 10px; */
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: grid;
-  }
-  .dropdown-content a {
-    color: black;
-    transition-duration: 0.1s;
-    background-color: var(--background-color);
-    padding: 10px;
-    text-align: center;
-  }
-
-  .dropdown-content a:hover {
-    color: black;
-    background-color: #6d6d6d;
-    padding: 10px;
-    text-align: center;
-  }
-
   .custom-cursor {
     --background-color: "black";
     --mix-blend-mode: "difference";
@@ -148,12 +164,12 @@
     position: fixed;
     top: 0px;
     backdrop-filter: blur(5px);
-    height: min-content;
-    background-color: #a1a1a14f;
+    max-height: 55px;
+    background-color: var(--topbar-color);
     z-index: 3;
     padding: 10px;
     width: 100%;
-    border-bottom: solid 3px black;
+    border-bottom: var(--border);
     box-sizing: border-box;
 
     /* animation-name: load;

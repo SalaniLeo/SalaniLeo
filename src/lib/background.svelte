@@ -13,7 +13,7 @@
     width: 100vw;
     position: fixed;
     top: 0px;
-    background-color: var(--body-color-light);
+    background-color: var(--body-color);
   }
 
   .border {
