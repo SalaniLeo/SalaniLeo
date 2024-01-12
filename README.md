@@ -2,6 +2,8 @@
 
 # Hi there👋
 
+<img height="50%" width="auto" src ="https://img.shields.io/badge/16yo-1D1C20?style=for-the-badge&labelColor=2A7BDE&label=age"> <br>
+
 <p>Wanna learn more about me?</p>
 <h4>Check out <a href="https://www.salanileo.dev">salanileo.dev</a></h4>
 
