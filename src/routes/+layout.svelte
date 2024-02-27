@@ -2,8 +2,15 @@
   import PageTransition from "$lib/transition.svelte";
   import type { LayoutServerData } from "./$types";
 
+  import favicon from "$lib/favicon.png";
+
   export let data: LayoutServerData;
 </script>
+
+<svelte:head>
+  <link rel="icon" type="image/svg" href={favicon} />
+  <title>SalaniLeo</title>
+</svelte:head>
 
 <div class="layout">
   <PageTransition pathname={data.pathname}>
