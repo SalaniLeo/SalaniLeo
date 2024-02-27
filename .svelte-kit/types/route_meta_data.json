@@ -1,13 +1,15 @@
 {
 	"/": [
-		"src/routes/+page.server.js",
-		"src/routes/+layout.js",
-		"src/routes/+layout.js"
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
 	],
-	"/about": [
-		"src/routes/+layout.js"
+	"/future": [
+		"src/routes/+layout.server.ts"
 	],
 	"/projects": [
-		"src/routes/+layout.js"
+		"src/routes/+layout.server.ts"
+	],
+	"/skills": [
+		"src/routes/+layout.server.ts"
 	]
 }
