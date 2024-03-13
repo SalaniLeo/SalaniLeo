@@ -2,7 +2,7 @@
   
 # Hi there👋
 
-😶‍🌫️ Age: 16YO <br>
+👦 Age: 17YO <br>
 🌍 From: Italy <br>
 ☁️ My website: <a href="https://www.salanileo.dev">salanileo.dev</a><br><br>
 ![](https://komarev.com/ghpvc/?username=salaniLeo&style=flat-square&abbreviated=true) <br>
