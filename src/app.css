@@ -2,22 +2,41 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
 :root{
-    --primary-color-base: #1b1c1a;
-    --on-primary-color-base: #3d4949;
-    --secondary-color-base: #242522;
-    --accent-color-primary: #bbccac;
-    --accent-color-secondary: #5a6254;
+    --primary-color-base: #222222;
+    --on-primary-color-base: #8b8b8b;
+    --secondary-color-base: #191919;
+    --accent-color-primary: #565656;
+    --accent-color-secondary: #999999;
     --terminal-color-primary: #141414; 
     --font-primary-color: #e5e2df;
+    --font-secondary-color: #9d9d9d;
     --font-link-color: #d9e5e4;
     --border-width-primary: 6px;
     --border-width-secondary: 2px;
 }
 
+[data-theme="light"] {
+  --primary-color-base: #e3e3e3;
+  --on-primary-color-base: #919191;
+  --secondary-color-base: #c2c2c2;
+  --accent-color-primary: #6b6b6b;
+  --accent-color-secondary: #4d4d4d;
+  --terminal-color-primary: #141414; 
+  --font-primary-color: #111111;
+  --font-secondary-color: #636363;
+  --font-link-color: #3d3d3d;
+  --border-width-primary: 6px;
+  --border-width-secondary: 2px;
+}
+
+*{
+  transition-duration: 0.25s;
+  font-family: "Josefin Sans", sans-serif;
+}
+
 body{
     background-color: var(--secondary-color-base);
     margin: 0px;
-    font-family: "Josefin Sans", sans-serif;
     color: var(--font-primary-color);
     padding-left: 10px;
     padding-right: 10px;
@@ -43,16 +62,40 @@ body{
 
 .content > #home > #top, .body-top {
     height: 130px;
-    /* border-bottom: var(--border-width-primary) solid var(--accent-color-primary); */
-
 }
+
+.content > #home > #home-body > #theme-select {
+  display: flex;
+  justify-content: right;
+}
+
+.fa-paint-roller{
+  scale: 150%;
+  color: var(--accent-color-secondary);
+}
+
 .content > #home > #home-body, .body {
     height: 100%;
     background-color: var(--primary-color-base);
     padding: 30px;
-    box-shadow: var(--accent-color-primary) 0px 0px 30px;
+    box-shadow: var(--accent-color-primary) 0px 0px 10px;
     border-radius: 20px;
     border-top: var(--border-width-primary) solid var(--accent-color-primary);
+}
+
+.themer {
+  border: none;
+  padding: 1rem;
+  background-color: var(--on-primary-color-base);
+  width: 100%;
+  height: 100%;
+  color: var(--font-link-color);
+  text-decoration: none;
+}
+
+.themer:hover {
+  background-color: var(--accent-color-primary);
+  cursor: pointer;
 }
 
 .link {

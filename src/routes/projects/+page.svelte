@@ -1,7 +1,3 @@
-<script>
-  import Background from "$lib/background.svelte";
-</script>
-
 <div id="root">
   <div class="content">
     <div class="page" id="projects">

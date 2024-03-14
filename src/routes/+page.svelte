@@ -1,5 +1,18 @@
 <script>
-  import Background from "./../lib/background.svelte";
+  import MenuItem from "./../lib/components/MenuItem.svelte";
+  import { onMount } from "svelte";
+  import { getCookie, setCookie, setTheme, getSysTheme } from "$lib";
+  import Menu from "$lib/components/Menu.svelte";
+  let currentTheme = "light";
+
+  onMount(() => {
+    if (getCookie("theme") != null) {
+      currentTheme = getCookie("theme");
+      document.documentElement.dataset.theme == currentTheme;
+      setTheme(currentTheme, false);
+    }
+  });
+
   import "../app.css";
   import pfp from "$lib/pfp.png";
 </script>
@@ -16,6 +29,26 @@
 				</div> -->
       </div>
       <div id="home-body" class="body">
+        <div id="theme-select">
+          <Menu>
+            <i slot="toggle" class="fa-solid fa-paint-roller"></i>
+            <MenuItem
+              ><button on:click={() => setTheme("light", true)} class="themer"
+                >Light</button
+              ></MenuItem
+            >
+            <MenuItem
+              ><button on:click={() => setTheme("dark", true)} class="themer"
+                >Dark</button
+              ></MenuItem
+            >
+            <MenuItem
+              ><button on:click={() => getSysTheme(true)} class="themer"
+                >System</button
+              ></MenuItem
+            >
+          </Menu>
+        </div>
         <div id="title" class="title-top">
           <h2>Leonardo Salani</h2>
         </div>

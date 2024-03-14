@@ -1,7 +1,3 @@
-<script>
-  import Background from "$lib/background.svelte";
-</script>
-
 <div id="root">
   <div class="content">
     <div id="projects">
@@ -42,13 +38,11 @@
 
 <style>
   .title {
-    /* color: var(--accent-color-primary); */
     margin-top: 30px;
   }
   .text-content {
-    color: var(--accent-color-primary);
+    color: var(--font-secondary-color);
     font-size: 17px;
-    /* line-height: 0px; */
     margin-bottom: 35px;
   }
   #top {
