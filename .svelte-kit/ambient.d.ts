@@ -51,7 +51,6 @@ declare module '$env/static/private' {
 	export const npm_config_globalconfig: string;
 	export const EDITOR: string;
 	export const PWD: string;
-	export const VCPKG_ROOT: string;
 	export const XDG_SESSION_DESKTOP: string;
 	export const LOGNAME: string;
 	export const XDG_SESSION_TYPE: string;
@@ -73,7 +72,6 @@ declare module '$env/static/private' {
 	export const npm_package_version: string;
 	export const MEMORY_PRESSURE_WATCH: string;
 	export const WAYLAND_DISPLAY: string;
-	export const VCPKG_DOWNLOADS: string;
 	export const GIT_ASKPASS: string;
 	export const INVOCATION_ID: string;
 	export const MANAGERPID: string;
@@ -178,7 +176,6 @@ declare module '$env/dynamic/private' {
 		npm_config_globalconfig: string;
 		EDITOR: string;
 		PWD: string;
-		VCPKG_ROOT: string;
 		XDG_SESSION_DESKTOP: string;
 		LOGNAME: string;
 		XDG_SESSION_TYPE: string;
@@ -200,7 +197,6 @@ declare module '$env/dynamic/private' {
 		npm_package_version: string;
 		MEMORY_PRESSURE_WATCH: string;
 		WAYLAND_DISPLAY: string;
-		VCPKG_DOWNLOADS: string;
 		GIT_ASKPASS: string;
 		INVOCATION_ID: string;
 		MANAGERPID: string;
