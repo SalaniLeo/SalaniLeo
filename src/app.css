@@ -2,29 +2,52 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
 :root{
-    --primary-color-base: #222222;
-    --on-primary-color-base: #8b8b8b;
-    --secondary-color-base: #191919;
-    --accent-color-primary: #565656;
-    --accent-color-secondary: #999999;
-    --terminal-color-primary: #141414; 
-    --font-primary-color: #e5e2df;
-    --font-secondary-color: #9d9d9d;
-    --font-link-color: #d9e5e4;
-    --border-width-primary: 6px;
-    --border-width-secondary: 2px;
+  /* Used for ui elements background. Use appropriate proportions for each one */
+  --primary-color: #191919;
+  --secondary-color: #242424;
+  --tertiary-color: #4f4f4f;
+
+  /* Used for shadows, under ui elements */
+   --shadow-color-heavy: #0a0a0aad;
+   --shadow-color-medium: #00000080;
+   --shadow-color-light: #00000042;
+
+  /* Used to refine a page colors, to give a personal touch */
+  --accent-color-primary: #494949;
+  --accent-color-secondary: #3b3b3b;
+
+    /* Used to refine a page colors, to give a personal touch */
+  --font-primary-color: #e5e2df;
+  --font-secondary-color: #9d9d9d;
+  --font-link-color: #d9e5e4;
+
+  /* Different elements may need a border, use with caution, might not look good everywhere */
+  --border-width-primary: 6px;
+  --border-width-secondary: 2px;
 }
 
 [data-theme="light"] {
-  --primary-color-base: #fafafa;
-  --on-primary-color-base: #919191;
-  --secondary-color-base: #e5e2df;
-  --accent-color-primary: #6b6b6b;
-  --accent-color-secondary: #4d4d4d;
-  --terminal-color-primary: #141414; 
+
+  /* Used for ui elements background. Use appropriate proportions for each one */
+  --primary-color: #e5e2df;
+  --secondary-color: #fefefe;
+  --tertiary-color: #565656;
+
+  /* Used for shadows, under ui elements */
+  --shadow-color-heavy: #0a0a0ace;
+  --shadow-color-medium: #00000080;
+  --shadow-color-light: #00000042;
+
+  /* Used to refine a page colors, to give a personal touch */
+  --accent-color-primary: #d9e5e4;
+  --accent-color-secondary: #c5e9e6;
+
+  /* Font colors, different types of text need different colors */
   --font-primary-color: #111111;
   --font-secondary-color: #636363;
   --font-link-color: #3d3d3d;
+
+  /* Different elements may need a border, use with caution, might not look good everywhere */
   --border-width-primary: 6px;
   --border-width-secondary: 2px;
 }
@@ -35,7 +58,7 @@
 }
 
 body{
-    background-color: var(--secondary-color-base);
+    background-color: var(--primary-color);
     margin: 0px;
     color: var(--font-primary-color);
     padding-left: 10px;
@@ -50,7 +73,7 @@ body{
     width: 25%;
     max-width: 200px;
     border-radius: 50%;
-    border: var(--border-width-primary) solid var(--accent-color-primary);
+    border: var(--border-width-primary) solid var(--tertiary-color);
 }
 
 .content > #home {
@@ -76,11 +99,11 @@ body{
 
 .content > #home > #home-body, .body {
     height: 100%;
-    background-color: var(--primary-color-base);
+    background-color: var(--secondary-color);
     padding: 30px;
-    box-shadow: var(--accent-color-primary) 0px 0px 10px;
+    box-shadow: var(--shadow-color-medium) 0px 0px 10px;
     border-radius: 20px;
-    border-top: var(--border-width-primary) solid var(--accent-color-primary);
+    border-top: var(--border-width-primary) solid var(--tertiary-color);
 }
 
 .themer {
@@ -97,7 +120,7 @@ body{
 }
 
 .more-arrow {
-    color: var(--accent-color-primary);
+    color: var(--tertiary-color);
     transition-duration: 0.25s;
 }
 
@@ -150,59 +173,6 @@ body{
     width: 30%;
     padding: 20px;
     font-size: larger;
-}
-
-#loader{
-
-    color: rgba(0, 0, 0, 0);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    animation: startbounce 1s 0.25s forwards, enlarge 1s 1.25s forwards ease-out;
-
-    left: 50%;
-    top: 50%;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--accent-color-primary);
-}
-
-@keyframes startbounce {
-    0%{
-
-    }
-    50%{
-        transform: translateY(-100px);
-    }
-    100%{
-        transform: translateY(00px);
-    }
-}
-
-@keyframes enlarge {
-    0%{
-
-    }
-    50%{
-        transform: translateY(100px);
-    }
-    100%{
-        border-radius: 0%;
-        left: 0%;
-        top: 0%;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-    }
-}
-
-@keyframes appear {
-    100%{
-        opacity: 1;
-    }
 }
 
 @media screen and (max-width: 890px) {
