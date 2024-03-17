@@ -16,9 +16,9 @@
 }
 
 [data-theme="light"] {
-  --primary-color-base: #e3e3e3;
+  --primary-color-base: #fafafa;
   --on-primary-color-base: #919191;
-  --secondary-color-base: #c2c2c2;
+  --secondary-color-base: #e5e2df;
   --accent-color-primary: #6b6b6b;
   --accent-color-secondary: #4d4d4d;
   --terminal-color-primary: #141414; 
@@ -84,17 +84,10 @@ body{
 }
 
 .themer {
-  border: none;
-  padding: 1rem;
-  background-color: var(--on-primary-color-base);
-  width: 100%;
-  height: 100%;
-  color: var(--font-link-color);
-  text-decoration: none;
-}
-
-.themer:hover {
-  background-color: var(--accent-color-primary);
+  scale: 115%;
+  display: flex;
+  align-items: center;
+  width: 20px;
   cursor: pointer;
 }
 

@@ -31,6 +31,7 @@ declare module '$env/static/private' {
 	export const LSCOLORS: string;
 	export const SESSION_MANAGER: string;
 	export const USER_ZDOTDIR: string;
+	export const NVM_RC_VERSION: string;
 	export const npm_config_userconfig: string;
 	export const COLORTERM: string;
 	export const __GL_SYNC_DISPLAY_DEVICE: string;
@@ -79,6 +80,7 @@ declare module '$env/static/private' {
 	export const CHROME_DESKTOP: string;
 	export const npm_lifecycle_script: string;
 	export const GJS_DEBUG_OUTPUT: string;
+	export const NVM_DIR: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const GNOME_SETUP_DISPLAY: string;
 	export const npm_config_npm_version: string;
@@ -93,6 +95,7 @@ declare module '$env/static/private' {
 	export const DISPLAY: string;
 	export const npm_lifecycle_event: string;
 	export const SHLVL: string;
+	export const NVM_CD_FLAGS: string;
 	export const MOZ_ENABLE_WAYLAND: string;
 	export const PAGER: string;
 	export const LC_TELEPHONE: string;
@@ -156,6 +159,7 @@ declare module '$env/dynamic/private' {
 		LSCOLORS: string;
 		SESSION_MANAGER: string;
 		USER_ZDOTDIR: string;
+		NVM_RC_VERSION: string;
 		npm_config_userconfig: string;
 		COLORTERM: string;
 		__GL_SYNC_DISPLAY_DEVICE: string;
@@ -204,6 +208,7 @@ declare module '$env/dynamic/private' {
 		CHROME_DESKTOP: string;
 		npm_lifecycle_script: string;
 		GJS_DEBUG_OUTPUT: string;
+		NVM_DIR: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		GNOME_SETUP_DISPLAY: string;
 		npm_config_npm_version: string;
@@ -218,6 +223,7 @@ declare module '$env/dynamic/private' {
 		DISPLAY: string;
 		npm_lifecycle_event: string;
 		SHLVL: string;
+		NVM_CD_FLAGS: string;
 		MOZ_ENABLE_WAYLAND: string;
 		PAGER: string;
 		LC_TELEPHONE: string;
