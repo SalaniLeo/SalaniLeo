@@ -5,7 +5,7 @@ let currentTheme = "light";
 
 // @ts-ignore
 function setCookie(name, args){
-	Cookies.set(name, args, { expires: 365, domain: 'salanileo.dev'})
+	Cookies.set(name, args, { expires: 365, domain: '.salanileo.dev'})
 }
 
 // @ts-ignore
