@@ -19,7 +19,7 @@
               the website you are on!
             </p>
             <p>
-              ⛅ <a class="link" href="https://github.com/SalaniLeo/Forecast"
+              ⛅ <a class="link" href="https://forecast.salanileo.dev"
                 >Forecast</a
               >, a Linux weather app made with LibAwdaita in python.
             </p>
