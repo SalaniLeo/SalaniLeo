@@ -1,20 +1,15 @@
 <script>
-  import { getTheme, setTheme, currentTheme } from "$lib";
+  import { setTheme, currentTheme } from "$lib";
 
   import "../app.css";
   import pfp from "$lib/pfp.png";
 </script>
 
 <div id="root">
-  <!-- <Loader></Loader> -->
-  <!-- <nav class="navbar"><p>a</p></nav> -->
   <div class="content">
     <div class="page" id="home">
       <div id="top">
         <img src={pfp} alt="me" id="pfp" />
-        <!-- <div id="terminal">
-					<p>{terminal_name}</p>
-				</div> -->
       </div>
       <div id="home-body" class="body">
         <div id="theme-select">
@@ -39,7 +34,13 @@
               <p>🌍 From Ferrara, Italy</p>
               <p>👦 17 Year old</p>
               <p>🏫 Student at IIS Copernico</p>
-              <p>🐧 Microsoft is shit</p>
+              <p>
+                <i class="fa-brands fa-linux" style="color: #ffffff;"></i> I use
+                arch btw
+                <a class="link" href="https://github.com/salanileo/dotfiles"
+                  >(dotfiles)</a
+                >
+              </p>
             </div>
             <div id="projects">
               <div id="title">

@@ -52,7 +52,7 @@
   --border-width-secondary: 2px;
 }
 
-*{
+* {
   transition-duration: 0.25s;
   font-family: "Josefin Sans", sans-serif;
 }
@@ -73,7 +73,7 @@ body{
     width: 25%;
     max-width: 200px;
     border-radius: 50%;
-    border: var(--border-width-primary) solid var(--tertiary-color);
+    border: var(--border-width-primary) solid var(--accent-color-secondary);
 }
 
 .content > #home {
@@ -103,7 +103,7 @@ body{
     padding: 30px;
     box-shadow: var(--shadow-color-medium) 0px 0px 10px;
     border-radius: 20px;
-    border-top: var(--border-width-primary) solid var(--tertiary-color);
+    border-top: var(--border-width-primary) solid var(--accent-color-secondary);
 }
 
 .themer {
@@ -121,7 +121,7 @@ body{
 
 .more-arrow {
     color: var(--tertiary-color);
-    transition-duration: 0.25s;
+    /* transition-duration: 0.25s; */
 }
 
 #content{

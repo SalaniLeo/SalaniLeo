@@ -24,7 +24,7 @@
             />
             I know quite well how Linux works, given that it has been more that 2
             years from when I first started using it, and I also use PostmarketOS
-            in my second phone.
+            on my second phone.
           </p>
           <p class="title">Linux:</p>
           <p class="text-content">Fedora, Ubuntu, Arch, Termux</p>
