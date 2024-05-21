@@ -21,7 +21,7 @@
             <p>
               ⛅ <a class="link" href="https://forecast.salanileo.dev"
                 >Forecast</a
-              >, a Linux weather app made with LibAwdaita in python.
+              >, a Linux weather app made with LibAdwaita in python.
             </p>
             <p>
               ⛅ <a class="link" href="https://weather.salanileo.dev">Weathy</a
