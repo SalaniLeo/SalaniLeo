@@ -69,13 +69,11 @@
               </div>
               <div id="title">
                 <h2>
-                  <a href="/future" class="link"
-                    >What will I learn in the future?</a
-                  >
+                  <a href="/now" class="link">What am I doing now?</a>
                   <span class="fa-solid fa-chevron-right more-arrow"></span>
                 </h2>
               </div>
-              <div id="subtitle"><p>Rust, TypeScript, Kotlin</p></div>
+              <div id="subtitle"><p>Learning stuff...</p></div>
             </div>
           </div>
         </div>

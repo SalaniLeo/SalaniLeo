@@ -10,17 +10,19 @@
       </div>
       <div id="projects-body" class="body">
         <div id="title">
-          <h2>What will I learn in the future?</h2>
+          <h2>What am I doing now?</h2>
         </div>
         <div id="content">
           <p>
-            Well, I want to mainly focus on web development, and learn even more
-            about Linux. <br /> I don't currently know what I will do for work, but
-            I would like to work as Linux or web developer.
+            Well, I've been rewriting apps I've published last year, which btw
+            sucked. Now I know how to code, and I decided to revive at least one
+            of them.<br />Aside from that I'm learning back end development,
+            with flask, django and postgresql. I also want to learn rust, to
+            maybe contribute to the cosmic DE.
           </p>
           <p>
-            As for languages, I 100% am going to learn Kotlin, TypeScript and
-            Rust.
+            Said that, I want to learn Rust, kotlin and some day in the future
+            when I have the money get into robotics.
           </p>
         </div>
       </div>
