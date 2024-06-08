@@ -25,7 +25,7 @@ export const handle = async({event, resolve}) => {
             theme = currentTheme
         }
 
-        return html.replace(`data-theme=""`, `data-theme="light"`);
+        return html.replace(`data-theme=""`, `data-theme="${themes[Math.floor(Math.random()*13)]}"`);
       }
     });
     return response;
