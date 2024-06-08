@@ -1,4 +1,4 @@
-const themes = ["dark" ,
+const themes = ["dark",
     "summer", 
     "winter", 
     "light", 
@@ -11,22 +11,19 @@ const themes = ["dark" ,
     "galaxy", 
     "sunset", 
     "forest"
-]
+];
 
-let theme = themes[Math.floor(Math.random()*13)];
+export const handle = async ({ event, resolve }) => {
+    const currentTheme = event.cookies.get("theme");
+    const useRandom = event.cookies.get("useRandomTheme");
+    
+    let theme = useRandom === "true" ? themes[Math.floor(Math.random() * themes.length)] : currentTheme;
 
-export const handle = async({event, resolve}) => {
     const response = await resolve(event, {
-      transformPageChunk: ({html}) => {
-        let currentTheme = event.cookies.get("theme");
-        let useRandom = event.cookies.get("useRandomTheme");
-
-        if (useRandom !== "true") {
-            theme = currentTheme
+        transformPageChunk: ({ html }) => {
+            return html.replace(`data-theme=""`, `data-theme="${theme}"`);
         }
-
-        return html.replace(`data-theme=""`, `data-theme="${themes[Math.floor(Math.random()*13)]}"`);
-      }
     });
+
     return response;
-}
+};
