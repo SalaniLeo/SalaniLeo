@@ -13,7 +13,7 @@ const themes = ["dark" ,
     "forest"
 ]
 
-let theme;
+let theme = themes[Math.floor(Math.random()*13)];
 
 export const handle = async({event, resolve}) => {
     const response = await resolve(event, {
@@ -21,9 +21,7 @@ export const handle = async({event, resolve}) => {
         let currentTheme = event.cookies.get("theme");
         let useRandom = event.cookies.get("useRandomTheme");
 
-        if (useRandom === "true") {
-            theme = "ocean"
-        } else {
+        if (useRandom !== "true") {
             theme = currentTheme
         }
 
