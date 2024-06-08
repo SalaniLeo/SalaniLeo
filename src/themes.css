@@ -1,0 +1,327 @@
+:root{
+    /* Used for ui elements background. Use appropriate proportions for each one */
+    --primary-color: #191919;
+    --secondary-color: #242424;
+    --tertiary-color: #4f4f4f;
+  
+    /* Used for shadows, under ui elements */
+     --shadow-color-heavy: #0a0a0aad;
+     --shadow-color-medium: #00000080;
+     --shadow-color-light: #00000042;
+  
+    /* Used to refine a page colors, to give a personal touch */
+    --accent-color-primary: #494949;
+    --accent-color-secondary: #3b3b3b;
+  
+      /* Used to refine a page colors, to give a personal touch */
+    --font-primary-color: #e5e2df;
+    --font-secondary-color: #9d9d9d;
+    --font-link-color: #d9e5e4;
+  
+    /* Different elements may need a border, use with caution, might not look good everywhere */
+    --border-width-primary: 6px;
+    --border-width-secondary: 2px;
+  }
+  
+  [data-theme="light"] {
+  
+    /* Used for ui elements background. Use appropriate proportions for each one */
+    --primary-color: #e5e2df;
+    --secondary-color: #fefefe;
+    --tertiary-color: #565656;
+  
+    /* Used for shadows, under ui elements */
+    --shadow-color-heavy: #0a0a0ace;
+    --shadow-color-medium: #00000080;
+    --shadow-color-light: #00000042;
+  
+    /* Used to refine a page colors, to give a personal touch */
+    --accent-color-primary: #d9e5e4;
+    --accent-color-secondary: #c5e9e6;
+  
+    /* Font colors, different types of text need different colors */
+    --font-primary-color: #111111;
+    --font-secondary-color: #636363;
+    --font-link-color: #3d3d3d;
+  
+    /* Different elements may need a border, use with caution, might not look good everywhere */
+    --border-width-primary: 6px;
+    --border-width-secondary: 2px;
+  }
+  
+  [data-theme="winter"] {
+  
+    /* Used for ui elements background. Use appropriate proportions for each one */
+    --primary-color: #aed2d5;
+    --secondary-color: #a4a9d3;
+    --tertiary-color: #1b77a5;
+  
+    /* Used for shadows, under ui elements */
+    --shadow-color-heavy: #0a0a0ace;
+    --shadow-color-medium: #00000080;
+    --shadow-color-light: #00000042;
+  
+    /* Used to refine a page colors, to give a personal touch */
+    --accent-color-primary: #d9e5e4;
+    --accent-color-secondary: var(--tertiary-color);
+  
+    /* Font colors, different types of text need different colors */
+    --font-primary-color: #111111;
+    --font-secondary-color: #636363;
+    --font-link-color: #3d3d3d;
+  
+    /* Different elements may need a border, use with caution, might not look good everywhere */
+    --border-width-primary: 6px;
+    --border-width-secondary: 2px;
+  }
+  
+  [data-theme="summer"] {
+  
+    /* Used for ui elements background. Use appropriate proportions for each one */
+    --primary-color: #dac08d;
+    --secondary-color: #f8e2c5;
+    --tertiary-color: #c68735;
+  
+    /* Used for shadows, under ui elements */
+    --shadow-color-heavy: #0a0a0ace;
+    --shadow-color-medium: #00000080;
+    --shadow-color-light: #00000042;
+  
+    /* Used to refine a page colors, to give a personal touch */
+    --accent-color-primary: #d9e5e4;
+    --accent-color-secondary: var(--tertiary-color);
+  
+    /* Font colors, different types of text need different colors */
+    --font-primary-color: #111111;
+    --font-secondary-color: #636363;
+    --font-link-color: #3d3d3d;
+  
+    /* Different elements may need a border, use with caution, might not look good everywhere */
+    --border-width-primary: 6px;
+    --border-width-secondary: 2px;
+  }
+  
+  [data-theme="spring"] {
+  
+    /* Used for ui elements background. Use appropriate proportions for each one */
+    --primary-color: #f5f4f0;
+    --secondary-color: #3b98b7;
+    --tertiary-color: #b03636;
+  
+    /* Used for shadows, under ui elements */
+    --shadow-color-heavy: #0a0a0ace;
+    --shadow-color-medium: #00000080;
+    --shadow-color-light: #00000042;
+  
+    /* Used to refine a page colors, to give a personal touch */
+    --accent-color-primary: #d9e5e4;
+    --accent-color-secondary: var(--tertiary-color);
+  
+    /* Font colors, different types of text need different colors */
+    --font-primary-color: #111111;
+    --font-secondary-color: #636363;
+    --font-link-color: #3d3d3d;
+  
+    /* Different elements may need a border, use with caution, might not look good everywhere */
+    --border-width-primary: 6px;
+    --border-width-secondary: 2px;
+  }
+  
+  [data-theme="fall"] {
+  
+    /* Used for ui elements background. Use appropriate proportions for each one */
+    --primary-color: #7ED7C1;
+    --secondary-color: #F0DBAF;
+    --tertiary-color: #b03636;
+  
+    /* Used for shadows, under ui elements */
+    --shadow-color-heavy: #0a0a0ace;
+    --shadow-color-medium: #00000080;
+    --shadow-color-light: #00000042;
+  
+    /* Used to refine a page colors, to give a personal touch */
+    --accent-color-primary: #d9e5e4;
+    --accent-color-secondary: var(--tertiary-color);
+  
+    /* Font colors, different types of text need different colors */
+    --font-primary-color: #111111;
+    --font-secondary-color: #636363;
+    --font-link-color: #3d3d3d;
+  
+    /* Different elements may need a border, use with caution, might not look good everywhere */
+    --border-width-primary: 6px;
+    --border-width-secondary: 2px;
+  }
+  
+  [data-theme="candycane"] {
+  
+    /* Used for ui elements background. Use appropriate proportions for each one */
+    --primary-color: #ffffff;
+    --secondary-color: #fcd88c;
+    --tertiary-color: #ff0000;
+  
+    /* Used for shadows, under ui elements */
+    --shadow-color-heavy: #0a0a0ace;
+    --shadow-color-medium: #00000080;
+    --shadow-color-light: #00000042;
+  
+    /* Used to refine a page colors, to give a personal touch */
+    --accent-color-primary: #d9e5e4;
+    --accent-color-secondary: var(--tertiary-color);
+  
+    /* Font colors, different types of text need different colors */
+    --font-primary-color: #111111;
+    --font-secondary-color: #636363;
+    --font-link-color: #3d3d3d;
+  
+    /* Different elements may need a border, use with caution, might not look good everywhere */
+    --border-width-primary: 6px;
+    --border-width-secondary: 2px;
+  }
+  
+  [data-theme="choco"] {
+  
+    /* Used for ui elements background. Use appropriate proportions for each one */
+    --primary-color: #a78b60;
+    --secondary-color: #88694d;
+    --tertiary-color: #44322a;
+  
+    /* Used for shadows, under ui elements */
+    --shadow-color-heavy: #0a0a0ace;
+    --shadow-color-medium: #00000080;
+    --shadow-color-light: #00000042;
+  
+    /* Used to refine a page colors, to give a personal touch */
+    --accent-color-primary: #d9e5e4;
+    --accent-color-secondary: var(--tertiary-color);
+  
+    /* Font colors, different types of text need different colors */
+    --font-primary-color: #111111;
+    --font-secondary-color: #636363;
+    --font-link-color: #270c00;
+  
+    /* Different elements may need a border, use with caution, might not look good everywhere */
+    --border-width-primary: 6px;
+    --border-width-secondary: 2px;
+  }
+  [data-theme="ocean"] {
+    /* Used for ui elements background. Use appropriate proportions for each one */
+    --primary-color: #013a63;
+    --secondary-color: #014f86;
+    --tertiary-color: #0369a1;
+  
+    /* Used for shadows, under ui elements */
+    --shadow-color-heavy: #0a0a0ace;
+    --shadow-color-medium: #00000080;
+    --shadow-color-light: #00000042;
+  
+    /* Used to refine a page colors, to give a personal touch */
+    --accent-color-primary: #5ca4a9;
+    --accent-color-secondary: #a9def9;
+  
+    /* Font colors, different types of text need different colors */
+    --font-primary-color: #f0f8ff;
+    --font-secondary-color: #b0c4de;
+    --font-link-color: #e0f7fa;
+  
+    /* Different elements may need a border, use with caution, might not look good everywhere */
+    --border-width-primary: 6px;
+    --border-width-secondary: 2px;
+  }
+  [data-theme="forest"] {
+    /* Used for ui elements background. Use appropriate proportions for each one */
+    --primary-color: #2e8b57;
+    --secondary-color: #3cb371;
+    --tertiary-color: #228b22;
+  
+    /* Used for shadows, under ui elements */
+    --shadow-color-heavy: #0a0a0ace;
+    --shadow-color-medium: #00000080;
+    --shadow-color-light: #00000042;
+  
+    /* Used to refine a page colors, to give a personal touch */
+    --accent-color-primary: #8fbc8f;
+    --accent-color-secondary: #98fb98;
+  
+    /* Font colors, different types of text need different colors */
+    --font-primary-color: #f5fffa;
+    --font-secondary-color: #90ee90;
+    --font-link-color: #d0f0c0;
+  
+    /* Different elements may need a border, use with caution, might not look good everywhere */
+    --border-width-primary: 6px;
+    --border-width-secondary: 2px;
+  }
+  [data-theme="sunset"] {
+    /* Used for ui elements background. Use appropriate proportions for each one */
+    --primary-color: #ff4500;
+    --secondary-color: #ff6347;
+    --tertiary-color: #ff7f50;
+  
+    /* Used for shadows, under ui elements */
+    --shadow-color-heavy: #0a0a0ace;
+    --shadow-color-medium: #00000080;
+    --shadow-color-light: #00000042;
+  
+    /* Used to refine a page colors, to give a personal touch */
+    --accent-color-primary: #ffa07a;
+    --accent-color-secondary: #f4a460;
+  
+    /* Font colors, different types of text need different colors */
+    --font-primary-color: #fff5ee;
+    --font-secondary-color: #ffdab9;
+    --font-link-color: #ffdead;
+  
+    /* Different elements may need a border, use with caution, might not look good everywhere */
+    --border-width-primary: 6px;
+    --border-width-secondary: 2px;
+  }
+  [data-theme="galaxy"] {
+    /* Used for ui elements background. Use appropriate proportions for each one */
+    --primary-color: #0b3d91;
+    --secondary-color: #1c1c6b;
+    --tertiary-color: #4b0082;
+  
+    /* Used for shadows, under ui elements */
+    --shadow-color-heavy: #0a0a0ace;
+    --shadow-color-medium: #00000080;
+    --shadow-color-light: #00000042;
+  
+    /* Used to refine a page colors, to give a personal touch */
+    --accent-color-primary: #8a2be2;
+    --accent-color-secondary: #483d8b;
+  
+    /* Font colors, different types of text need different colors */
+    --font-primary-color: #f8f8ff;
+    --font-secondary-color: #dcdcdc;
+    --font-link-color: #e6e6fa;
+  
+    /* Different elements may need a border, use with caution, might not look good everywhere */
+    --border-width-primary: 6px;
+    --border-width-secondary: 2px;
+  }
+  [data-theme="retro"] {
+    /* Used for ui elements background. Use appropriate proportions for each one */
+    --primary-color: #f4c542;
+    --secondary-color: #ff6f61;
+    --tertiary-color: #7d3c98;
+  
+    /* Used for shadows, under ui elements */
+    --shadow-color-heavy: #0a0a0ace;
+    --shadow-color-medium: #00000080;
+    --shadow-color-light: #00000042;
+  
+    /* Used to refine a page colors, to give a personal touch */
+    --accent-color-primary: #ffb400;
+    --accent-color-secondary: #ff6347;
+  
+    /* Font colors, different types of text need different colors */
+    --font-primary-color: #000000;
+    --font-secondary-color: #666666;
+    --font-link-color: #e6e6fa;
+  
+    /* Different elements may need a border, use with caution, might not look good everywhere */
+    --border-width-primary: 6px;
+    --border-width-secondary: 2px;
+  }
+  

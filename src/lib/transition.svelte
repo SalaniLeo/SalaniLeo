@@ -5,8 +5,8 @@
 
 {#key pathname}
   <div
-    in:fly={{ x: 25, duration: 500, delay: 500 }}
-    out:fly={{ x: 25, duration: 500 }}
+    in:fly={{ x: 0, duration: 400, delay: 400 }}
+    out:fly={{ x: 0, duration: 400 }}
   >
     <slot />
   </div>

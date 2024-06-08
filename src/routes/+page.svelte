@@ -1,5 +1,19 @@
 <script>
-  import { setTheme, currentTheme } from "$lib";
+  // @ts-nocheck
+
+  import {
+    setTheme,
+    currentTheme,
+    toggleRandomTheme,
+    randomTheme,
+    setRandomTheme,
+  } from "$lib";
+
+  let random = true;
+
+  randomTheme.subscribe((bool) => {
+    random = bool;
+  });
 
   import "../app.css";
   import pfp from "$lib/pfp.png";
@@ -13,16 +27,46 @@
       </div>
       <div id="home-body" class="body">
         <div id="theme-select">
-          {#if $currentTheme == "dark"}
-            <i
-              class="fa-regular fa-sun themer"
-              on:click={() => setTheme("light", true)}
-            ></i>
+          <div id="random-select">
+            {#if $randomTheme}
+              <small>Random</small>
+            {:else}
+              <small>Try Random!</small>
+            {/if}
+            <label class="switch">
+              {#if $randomTheme}
+                <input type="checkbox" checked on:click={toggleRandomTheme} />
+                <span class="slider round"></span>
+              {:else}
+                <input type="checkbox" on:click={toggleRandomTheme} />
+                <span class="slider round"></span>
+              {/if}
+            </label>
+          </div>
+          <!-- svelte-ignore a11y-no-static-element-interactions -->
+          <!-- svelte-ignore a11y-click-events-have-key-events -->
+          {#if random}
+            <div class="switcher">
+              <button class="theme-switcher" on:click={setRandomTheme}
+                ><i class="fa-solid fa-bolt"></i></button
+              >
+            </div>
           {:else}
-            <i
-              class="fa-regular fa-moon themer"
-              on:click={() => setTheme("dark", true)}
-            ></i>
+            <div class="switcher">
+              {#if $currentTheme == "dark"}
+                <button
+                  class="theme-switcher"
+                  on:click={() => setTheme("light", true)}
+                  ><i class="fa-regular fa-sun"></i></button
+                >
+              {:else}
+                <button
+                  class="theme-switcher"
+                  on:click={() => setTheme("dark", true)}
+                  ><i class="fa-regular fa-moon"></i></button
+                >
+              {/if}
+            </div>
           {/if}
         </div>
         <div id="title" class="title-top">
@@ -65,7 +109,7 @@
                 </h2>
               </div>
               <div id="subtitle">
-                <p>Python, Java, C, JavaScript, Bash, CSS, HTML</p>
+                <p>JavaScript, TypeScript, HTML, CSS, Python, Java, C, Bash</p>
               </div>
               <div id="title">
                 <h2>
