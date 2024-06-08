@@ -25,7 +25,7 @@ export const handle = async({event, resolve}) => {
             theme = currentTheme
         }
 
-        return html.replace(`data-theme=""`, `data-theme="${theme}"`);
+        return html.replace(`data-theme=""`, `data-theme="light"`);
       }
     });
     return response;
