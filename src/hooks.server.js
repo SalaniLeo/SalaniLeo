@@ -1,6 +1,6 @@
 import { themes } from '$lib';
 
-let theme: string | undefined
+let theme;
 
 export const handle = async({event, resolve}) => {
     const response = await resolve(event, {
