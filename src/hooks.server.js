@@ -22,7 +22,7 @@ export const handle = async({event, resolve}) => {
         let useRandom = event.cookies.get("useRandomTheme");
 
         if (useRandom === "true") {
-            theme = themes[Math.floor(Math.random()*13)]
+            theme = "ocean"
         } else {
             theme = currentTheme
         }
