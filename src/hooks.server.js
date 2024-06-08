@@ -21,7 +21,7 @@ export const handle = async ({ event, resolve }) => {
 
     const response = await resolve(event, {
         transformPageChunk: ({ html }) => {
-            return html.replace(`data-theme=""`, `data-theme="${theme}"`);
+            return html.replace(`data-theme=""`, `data-theme="${themes[0]}"`);
         }
     });
 
