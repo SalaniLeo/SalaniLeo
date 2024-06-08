@@ -1,4 +1,17 @@
-import { themes } from '$lib';
+const themes = ["dark" ,
+    "summer", 
+    "winter", 
+    "light", 
+    "spring", 
+    "fall", 
+    "candycane", 
+    "choco", 
+    "ocean", 
+    "retro", 
+    "galaxy", 
+    "sunset", 
+    "forest"
+]
 
 let theme;
 

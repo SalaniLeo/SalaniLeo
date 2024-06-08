@@ -9,9 +9,7 @@ const initialTheme = Cookies.get('theme');
 export const randomTheme = writable(initialRandomTheme);
 export const currentTheme = writable(initialTheme);
 
-export const themes = 
-
-["dark" ,
+const themes = ["dark" ,
     "summer", 
     "winter", 
     "light", 

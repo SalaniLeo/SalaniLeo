@@ -2,7 +2,7 @@
   import PageTransition from "$lib/transition.svelte";
   import type { LayoutServerData } from "./$types";
   import favicon from "$lib/pfp.png";
-
+  import { inject } from '@vercel/analytics'
   export let data: LayoutServerData;
 </script>
 
