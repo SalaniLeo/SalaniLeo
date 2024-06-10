@@ -1,6 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import "@fortawesome/fontawesome-free/css/all.min.css";
-@import url('themes.css');
+
+:root{
+  /* Used for ui elements background. Use appropriate proportions for each one */
+  --primary-color: #191919;
+  --secondary-color: #242424;
+  --tertiary-color: #4f4f4f;
+
+  /* Used for shadows, under ui elements */
+   --shadow-color-heavy: #0a0a0aad;
+   --shadow-color-medium: #00000080;
+   --shadow-color-light: #00000042;
+
+  /* Used to refine a page colors, to give a personal touch */
+  --accent-color-primary: #494949;
+  --accent-color-secondary: #3b3b3b;
+
+    /* Used to refine a page colors, to give a personal touch */
+  --font-primary-color: #e5e2df;
+  --font-secondary-color: #9d9d9d;
+  --font-link-color: #d9e5e4;
+
+  /* Different elements may need a border, use with caution, might not look good everywhere */
+  --border-width-primary: 6px;
+  --border-width-secondary: 2px;
+}
+
+[data-theme="light"] {
+
+  /* Used for ui elements background. Use appropriate proportions for each one */
+  --primary-color: #e5e2df;
+  --secondary-color: #fefefe;
+  --tertiary-color: #565656;
+
+  /* Used for shadows, under ui elements */
+  --shadow-color-heavy: #0a0a0ace;
+  --shadow-color-medium: #00000080;
+  --shadow-color-light: #00000042;
+
+  /* Used to refine a page colors, to give a personal touch */
+  --accent-color-primary: #d9e5e4;
+  --accent-color-secondary: #c5e9e6;
+
+  /* Font colors, different types of text need different colors */
+  --font-primary-color: #111111;
+  --font-secondary-color: #636363;
+  --font-link-color: #3d3d3d;
+
+  /* Different elements may need a border, use with caution, might not look good everywhere */
+  --border-width-primary: 6px;
+  --border-width-secondary: 2px;
+}
 
 * {
   transition-duration: 0.25s;
@@ -39,24 +89,7 @@ body{
 
 .content > #home > #home-body > #theme-select {
   display: flex;
-  gap: 20px;
-  align-items: center;
   justify-content: right;
-  height: 25px;
-}
-
-.content > #home > #home-body > #theme-select > #random-select {
-  display: flex;
-  gap: 10px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.switcher {
-  display: flex;
-  align-items: center;
-  width: 25px;
 }
 
 .fa-paint-roller{
@@ -75,7 +108,10 @@ body{
 
 .themer {
   scale: 115%;
+  display: flex;
+  align-items: center;
   width: 20px;
+  cursor: pointer;
 }
 
 .link {
@@ -124,110 +160,19 @@ body{
 }
 
 #content > #right {
-  padding-top: 25px;
+  padding-top: 100px;
 }
 
 #content > #right > #languages {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#content > #right > #languages > #subtitle{
-    text-align: center;
-    max-width: 75%;
-}
-
-#content > #right > #subtitle {
-  width: 200px;
-  outline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #languages > #langs {
     width: 30%;
     padding: 20px;
     font-size: larger;
-}
-
- .switch {
-  position: relative;
-  display: inline-block;
-  width: 34px;
-  height: 17.5px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--primary-color);
-  -webkit-transition: .2s;
-  transition: .2s;
-  outline: solid 2px var(--font-primary-color);
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 14px;
-  width: 14px;
-  left: 2px;
-  bottom: 1.75px;
-  background-color: var(--font-primary-color);
-  -webkit-transition: .2s;
-  transition: .2s;
-}
-
-input:checked + .slider {
-  background-color: rgba(0, 0, 0, 0);
-  outline: solid 2px var(--font-primary-color);
-}
-
-input:focus + .slider {
-  background-color: var(--accent-color-secondary);
-  outline: solid 2px var(--font-primary-color);
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(16px);
-  -ms-transform: translateX(16px);
-  transform: translateX(16px);
-}
-
-.slider.round {
-  border-radius: 50px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-.theme-switcher {
-  cursor: pointer;
-  border-radius: 5px;
-  width: 25px;
-  height: 25px;
-  background-color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-  color: var(--font-primary-color-color);
-  border: none;
-  box-shadow: 2px 2px 2px var(--tertiary-color);
-  align-items: center;
-}
-
-.theme-switcher:active {
-  box-shadow: 0px 0px 0px var(--tertiary-color);
 }
 
 @media screen and (max-width: 890px) {
