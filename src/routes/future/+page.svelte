@@ -10,20 +10,18 @@
       </div>
       <div id="projects-body" class="body">
         <div id="title">
-          <h2>What am I doing now?</h2>
+          <h3>What am I doing now?</h3>
         </div>
         <div id="content">
-          <p>
-            Well, I've been rewriting apps I've published last year, which btw
-            sucked. Now I know how to code, and I decided to revive at least one
-            of them.<br />Aside from that I'm learning back end development,
-            with flask, django and postgresql. I also want to learn rust, to
-            maybe contribute to the cosmic DE.
-          </p>
-          <p>
-            Said that, I want to learn Rust, kotlin and some day in the future
-            when I have the money get into robotics.
-          </p>
+          <p>Now I'm learning backend web development with flask, docker and kubernetes. I'm also improving my sveltekit knowledge, 
+            thanks to coding a social media like website.</p>
+        </div>
+        <div id="title">
+          <h3>What are my plans for the future?</h3>
+        </div>
+        <div id="content">
+          <p>For the near future I want to create my portfolio website, to then focus on finishing high school and go to university. 
+            I'm already searching for coding jobs, mainly part time so that I can still study while working.</p>
         </div>
       </div>
     </div>

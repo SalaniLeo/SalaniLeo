@@ -10,7 +10,7 @@
       </div>
       <div id="projects-body" class="body">
         <div id="title">
-          <h2>Projects</h2>
+          <h2>My projects</h2>
         </div>
         <div id="content">
           <div style="margin-left: 15px;">

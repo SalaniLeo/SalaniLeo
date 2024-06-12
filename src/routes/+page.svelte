@@ -8,7 +8,7 @@
 <div id="root">
   <div class="content">
     <div class="page" id="home">
-      <div id="top">
+      <div id="top" class="body-top">
         <img src={pfp} alt="me" id="pfp" />
       </div>
       <div id="home-body" class="body">
@@ -53,7 +53,7 @@
             <div id="projects">
               <div id="title">
                 <h2>
-                  <a href="/projects" class="link">What have I worked on?</a>
+                  <a href="/projects" class="link">My projects</a>
                   <span class="fa-solid fa-chevron-right more-arrow"></span>
                 </h2>
               </div>
@@ -68,20 +68,27 @@
             <div id="languages">
               <div id="title">
                 <h2>
-                  <a href="/skills" class="link">What languages do I know?</a>
+                  <a href="/skills" class="link">My Programming Skills</a>
                   <span class="fa-solid fa-chevron-right more-arrow"></span>
                 </h2>
               </div>
               <div id="subtitle">
                 <p>Python, Java, C, JavaScript, Bash, CSS, HTML</p>
               </div>
-              <div id="title">
-                <h2>
-                  <a href="/now" class="link">What am I doing now?</a>
-                  <span class="fa-solid fa-chevron-right more-arrow"></span>
-                </h2>
+              <div id="other">
+                <div id="title">
+                  <h2>
+                    <a href="/future" class="link">My plans for the future</a>
+                    <span class="fa-solid fa-chevron-right more-arrow"></span>
+                  </h2>
+                </div>
+                <div id="title">
+                  <h2>
+                    <a href="/setup" class="link">My linux setup</a>
+                    <span class="fa-solid fa-chevron-right more-arrow"></span>
+                  </h2>
+                </div>
               </div>
-              <div id="subtitle"><p>Learning stuff...</p></div>
             </div>
           </div>
         </div>

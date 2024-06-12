@@ -10,7 +10,7 @@
       </div>
       <div id="projects-body" class="body">
         <div id="title">
-          <h2>What languages do I know?</h2>
+          <h2>My programming skills</h2>
         </div>
         <div id="content">
           <p class="title">I know a couple of languages, and they are:</p>
@@ -19,16 +19,16 @@
           </p>
           <p style="font-size: 19px;">
             Other than programming languages I know quite a few other things
-            (excluding what I learnt at school), like TrueNAS, NextCloud and
+            (excluding what I learnt in school), like TrueNAS, NextCloud and
             many other self-hosted things, including how to setup the network. <br
             />
             I know quite well how Linux works, given that it has been more that 2
-            years from when I first started using it, and I also use PostmarketOS
+            years from when I first started using it. I also use PostmarketOS
             on my second phone.
           </p>
           <p class="title">Linux:</p>
           <p class="text-content">Fedora, Ubuntu, Arch, Termux</p>
-          <p class="title">web:</p>
+          <p class="title">Frameworks:</p>
           <p class="text-content">SvelteKit, bootstrap</p>
         </div>
       </div>
