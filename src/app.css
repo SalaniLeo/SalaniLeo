@@ -63,7 +63,6 @@ body{
     color: var(--font-primary-color);
     padding-left: 10px;
     padding-right: 10px;
-
 }
 
 #pfp{
@@ -87,14 +86,28 @@ body{
     height: 130px;
 }
 
-.content > #home > #home-body > #theme-select {
+.content > #home > #home-body > #contact-theme {
   display: flex;
+  gap: 1.5rem;
   justify-content: right;
+  align-items: center;
 }
 
-.fa-paint-roller{
-  scale: 150%;
-  color: var(--accent-color-secondary);
+#contacts {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+#contacts > * {
+  max-height: 20px;
+  color: var(--text-primary-color);
+  text-decoration: none;
+}
+
+
+.fa-paint-roller, .fa-brands, .fa-solid{
+  font-size: 1rem;
 }
 
 .content > #home > #home-body, .body {

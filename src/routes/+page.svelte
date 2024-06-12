@@ -12,8 +12,15 @@
         <img src={pfp} alt="me" id="pfp" />
       </div>
       <div id="home-body" class="body">
-        <div id="theme-select">
-          {#if $currentTheme == "dark"}
+        <div id="contact-theme">
+          <div id="contacts">
+            <a href="mailto:leonardo07.salani@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/SalaniLeo"><i class="fa-brands fa-github"></i></a>
+            <a href="https://matrix.to/#/@salanileo:matrix.org">[m]</a>
+            <a href="https://www.linkedin.com/in/leonardo-salani/"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <div id="theme-select">
+            {#if $currentTheme == "dark"}
             <i
               class="fa-regular fa-sun themer"
               on:click={() => setTheme("light", true)}
@@ -24,6 +31,7 @@
               on:click={() => setTheme("dark", true)}
             ></i>
           {/if}
+          </div>
         </div>
         <div id="title" class="title-top">
           <h2>Leonardo Salani</h2>
