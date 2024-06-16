@@ -7,6 +7,8 @@
   --secondary-color: #242424;
   --tertiary-color: #4f4f4f;
 
+  --blur-secondary: #2424248e;
+
   /* Used for shadows, under ui elements */
    --shadow-color-heavy: #0a0a0aad;
    --shadow-color-medium: #00000080;
@@ -33,6 +35,8 @@
   --secondary-color: #fefefe;
   --tertiary-color: #565656;
 
+  --blur-secondary: #fefefe3f;
+
   /* Used for shadows, under ui elements */
   --shadow-color-heavy: #0a0a0ace;
   --shadow-color-medium: #00000080;
@@ -54,13 +58,18 @@
 
 * {
   transition-delay: 0s !important;
-  transition-duration: 0.05s;
+  transition-duration: 0.25s;
   font-family: "Josefin Sans", sans-serif;
 }
 
 a {
   text-decoration: none;
   color: var(--font-link-color);
+  transition-duration: 0s;
+}
+
+p, h1, h2, h3, h4, b, ul > * ,li > * {
+  transition-duration: 0.01s !important;
 }
 
 body{
@@ -82,6 +91,7 @@ body{
     max-width: 200px;
     border-radius: 50%;
     border: var(--border-width-primary) solid var(--accent-color-secondary);
+    z-index: 2;
 }
 
 .content > #home {
@@ -125,14 +135,21 @@ body{
   width: 25px;
 }
 
+#home-body, #pfp {
+    backdrop-filter: blur(10px);
+    background-color: var(--blur-secondary);
+}
+
 .content > #home > #home-body, .body {
+    backdrop-filter: blur(10px) !important;
+    background-color: var(--blur-secondary) !important;
     height: fit-content;
-    background-color: var(--secondary-color);
     padding: 30px;
     box-shadow: var(--shadow-color-medium) 0px 0px 10px;
     border-radius: 20px;
     border-top: var(--border-width-primary) solid var(--accent-color-secondary);
-}
+    margin: 25px;
+  }
 
 .themer {
   scale: 115%;
@@ -157,7 +174,8 @@ body{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
-    grid-row-gap: 0px; 
+    grid-row-gap: 0px;
+    /* height: fit-content; */
 }
 
 #home-body > #title {
@@ -194,7 +212,7 @@ body{
 }
 
 #content > #right {
-  padding-top: 3rem;
+  padding-top: 5rem;
 }
 
 #content > #right > #languages {
@@ -228,6 +246,7 @@ body{
       padding-top: 30px;
       border-radius: 0px !important;
       height: 100vh;
+      margin: 0px !important;
     }
     .link{
       font-size: 22px !important;
@@ -245,7 +264,7 @@ body{
     }
 
     #home {
-        height: 100vh !important;
+        /* height: 100vh !important; */
     }
     #content{
       display: grid;
@@ -269,6 +288,7 @@ body{
     #content > #right > #languages > #subtitle {
       padding-left: 20px;
       line-height: 20px;
+      text-align: left !important;
     } 
     #content > #left {
       padding: 0px;

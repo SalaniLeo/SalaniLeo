@@ -1,7 +1,5 @@
 <script>
   import { setTheme, currentTheme } from "$lib";
-
-  import "../app.css";
   import pfp from "$lib/pfp.png";
 </script>
 
@@ -81,10 +79,10 @@
                   <span class="fa-solid fa-chevron-right more-arrow"></span>
                 </h2>
               </div>
-              <div id="subtitle">
-                <p>Python, Java, C, JavaScript, Bash, CSS, HTML</p>
+              <div id="subtitle" style="width: 300px; text-align: center;">
+                <p>JavaScript, TypeScript, HTML, CSS, Python, Java, C, Bash</p>
               </div>
-              <div id="other">
+              <!-- <div id="other">
                 <div id="title">
                   <h2>
                     <a href="/future" class="link">My plans for the future</a>
@@ -97,7 +95,7 @@
                     <span class="fa-solid fa-chevron-right more-arrow"></span>
                   </h2>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

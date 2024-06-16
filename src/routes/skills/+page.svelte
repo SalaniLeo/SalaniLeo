@@ -15,7 +15,7 @@
         <div id="content">
           <p class="title">I know a couple of languages, and they are:</p>
           <p class="text-content">
-            JavaScript, TypeScript, HTML, CSS, Python, Java, C, Bash, Kotlin*
+            JavaScript, TypeScript, HTML, CSS, Python, Java, C, Bash
           </p>
           <!-- <p style="font-size: 19px;">
             Other than programming languages I know quite a few other things
