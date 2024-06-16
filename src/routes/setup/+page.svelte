@@ -17,7 +17,7 @@
           <h3>My home setup</h3>
         </div>
         <div id="content">
-          <p class="title">Both my laptop and pc run Arch Linux with gnome, but I also have Hyprland installed.</p>
+          <p class="title">Both my laptop and pc run Arch Linux with gnome, but I also have <a href="https://hyprland.org/">Hyprland</a> installed.</p>
           <!-- <p class="text-content">
             JavaScript, TypeScript, HTML, CSS, Python, Java, C, Bash
           </p> -->

@@ -45,7 +45,7 @@
   /* Font colors, different types of text need different colors */
   --font-primary-color: #111111;
   --font-secondary-color: #636363;
-  --font-link-color: #3d3d3d;
+  --font-link-color: #336863;
 
   /* Different elements may need a border, use with caution, might not look good everywhere */
   --border-width-primary: 6px;
@@ -54,16 +54,24 @@
 
 * {
   transition-delay: 0s !important;
-  transition-duration: 0.1s;
+  transition-duration: 0.05s;
   font-family: "Josefin Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-link-color);
 }
 
 body{
     background-color: var(--primary-color);
     margin: 0px;
     color: var(--font-primary-color);
-    padding-left: 10px;
-    padding-right: 10px;
+    max-height: 100vh;
+    top: 0px;
+    position: absolute;
+    min-width: 100vw;
+    left: 0px;
 }
 
 #pfp{
@@ -80,7 +88,8 @@ body{
     display: flex;
     flex-direction: column;
     grid-column-gap: 0px;
-    grid-row-gap: 0px; 
+    grid-row-gap: 0px;
+    z-index: 24234;
 }
 
 .content > #home > #top, .body-top {
@@ -109,6 +118,11 @@ body{
 
 .fa-paint-roller, .fa-brands, .fa-solid{
   font-size: 1rem;
+}
+
+.fa-linux {
+  font-size: 1.5rem;
+  width: 25px;
 }
 
 .content > #home > #home-body, .body {
@@ -175,7 +189,8 @@ body{
 
 #content > #left > #projects > #subtitle {
     margin-top: 40px;
-    padding-left: 50px;
+    padding-left: 35px;
+    line-height: 40px;
 }
 
 #content > #right {
@@ -269,8 +284,8 @@ body{
       width: 100%;
     }
     #content > #left > #projects > #subtitle {
-      margin-top: 40px;
-      padding-left: 20px;
+      margin-top: 20px;
+      padding-left: 0px;
   }
   #back{
     margin-left: 1rem;

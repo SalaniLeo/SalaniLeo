@@ -5,6 +5,13 @@
   import pfp from "$lib/pfp.png";
 </script>
 
+<script context="module">
+  export async function load({ session }) {
+      console.log(session.userAgent)
+  }
+</script>
+
+
 <div id="root">
   <div class="content">
     <div class="page" id="home">
@@ -40,10 +47,10 @@
           <div id="left">
             <div id="subtitle">
               <p>🌍 From Ferrara, Italy</p>
-              <p>👦 17 Year old</p>
-              <p>🏫 Student at IIS Copernico</p>
+              <p>💤 17 Year old</p>
+              <p>🏫 Student at ITI Copernico</p>
               <p>
-                <i class="fa-brands fa-linux" style="color: #ffffff;"></i> I use
+                <i class="fa-brands fa-linux"></i> I use
                 arch btw
                 <a class="link" href="https://github.com/salanileo/dotfiles"
                   >(dotfiles)</a
@@ -58,9 +65,11 @@
                 </h2>
               </div>
               <div id="subtitle">
-                <p>🌐 My website (this one)</p>
-                <p>⛅ Forecast (weather app)</p>
-                <p>⛅ Weathy (weather website)</p>
+                <ul>
+                  <li><a href="https://salanileo.dev">SalaniLeo.dev</a>, My Website</li>
+                  <li><a href="https://forecast.salanileo.dev">Forecast</a>, A Weather App</li>
+                  <li><a href="https://weather.salanileo.dev">Weathy</a>, A Weather Website</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -68,7 +77,7 @@
             <div id="languages">
               <div id="title">
                 <h2>
-                  <a href="/skills" class="link">My Programming Skills</a>
+                  <a href="/skills" class="link">My coding Skills</a>
                   <span class="fa-solid fa-chevron-right more-arrow"></span>
                 </h2>
               </div>

@@ -14,49 +14,64 @@
         </div>
         <div id="content">
           <div style="margin-left: 15px;">
-            <p>
-              🌐 <a class="link" href="https://salanileo.dev">salaniLeo.dev</a>,
-              the website you are on!
-            </p>
-            <p>
-              ⛅ <a class="link" href="https://forecast.salanileo.dev"
-                >Forecast</a
-              >, a Linux weather app made with LibAdwaita in python.
-            </p>
-            <p>
-              ⛅ <a class="link" href="https://weather.salanileo.dev">Weathy</a
-              >, a weather website made in sveltekit
-            </p>
+            <h3>Not yet released:</h3>
+            <ul>
+              <li>
+                <a class="link" href="https://github.com/salanileo/photogallery">Photo Gallery</a>
+              </li>
+            </ul>
+            <h3>Already published:</h3>
+            <ul>
+              <li>
+                <a class="link" href="https://salanileo.dev">salanileo.dev</a>,
+                the website you are on!
+              </li>
+              <li>
+                <a class="link" href="https://forecast.salanileo.dev"
+                  >Forecast</a
+                >, a Linux weather app made with LibAdwaita in python.
+              </li>
+              <li>
+                <a class="link" href="https://weather.salanileo.dev">Weathy</a
+                >, a weather website made in sveltekit
+              </li>
+              <li>
+                <a class="link" href="https://home.salanileo.dev">home.salanileo.dev</a>,
+                a fork of bento
+              </li>
+            </ul>
           </div>
           <div>
             <p
               style="padding-top: 15px; font-size: 22px; font-weight: 700; padding-left: 5px; padding-bottom: 10px;"
             >
-              Old projects (I made them when I was 15)
+              Old projects, ~2022
             </p>
           </div>
           <div style="margin-left: 15px;">
-            <p>
-              ⚙ <a class="link" href="https://github.com/SalaniLeo/Immagini"
+            <ul>
+              <li>
+                <a class="link" href="https://github.com/SalaniLeo/Immagini"
                 >Immagini</a
               > (archived), a Linux app to easily package .AppImage
-            </p>
-            <p>
-              🔎 <a
+              </li>
+              <li>
+                <a
                 class="link"
                 href="https://github.com/SalaniLeo/basic-CPU-info"
                 >Basic CPU info</a
               > (archived), a Linux app to check CPU temperature and core clocks
-            </p>
+              </li>
+            </ul>
           </div>
           <div>
             <p
               style="padding-top: 15px; font-size: 22px; font-weight: 700; padding-left: 5px; padding-bottom: 10px;"
             >
-              And much more, go to <a
+              Everything here is avaliable on <a
                 href="https://github.com/SalaniLeo/"
                 class="link">my GitHub</a
-              > to check everything out!
+              >, be sure to check everything out!
             </p>
           </div>
         </div>
@@ -66,6 +81,19 @@
 </div>
 
 <style>
+  #projects-body {
+    height: fit-content;
+    background-color: var(--secondary-color);
+    padding: 30px;
+    box-shadow: var(--shadow-color-medium) 0px 0px 10px;
+    border-radius: 20px;
+    border-top: var(--border-width-primary) solid var(--accent-color-secondary);
+  }
+  ul {
+    margin: 0px;
+    padding: 10px;
+    line-height: 30px;
+  }
   #top {
     display: flex;
     align-items: center;
