@@ -1,6 +1,6 @@
 <div id="root">
   <div class="content">
-    <div class="page" id="projects">
+    <div class="page">
       <div id="top" class="body-top">
         <h2>
           <a href="/" id="back" class="link title"

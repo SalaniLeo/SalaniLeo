@@ -59,6 +59,7 @@
 * {
   transition-duration: 0.25s;
   font-family: "Josefin Sans", sans-serif;
+  color: var(--font-primary-color);
 }
 
 a {
