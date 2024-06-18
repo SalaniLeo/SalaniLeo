@@ -3,16 +3,15 @@
   import type { LayoutServerData } from "./$types";
   import favicon from "$lib/pfp.png";
   import { onMount } from "svelte";
-  import { getCookie, setTheme } from "$lib";
-  let currentTheme = "light";
+  import { getCookie, setTheme, currentTheme } from "$lib";
   let shadow: HTMLElement;
   import "../app.css";
 
   onMount(() => {
-    if (getCookie("theme") != null) {
-      currentTheme = getCookie("theme");
-      document.documentElement.dataset.theme = currentTheme;
-      setTheme(currentTheme, false);
+    const themeFromCookie = getCookie("theme");
+    if (themeFromCookie != null) {
+      currentTheme.set(themeFromCookie);
+      setTheme(themeFromCookie, false);
     } else {
       setTheme(currentTheme, true);
     }

@@ -21,7 +21,7 @@
           <div id="contacts">
             <a href="mailto:leonardo07.salani@gmail.com"><i class="fa-solid fa-envelope"></i></a>
             <a href="https://github.com/SalaniLeo"><i class="fa-brands fa-github"></i></a>
-            <a href="https://matrix.to/#/@salanileo:matrix.org">[m]</a>
+            <a href="https://matrix.to/#/@salanileo:matrix.org"><p class="icon">[m]</p></a>
             <a href="https://www.linkedin.com/in/leonardo-salani/"><i class="fa-brands fa-linkedin"></i></a>
           </div>
           <div id="theme-select">
@@ -58,15 +58,15 @@
             <div id="projects">
               <div id="title">
                 <h2>
-                  <a href="/projects" class="link">My projects</a>
-                  <span class="fa-solid fa-chevron-right more-arrow"></span>
+                  <a href="/projects" class="link">My projects<span class="fa-solid fa-chevron-right more-arrow"></span></a>
                 </h2>
               </div>
               <div id="subtitle">
                 <ul>
                   <li><a href="https://salanileo.dev">SalaniLeo.dev</a>, My Website</li>
-                  <li><a href="https://forecast.salanileo.dev">Forecast</a>, A Weather App</li>
-                  <li><a href="https://weather.salanileo.dev">Weathy</a>, A Weather Website</li>
+                  <li><a href="https://forecast.salanileo.dev">Forecast</a>, Weather App for Linux</li>
+                  <li><a href="https://weather.salanileo.dev">Weathy</a>, Weather Website</li>
+                  <li>... And much more on <a href="https://github.com/salanileo">GitHub</a></li>
                 </ul>
               </div>
             </div>
@@ -75,8 +75,7 @@
             <div id="languages">
               <div id="title">
                 <h2>
-                  <a href="/skills" class="link">My coding Skills</a>
-                  <span class="fa-solid fa-chevron-right more-arrow"></span>
+                  <a href="/skills" class="link">My coding Skills<span class="fa-solid fa-chevron-right more-arrow"></span></a>
                 </h2>
               </div>
               <div id="subtitle" style="width: 300px; text-align: center;">

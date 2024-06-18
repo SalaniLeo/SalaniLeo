@@ -5,7 +5,7 @@
   /* Used for ui elements background. Use appropriate proportions for each one */
   --primary-color: #191919;
   --secondary-color: #242424;
-  --tertiary-color: #4f4f4f;
+  --tertiary-color: #7e7d7d;
 
   --blur-secondary: #2424248e;
 
@@ -57,7 +57,6 @@
 }
 
 * {
-  transition-delay: 0s !important;
   transition-duration: 0.25s;
   font-family: "Josefin Sans", sans-serif;
 }
@@ -65,11 +64,15 @@
 a {
   text-decoration: none;
   color: var(--font-link-color);
-  transition-duration: 0s;
 }
 
-p, h1, h2, h3, h4, b, ul > * ,li > * {
-  transition-duration: 0.01s !important;
+p, h1, h2, h3, h4, b, ul > * ,li > *, i {
+  color: var(--font-primary-color);
+}
+
+.icon  {
+  padding: 0px;
+  margin: 0px;
 }
 
 body{
@@ -166,6 +169,7 @@ body{
 
 .more-arrow {
     color: var(--tertiary-color);
+    margin-left: 10px;
     /* transition-duration: 0.25s; */
 }
 
@@ -201,10 +205,13 @@ body{
     font-size: 20px;
 }
 
-#title:hover .more-arrow {
-  transform: translateX(10px);
+#languages:hover .more-arrow {
+  animation: movearrow 2s infinite;
 }
 
+#projects:hover .more-arrow {
+  animation: movearrow 2s infinite;
+}
 #content > #left > #projects > #subtitle {
     margin-top: 40px;
     padding-left: 35px;
@@ -232,6 +239,18 @@ body{
     width: 30%;
     padding: 20px;
     font-size: larger;
+}
+
+@keyframes movearrow {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 @media screen and (max-width: 890px) {

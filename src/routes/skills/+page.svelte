@@ -13,7 +13,7 @@
           <h2>My coding skills</h2>
         </div>
         <div id="content">
-          <p class="title">I know a couple of languages, and they are:</p>
+          <p class="title">Languages I know:</p>
           <p class="text-content">
             JavaScript, TypeScript, HTML, CSS, Python, Java, C, Bash
           </p>
@@ -26,12 +26,14 @@
             years from when I first started using it. I also use PostmarketOS
             on my second phone.
           </p> -->
-          <p class="title">Linux:</p>
+          <p class="title">Linux Distros:</p>
           <p class="text-content">Fedora, Ubuntu, Pop OS, Arch Linux, Termux</p>
           <p class="title">Frameworks:</p>
           <p class="text-content">SvelteKit, Bootstrap</p>
           <p class="title">Misc:</p>
           <p class="text-content">TrueNAS, Oauth2, WireGuard, Network Management, Docker, Git, GitHub</p>
+          <p class="title">Things I self-host:</p>
+          <p class="text-content">Immich, NextCloud, Ollama, BitWarden, My Minecraft Server, PhotoGallery (Coded by me), Jellyfin, AdGuard, Home Assistant</p>
         </div>
       </div>
     </div>
@@ -46,6 +48,7 @@
     color: var(--font-secondary-color);
     font-size: 17px;
     margin-bottom: 35px;
+    line-height: 22px;
   }
   #top {
     display: flex;
