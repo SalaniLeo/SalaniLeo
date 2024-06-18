@@ -63,7 +63,7 @@
 
 a {
   text-decoration: none;
-  color: var(--font-link-color);
+  color: var(--font-link-color) !important;
 }
 
 p, h1, h2, h3, h4, b, ul > * ,li > *, i {
