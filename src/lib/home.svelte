@@ -10,3 +10,4 @@
         <a style="animation: loadText 1s 0.3s forwards;" class="button margin" href="#work" on:click|preventDefault={scrollIntoView}>Click!</a>
     </div>
 </div>
+

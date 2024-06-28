@@ -25,7 +25,7 @@
             <h2>Socials</h2>
             <div id="list">
                 <a class="contact" id="instagram" href="https://www.instagram.com/leonardo.salanii/"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a class="contact" id="email"     href="mailto:leonardo07.salani@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+                <!-- <a class="contact" id="email"     href="mailto:leonardo07.salani@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a> -->
                 <a class="contact" id="telegram"  href="https://t.me/sudatoLeo"><i class="fa-brands fa-telegram"></i> Telegram</a>
                 <a class="contact" id="linkedin"  href="https://www.linkedin.com/in/leonardo-salani/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
             </div>

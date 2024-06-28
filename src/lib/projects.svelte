@@ -1,67 +1,43 @@
 <script>
-    import salanileodotdev from "../static/salanileodotdev.png"
+    import salanileo from "../static/salanileodotdev.png"
     import forecast from "../static/forecast.png"
     import weathy from "../static/weathy.png"
+    import missing from "../static/missing.svg"
+	import viewport from '$lib/useViewportAction';
+
+    let card1 = false, card2 = false, card3 = false, card4 = false
+
+    let cards = [
+        {id: card1, title: 'SalaniLeo', subtitle: "This exact website", image: salanileo, description: "The website you are currently on. I made it using sveltekit.", langs: ["svelte", "typescript", "css"]},
+        {id: card2, title: 'Forecast', subtitle: "Weather app", image: forecast, description: "A weather app for linux. I use it every time I need to watch the weather.", langs: ["python", "openweathermap"]},
+        {id: card3, title: 'Weathy', subtitle: "Weather website", image: weathy, description: "Guessed it... A weather website! I use it as a collection of useful maps for italy and a bit of europe.", langs: ["svelte", "typescript", "css", "openweathermap"]},
+        {id: card4, title: 'PhotoGallery', subtitle: "Photo Library", image: missing, description: "Self hostable platform where you can host your photos to show to the world!", langs: ["svelte", "typescript", "css", "docker", "python"]},
+    ]
+
 </script>
 
 <div class="cards flexbox">
-    <div class="card">
-        <div class="header">
-            <h1>SalaniLeo</h1>
-            <a class="github repo" href="https://github.com/SalaniLeo/SalaniLeo"><i class="fa-brands fa-github"></i></a>
+    {#each cards as card}
+        <div class="card hidden" class:show={card.id} use:viewport 
+            on:enterViewport={() => {card.id = true}}
+            on:exitViewport={() => {card.id = false}}
+        >
+            <div class="header">
+                <h1>{card.title}</h1>
+                <a class="github repo" href="https://github.com/SalaniLeo/{card.title}"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <h2>{card.subtitle}</h2>
+            <div class="image">
+                <img src="{card.image}" class="cardimage" alt="{card.title}">
+            </div>
+            <p>{card.description}</p>
+            <div class="langs flexbox">
+                {#each card.langs as lang}
+                    <i class="lang" id="{lang}">{lang}</i>
+                {/each}
+            </div>
         </div>
-        <h2>This exact website</h2>
-        <div class="image">
-            <img class="cardimage" src="{salanileodotdev}" alt="img">
-        </div>
-        <p>The website you are currently on. I made it using sveltekit.</p>
-        <div class="langs flexbox">
-            <i class="lang" id="svelte">svelte</i><i class="lang" id="css">css</i><i class="lang" id="typescript">typescript</i>
-        </div>
-    </div>
-    <div class="card">
-        <div class="header">
-            <h1>Forecast</h1>
-            <a class="github repo" href="https://github.com/SalaniLeo/Forecast"><i class="fa-brands fa-github"></i></a>
-        </div>
-        <h2>Weather app</h2>
-        <div class="image">
-            <img class="cardimage" src="{forecast}" alt="img">
-        </div>
-        <p>A weather app for linux. I use it every time I need to watch the weather.</p>
-        <div class="langs flexbox">
-            <i id="openweathermap" class="lang">openweathermap</i> <i class="lang" id="python">python</i>
-        </div>
-    </div>
-    <div class="card">
-        <div class="header">
-            <h1>Weathy</h1>
-            <a class="github repo" href="https://github.com/SalaniLeo/Weathy"><i class="fa-brands fa-github"></i></a>
-        </div>
-        <h2>Weather website</h2>
-        <div class="image">
-            <img class="cardimage" src="{weathy}" alt="img">
-        </div>
-        <p>Guessed it... A weather website! I use it as a collection of useful maps for italy and a bit of europe.</p>
-        <div class="langs flexbox">
-            <i id="openweathermap" class="lang">openweathermap</i> <i class="lang" id="css">css</i><i class="lang" id="typescript">typescript</i> <i id="svelte" class="lang">svelte</i>
-        </div>
-    </div>
-    <div class="card">
-        <div class="header">
-            <h1>PhotoGallery</h1>
-            <a class="github repo" href="https://github.com/SalaniLeo/Weathy"><i class="fa-brands fa-github"></i></a>
-        </div>
-        <h2>Photo Library</h2>
-        <div class="image">
-            <p>Screenshot missing :p</p>
-            <!-- <img class="cardimage" src="{weathy}" alt="img"> -->
-        </div>
-        <p>Self hostable platform where you can host your photos to show to the world!</p>
-        <div class="langs flexbox">
-            <i class="lang" id="css">css</i><i class="lang" id="typescript">typescript</i><i class="lang" id="docker">docker</i><i class="lang" id="python">python</i> <i id="svelte" class="lang">svelte</i>
-        </div>
-    </div>
+    {/each}
 </div>
 
 <style>
@@ -73,6 +49,9 @@
         box-shadow: var(--box-shadow);
         display: flex;
         flex-direction: column;
+    }
+    .card:hover {
+        box-shadow: var(--box-shadow-hover);
     }
     .repo {
         text-shadow: var(--box-shadow);
