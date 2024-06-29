@@ -295,4 +295,7 @@ h2 {
         margin: 1rem;
         padding: 1rem;
     }
+    #footer-wrapper {
+        gap: 2rem;
+    }
 }

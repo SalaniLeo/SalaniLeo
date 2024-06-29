@@ -1,23 +1,63 @@
 <script lang="ts">
-        import { scrollIntoView } from "$lib"
+    import { enableScroll } from "$lib";
 
-        let opened = false;
+    $: outerWidth = 0
+	$: innerWidth = 0
+	$: outerHeight = 0
+	$: innerHeight = 0
+    let pageY: number
 
-        function openNavMenu() {
-            opened = !opened
-            console.log(opened)
+    import { scrollIntoView } from "$lib"
+
+    let opened = false;
+
+    function openNavMenu() {
+        if (window.pageYOffset < window.innerHeight) {
+            window.scrollTo({ top: window.innerHeight + 75 });
         }
+        changeValues()
+    }
 
+    function changeValues() {
+        opened = !opened
+        scrollable = !scrollable
+        enableScroll.set(!$enableScroll)
+        clickedAtLeastOnce = true
+    }
+
+    let scrollable = true;
+    let clickedAtLeastOnce = false;
+
+    const wheel = (node: any, options: any) => {
+        let { scrollable } = options;
+        
+        const handler = (e:any) => {
+            if (!scrollable) e.preventDefault();
+        };
+        
+        node.addEventListener('wheel', handler, { passive: false });
+        
+        return {
+            update(options: any) {
+                scrollable = options.scrollable;
+            },
+            destroy() {
+                node.removeEventListener('wheel', handler, { passive: false });
+            }
+        };
+    };
 </script>
+
+<svelte:window use:wheel={{scrollable}} bind:scrollY={pageY} bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight/>
 
 <nav>
     <div class="left">
         <!-- <div class="open"></div> -->
-        <div style="transition-duration: 0s;" class:open={opened} class:closed={!opened} class="mobile links">
-            <a class="loadanim link" style="animation: loadText 1s 0s forwards;" href="#home" on:click|preventDefault={scrollIntoView}>Home</a>
-            <a class="loadanim link" style="animation: loadText 1s 0s forwards;" href="#experience" on:click|preventDefault={scrollIntoView}>Experience</a>
-            <a class="loadanim link" style="animation: loadText 1s 0.025s forwards;" href="#projectslink" on:click|preventDefault={scrollIntoView}>Projects</a>
-            <a class="loadanim link" style="animation: loadText 1s 0.05s forwards;" href="#footer" on:click|preventDefault={scrollIntoView}>Contact</a>
+        <div class:open={opened && clickedAtLeastOnce} class:closed={!opened && clickedAtLeastOnce} class="mobile links">
+            <a on:click={changeValues} class="loadanim link" style="animation: loadText 1s 0s forwards;" href="/">Home</a>
+            <a on:click={changeValues} class="loadanim link" style="animation: loadText 1s 0s forwards;" href="#experience" on:click|preventDefault={scrollIntoView}>Experience</a>
+            <a on:click={changeValues} class="loadanim link" style="animation: loadText 1s 0.025s forwards;" href="#projectslink" on:click|preventDefault={scrollIntoView}>Projects</a>
+            <a on:click={changeValues} class="loadanim link" style="animation: loadText 1s 0.05s forwards;" href="#footer" on:click|preventDefault={scrollIntoView}>Contact</a>
         </div>
         <button class="show" id="btnmenu" style="animation: loadText 1s 0.025s forwards;" on:click={openNavMenu}><i class="fa-solid fa-bars"></i></button>
     </div>
@@ -28,7 +68,7 @@
             <a class="loadanim contact" style="animation: loadText 1s 0.25s forwards;" id="github" href="https://github.com/SalaniLeo"><i style="transform: translateY(-25%);" class="fa-brands fa-github"></i></a>
             <a class="loadanim contact" style="animation: loadText 1s 0.275s forwards;" id="linkedin" href="https://www.linkedin.com/in/leonardo-salani/"><i style="transform: translateY(-25%);" class="fa-brands fa-linkedin"></i></a>
         </div>
-        <a class="loadanim link" style="animation: loadText 1s 0.3s forwards;" href="/about">About</a>
+        <!-- <a class="loadanim link" style="animation: loadText 1s 0.3s forwards;" href="/about">About</a> -->
     </div>
 </nav>
 
@@ -92,7 +132,8 @@ nav a:hover {
     display: flex;
     gap: 1rem;
     align-items: center;
-    margin-right: 4rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
 }
 
 #contacts > * {
@@ -144,7 +185,6 @@ nav a:hover {
 @keyframes closeMenu {
     from {
         transform: translateX(0px);
-
     }
     to {
         transform: translateX(-100%);
@@ -170,18 +210,21 @@ nav a:hover {
         scale: 200%;
     }
     .mobile {
+        top: 0px;
         position: fixed;
-        top: 75px;
+        padding-top: 75px;
         height: 100vh;
         width: 100vw;
+        text-align: left;
+        justify-content: left;
+        align-items: start;
         background-color: white;
         left: 0px;
-        opacity: 0;
+        transform: translateX(-100%);
         display: flex;
         gap: 1rem;
         flex-direction: column;
         font-size: 2rem;
-        transition-duration: 0s !important;
     }
     .open {
         opacity: 1 !important;

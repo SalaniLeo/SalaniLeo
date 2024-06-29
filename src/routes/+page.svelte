@@ -5,6 +5,8 @@
     import Home from "$lib/home.svelte";
 	import viewport from '$lib/useViewportAction';
 
+    import { enableScroll, scrollIntoView } from '$lib';
+
     let tmpY: number
     let pageY: number
     let angle = 0
@@ -44,7 +46,8 @@
                 >
                 <h1>Experience</h1>
                 <div class="tleft">
-                    <p>I don't have any work experience yet, since I'm only 17 (already to old in my opinion :D). You can see what I've worked on in the <a href="#projects">Projects</a> section</p>
+                    <p>I don't have any work experience yet, since I'm only 17 (already to old in my opinion :D). 
+                        You can see what I've worked on in the <a href="#projects" on:click|preventDefault={scrollIntoView}>Projects</a> section</p>
                 </div>
             </div>
         
@@ -61,7 +64,7 @@
             <div id="school">
                 <h1>School</h1>
                 <div class="tleft">
-                    <p>I study computer science at <a href="http://www.iiscopernico.edu.it/">IIS Copernico</a>. I plan on going to university in computer engineering // TODO
+                    <p>I study computer science at <a href="http://www.iiscopernico.edu.it/">IIS Copernico</a>. I plan on going to university to study computer engineering // TODO LINKS
                     </p>
                 </div>
             </div>
@@ -69,3 +72,10 @@
     </div>
     <Footer></Footer>
 </div>
+{#if !$enableScroll}
+    <style>
+        body {
+            overflow-y: hidden;
+        }
+    </style>
+{/if}

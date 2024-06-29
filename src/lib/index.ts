@@ -1,3 +1,5 @@
+import { writable } from "svelte/store";
+
 export function scrollIntoView({ target }) {
     const el = document.querySelector(target.getAttribute('href'));
     if (!el) return;
@@ -9,3 +11,9 @@ export function scrollIntoView({ target }) {
         behavior: 'smooth'
     });
 }
+
+export const enableScroll = writable(true)
+
+enableScroll.subscribe((v) => {
+    console.log(v)
+})
