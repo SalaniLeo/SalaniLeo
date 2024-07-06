@@ -2,7 +2,7 @@
   import salanileo from "$lib/assets/salanileodotdev.png";
   import forecast from "$lib/assets/forecast.png";
   import weathy from "$lib/assets/weathy.png";
-  import missing from "$lib/assets/missing.svg";
+  import photopallery from "$lib/assets/photogallery.png";
   import viewport from "$lib/useViewportAction";
 
   let prView = false;
@@ -44,7 +44,7 @@
       id: card4,
       title: "PhotoGallery",
       subtitle: "Photo hosting",
-      image: missing,
+      image: photopallery,
       description:
         "Self hostable platform where you can host your photos to show to the world!",
       langs: ["svelte", "typescript", "css", "docker", "python"],
