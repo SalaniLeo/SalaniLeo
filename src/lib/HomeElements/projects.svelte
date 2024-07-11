@@ -10,7 +10,9 @@
   let card1 = false,
     card2 = false,
     card3 = false,
-    card4 = false;
+    card4 = false,
+    card5 = false,
+    card6 = false;
 
   let cards = [
     {
@@ -20,7 +22,7 @@
       image: salanileo,
       description:
         "The website you are currently on. I made it using sveltekit.",
-      langs: ["svelte", "typescript", "css"],
+      langs: ["svelte", "typescript"],
     },
     {
       id: card2,
@@ -29,7 +31,7 @@
       image: forecast,
       description:
         "A weather app for linux. I use it every time I need to watch the weather.",
-      langs: ["python", "openweathermap"],
+      langs: ["python"],
     },
     {
       id: card3,
@@ -38,7 +40,7 @@
       image: weathy,
       description:
         "Guessed it... A weather website! I use it as a collection of useful maps for italy and a bit of europe.",
-      langs: ["svelte", "typescript", "css", "openweathermap"],
+      langs: ["svelte", "typescript"],
     },
     {
       id: card4,
@@ -47,14 +49,32 @@
       image: photopallery,
       description:
         "Self hostable platform where you can host your photos to show to the world!",
-      langs: ["svelte", "typescript", "css", "docker", "python"],
+      langs: ["svelte", "typescript", "docker", "python"],
+    },
+    {
+      id: card5,
+      title: "Dotfiles",
+      subtitle: "My Arch Linux",
+      image: photopallery,
+      description:
+        "Config files made by me for my Lenovo notebook",
+      langs: [],
+    },
+    {
+      id: card6,
+      title: "ImgPush",
+      subtitle: "Am ImgPush fork",
+      image: photopallery,
+      description:
+        "A modified version of imgpush for my needs",
+      langs: ["python"],
     },
   ];
 </script>
 
 <div id="projectslink">
   <h1
-    class="hidden"
+    class="hidden header"
     class:show={prView}
     use:viewport
     on:enterViewport={() => {
@@ -63,7 +83,7 @@
     on:exitViewport={() => {
       prView = false;
     }}
-  >
+  ><i class="fa-solid fa-circle-dot"></i>
     Projects
   </h1>
   <div id="projects">
@@ -90,7 +110,7 @@
           </div>
           <h2>{card.subtitle}</h2>
           <div class="image">
-            <img src={card.image} class="cardimage" alt={card.title} />
+            <!-- <img src={card.image} class="cardimage" alt={card.title} /> -->
           </div>
           <p>{card.description}</p>
           <div class="langs flexbox">
@@ -106,18 +126,26 @@
 
 <style>
   .card {
-    width: 300px;
+    width: fit-content;
+    max-width: 350px;
     padding: 1rem;
     border-radius: 10px;
-    background-color: var(--background-primary-color);
-    box-shadow: var(--box-shadow);
+    background-color: var(--background-terthiary-color);
+    border: 1px solid var(--background-fourth-color);
     display: flex;
+    height: fit-content;
+    min-height: 200px;
     flex-direction: column;
   }
-  .card:hover {
+  /* .card:hover {
     box-shadow: var(--box-shadow-hover);
-  }
+  } */
   .repo {
     text-shadow: var(--box-shadow);
+  }
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 </style>

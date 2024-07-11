@@ -154,7 +154,7 @@
 
 <style>
   * {
-    color: var(--text-inverted-color);
+    color: white;
     text-decoration: none;
   }
 
@@ -163,17 +163,16 @@
     font-size: 1.5rem;
     font-family: "Metrophobic", sans-serif;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
     position: absolute;
     height: 75px;
-    border-bottom: 3px solid black;
+    /* border-bottom: 3px solid black; */
     z-index: 2;
-    /* transition-duration: 1s; */
     display: flex;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    box-shadow: var(--background-primary-color) 0px -50px 100px 0px;
   }
   nav > .left {
     height: 100%;
@@ -288,15 +287,16 @@
       scale: 200%;
     }
     .mobile {
-      top: 0px;
+      top: 75px;
       position: fixed;
-      padding-top: 75px;
+      padding-top: 1rem;
       height: 100vh;
       width: 100vw;
       text-align: left;
       justify-content: left;
       align-items: start;
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
       left: 0px;
       transform: translateX(-100%);
       display: flex;

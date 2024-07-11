@@ -45,18 +45,21 @@
 
 <div class="root">
   <div class="full"></div>
-  <div id="home" style="scale: {((innerHeight / (pageY + innerHeight)) * 100)}%; opacity: {innerHeight / (pageY + innerHeight)}">
+  <div id="home" style="scale: {((innerHeight / (pageY + innerHeight)) * 100)}%;2">
     <Home></Home>
   </div>
   <Navbar></Navbar>
-  <div class="tleft wrapper" id="work">
-    <Experience></Experience>
+  <div class="wrapper-backdrop">
+    <div class="tleft wrapper" id="work">
 
-    <School></School>
+      <Experience></Experience>
 
-    <Projects></Projects>
+      <School></School>
+  
+      <Projects></Projects>
 
-    <Passions></Passions>
+      <!-- <Passions></Passions> -->
+    </div>
   </div>
 
   <Footer></Footer>
@@ -69,3 +72,25 @@
     }
   </style>
 {/if}
+
+<style>
+  /* .connected {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+    border-image: linear-gradient(140deg, #3ad0d500 80%, #1e2239 100%) 1;
+    border-radius: 100%;
+    border-width: 4px;
+    border-style: solid;
+  } */
+  .wrapper-backdrop {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.12);
+    display: flex;
+    top: 0;
+  }
+  * {
+    color: white !important;
+  }
+</style>
