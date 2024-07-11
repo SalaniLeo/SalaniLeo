@@ -72,7 +72,8 @@
     width: 300px;
     height: 325px;
     padding: 1rem;
-    background-color: var(--background-primary-color);
+    background-color: var(--card-background);
+    backdrop-filter: var(--card-blur);
     box-shadow: var(--box-shadow);
     border-radius: 10px;
     display: flex;

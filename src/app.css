@@ -1,13 +1,16 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');:root {
-    --text-primary-color: rgb(255, 245, 227);
+@import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
+
+:root {
+    --text-primary-color: rgb(254, 237, 202);
     --text-primary-shadow: rgb(70, 70, 70);
     --text-soft-color: rgb(94, 94, 94);
     --text-inverted-color: black;
 
-    --background-primary-color: rgb(101, 95, 87);
-    --background-secondary-color: #191816;
-    --background-terthiary-color: #282724;
+    --background-primary-color: rgb(19, 21, 29);
+    --background-secondary-color: #161719;
+    --background-terthiary-color: #191925;
+    --background-fourth-color: #343446;
 
     --element-background: #35332e;
 
@@ -22,7 +25,7 @@ body {
 
 *, label{
     font-family: "Metrophobic", sans-serif;
-    color: var(--text-primary-color);
+    color: white;
 }
 
 h1 {
@@ -37,6 +40,12 @@ h2 {
     text-shadow: var(--text-primary-shadow) 4px 3px 0px;
 }
 
+.fa-circle-dot {
+    font-size: 1.5rem;
+    opacity: 0.5;
+    height: 100%;
+}
+
 .page {
     width: 100vw !important;
     text-align: center;
@@ -46,7 +55,7 @@ h2 {
 
 .hidden {
     opacity: 0;
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .show {
@@ -90,7 +99,7 @@ h2 {
     /* margin: 2rem; */
     border-radius: 1rem;
     background-color: var(--background-terthiary-color);
-    box-shadow: var(--box-shadow);
+    border: 1px solid var(--background-fourth-color);
     padding: 2rem;
     text-align: left;
     align-items: center;
@@ -104,12 +113,13 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 4px solid black;
     position: fixed;
     top: 0px;
 }
 
-
+.margin-left {
+    margin-left: 3.25rem;
+}
 
 .wrapper {
     display: flex;
@@ -119,6 +129,7 @@ h2 {
     padding: 5rem;
     position: relative;
     z-index: 1;
+    width: 100%;
     background-color: var(--background-secondary-color);
 }
 
@@ -152,6 +163,12 @@ h2 {
     box-shadow: var(--text-primary-shadow) 0px 0px 0px;
     background-color: var(--text-primary-color);
     color: var(--text-inverted-color);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .loadanim {
