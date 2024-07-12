@@ -148,15 +148,11 @@
     align-items: center;
     gap: 1rem;
   }
-  @media only screen and (max-width: 860px) {
-
-#projects{ 
-    padding: 0rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-    .card {
-      min-width: fit-content;
+  @media only screen and (max-width: 720px) {
+    #projects{ 
+        padding: 0rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
   }
 </style>
