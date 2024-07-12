@@ -68,7 +68,7 @@
     <div
       class:open={opened && clickedAtLeastOnce}
       class:closed={!opened && clickedAtLeastOnce}
-      class="mobile links"
+      class="mobile"
     >
       <!-- <a
         on:click={changeValues}
@@ -77,7 +77,8 @@
         href="#work"
         on:click|preventDefault={scrollIntoView}>Home</a
       > -->
-      <a
+    <div class="links">
+        <a
         on:click={changeValues}
         class="loadanim link"
         style="animation: loadText 1s 0s forwards;"
@@ -105,6 +106,7 @@
         href="#footer"
         on:click|preventDefault={scrollIntoView}>Contact</a
       >
+    </div>
     </div>
     <button
       class="show"
@@ -287,15 +289,16 @@
       scale: 200%;
     }
     .mobile {
-      top: 75px;
+      top: 0;
       position: fixed;
-      padding-top: 1rem;
+      padding: 0 !important;
       height: 100vh;
       width: 100vw;
       text-align: left;
       justify-content: left;
       align-items: start;
-      background-color: rgba(255, 255, 255, 0.12);
+      background-color: rgb(18, 19, 24);
+      z-index: 0;
       backdrop-filter: blur(10px);
       left: 0px;
       transform: translateX(-100%);
@@ -303,6 +306,16 @@
       gap: 1rem;
       flex-direction: column;
       font-size: 2rem;
+    }
+    .links {
+      padding: 1rem !important;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.5rem;
+      text-align: left;
+      align-items: start;
+      justify-content: start;
+      padding-top: 75px !important;
     }
     .open {
       opacity: 1 !important;
