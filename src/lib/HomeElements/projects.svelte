@@ -63,7 +63,7 @@
     {
       id: card6,
       title: "ImgPush",
-      subtitle: "Am ImgPush fork",
+      subtitle: "An ImgPush fork",
       image: photopallery,
       description:
         "A modified version of imgpush for my needs",
