@@ -98,7 +98,6 @@
     font-size: 1rem;
     border-radius: 6px;
     cursor: pointer;
-    font-weight: 900;
     transition-duration: 0.25s;
     display: inline-flex;
     align-items: center;

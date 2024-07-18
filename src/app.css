@@ -1,18 +1,22 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
-    --text-primary-color: rgb(254, 237, 202);
+    --text-primary-color: rgb(199, 199, 199);
     --text-primary-shadow: rgb(70, 70, 70);
     --text-soft-color: rgb(94, 94, 94);
     --text-inverted-color: black;
 
-    --background-primary-color: rgb(19, 21, 29);
-    --background-secondary-color: #161719;
-    --background-terthiary-color: #191925;
-    --background-fourth-color: #343446;
+    --background-primary-color: #0e0e0e;
+    --background-secondary-color: #0e0e0f;
+    --background-terthiary-color: #131315;
 
-    --element-background: #35332e;
+    --hover-color: #1a1a1a;
+
+    --background-blurry: #24242469;
+    --border-color: #363331;
+    --border-secondary-color: #5c5c5c;
+
+    /* --element-background: #35332e; */
 
     --box-shadow: var(--text-primary-shadow) 5px 4px 0px;
     --box-shadow-hover: var(--text-primary-shadow) 4px 3px 0px;
@@ -24,20 +28,21 @@ body {
 }
 
 *, label{
-    font-family: "Metrophobic", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: white;
 }
 
 h1 {
     font-size: 3rem;
     margin: 0;
-    text-shadow: var(--text-primary-shadow) 5px 4px 0px;
+    font-weight: 600;
+    /* text-shadow: var(--text-primary-shadow) 5px 4px 0px; */
 }
 
 h2 {
     font-size: 2rem;
     margin: 0;
-    text-shadow: var(--text-primary-shadow) 4px 3px 0px;
+    /* text-shadow: var(--text-primary-shadow) 4px 3px 0px; */
 }
 
 .fa-circle-dot {
@@ -99,7 +104,7 @@ h2 {
     /* margin: 2rem; */
     border-radius: 1rem;
     background-color: var(--background-terthiary-color);
-    border: 1px solid var(--background-fourth-color);
+    border: 2px solid var(--border-color);
     padding: 2rem;
     text-align: left;
     align-items: center;
@@ -142,27 +147,23 @@ h2 {
 }
 
 .button {
-    width: 150px;
-    height: 50px;
-    background-color: transparent;
-    border: 3px solid var(--text-primary-color);
-    box-shadow: var(--text-primary-shadow) 4px 4px 0px;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 900;
-    transition-duration: 0.25s;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0.75rem;
+    background-color: var(--background-terthiary-color);
+    border: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
-    opacity: 0;
+    transition-duration: 0.25s;
+    user-select: none;
 }
 
 .button:hover {
-    box-shadow: var(--text-primary-shadow) 0px 0px 0px;
-    background-color: var(--text-primary-color);
-    color: var(--text-inverted-color);
+    background-color: var(--hover-color);
 }
 
 .header {
@@ -193,11 +194,11 @@ h2 {
 
 .card h2 {
     font-size: 1.75rem;
+    font-weight: 500;
 }
 
 .card p {
     font-size: 1.1rem;
-    font-weight: 700;
 }
 
 .card i {
@@ -237,7 +238,11 @@ h2 {
 }
 
 .lang {
-    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding: 5px;
+    /* border: 2px solid var(--border-secondary-color) */
 }
 
 .flexbox {
@@ -247,38 +252,26 @@ h2 {
 
 #svelte {
     background-color: #f73c00;
-    padding: 5px;
-    border-radius: 5px;
 }
 
 #typescript {
     background-color: #2f74c0;
-    padding: 5px;
-    border-radius: 5px;
 }
 
 #css {
     background-color: #254bdd;
-    padding: 5px;
-    border-radius: 5px;
 }
 
 #python {
     background-color: #376fa0;
-    padding: 5px;
-    border-radius: 5px;
 }
 
 #docker {
     background-color: #37b1d8;
-    padding: 5px;
-    border-radius: 5px;
 }
 
 #openweathermap {
     background-color: #eb6e4b;
-    padding: 5px;
-    border-radius: 5px;
 }
 
 #footer {
@@ -337,9 +330,12 @@ h2 {
         width: 100%;
     }
     #footer {
-        padding:0.5rem;
+        padding:0rem;
     }
     #footer-wrapper {
+        border-radius: 0;
+        border: unset;
+        border-top: 2px solid var(--border-color);
         gap: 2rem;
     }
 }

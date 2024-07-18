@@ -161,20 +161,19 @@
   }
 
   nav {
-    font-weight: 900;
     font-size: 1.5rem;
     font-family: "Metrophobic", sans-serif;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: var(--background-blurry);
     backdrop-filter: blur(10px);
     position: absolute;
     height: 75px;
-    /* border-bottom: 3px solid black; */
     z-index: 2;
     display: flex;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+    border-radius: 0.5rem;
+    border: 2px solid var(--border-color);
   }
   nav > .left {
     height: 100%;
@@ -272,6 +271,9 @@
   @media only screen and (max-width: 860px) {
     nav {
       width: 100vw;
+      border-radius: 0;
+      border: unset;
+      border-bottom: 2px solid var(--border-color);
     }
     nav div {
       font-size: 1rem;
@@ -297,7 +299,7 @@
       text-align: left;
       justify-content: left;
       align-items: start;
-      background-color: rgb(18, 19, 24);
+      background-color: var(--background-terthiary-color);
       z-index: 0;
       backdrop-filter: blur(10px);
       left: 0px;

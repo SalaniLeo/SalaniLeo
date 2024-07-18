@@ -39,7 +39,7 @@
       subtitle: "Weather website",
       image: weathy,
       description:
-        "Guessed it... A weather website! I use it as a collection of useful maps for italy and a bit of europe.",
+        "A weather website I use as a collection of useful maps for italy and a bit of europe.",
       langs: ["svelte", "typescript"],
     },
     {
@@ -63,7 +63,7 @@
     {
       id: card6,
       title: "ImgPush",
-      subtitle: "Am ImgPush fork",
+      subtitle: "An ImgPush fork",
       image: photopallery,
       description:
         "A modified version of imgpush for my needs",
@@ -131,7 +131,7 @@
     padding: 1rem;
     border-radius: 10px;
     background-color: var(--background-terthiary-color);
-    border: 1px solid var(--background-fourth-color);
+    border: 2px solid var(--border-color);
     display: flex;
     height: fit-content;
     min-height: 200px;
