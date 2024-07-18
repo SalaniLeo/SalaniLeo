@@ -15,7 +15,7 @@
     </h2>
     <a
       style="animation: loadText 1s 0.3s forwards;"
-      class="button margin"
+      class="button margin hidden"
       href="#work"
       on:click|preventDefault={scrollIntoView}>Click!</a
     >
