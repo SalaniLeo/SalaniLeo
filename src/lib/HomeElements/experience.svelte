@@ -33,10 +33,10 @@
       }}
     >
         I don't have any work experience yet, since I'm only 17 (already to old in
-        my opinion :D). To see what I've published you can head to the <a
+        my opinion :D). To see what I've published you can head over to the <a
         href="#projects"
         on:click|preventDefault={scrollIntoView}>Projects</a
-      > section, otherwise all my projects are on GitHub
+      > section, otherwise all my projects are on <a href="https://github.com/salanileo">GitHub</a>, including the unfinished ones
     </p>
   </div>
 </div>
