@@ -9,7 +9,11 @@
       </div>
     </div>
     <div class="right" id="contactbox">
-      <h2>Socials</h2>
+      <h2>      
+          <a 
+          class="contact hover"
+          id="share"
+          href="https://me.salanileo.dev">Socials <small><i class="fa-solid fa-link"></i></small></a></h2>
       <div id="list">
         <a
           class="contact"
@@ -54,5 +58,8 @@
   }
   .contact {
     text-decoration: none;
+  }
+  .hover small {
+    font-size: 1.25rem;
   }
 </style>

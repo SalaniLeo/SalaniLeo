@@ -62,7 +62,7 @@
   bind:outerHeight
 />
 
-<nav>
+<nav class:non-expanded={pageY <= innerHeight}>
   <div class="left">
     <!-- <div class="open"></div> -->
     <div
@@ -155,12 +155,21 @@
 </nav>
 
 <style>
+  .non-expanded {
+    width: 95%;
+    transform: translateX(2.5%);
+    transition-duration: 0.5s !important;
+    border-radius: 1rem;
+    border: 2px solid var(--border-color);
+  }
+
   * {
     color: white;
     text-decoration: none;
   }
 
   nav {
+    transition-duration: 0.5s !important;
     font-size: 1.5rem;
     font-family: "Metrophobic", sans-serif;
     background-color: var(--background-blurry);
@@ -172,8 +181,11 @@
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    border-radius: 0.5rem;
-    border: 2px solid var(--border-color);
+    width: calc(100%);
+
+    border-radius: unset;
+    border: unset;
+    border-bottom: 2px solid var(--border-color);
   }
   nav > .left {
     height: 100%;
@@ -217,7 +229,8 @@
 
   #contacts > * {
     max-height: 20px;
-    text-decoration: none;
+    text-decoration: none;    width: calc(100% - 4px);
+
   }
 
   .contact {
@@ -270,10 +283,12 @@
   }
   @media only screen and (max-width: 860px) {
     nav {
-      width: 100vw;
+      width: 100vw !important;
+      transform: unset !important;
       border-radius: 0;
       border: unset;
       border-bottom: 2px solid var(--border-color);
+
     }
     nav div {
       font-size: 1rem;

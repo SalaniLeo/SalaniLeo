@@ -48,7 +48,7 @@
       subtitle: "Photo hosting",
       image: photopallery,
       description:
-        "Self hostable platform where you can host your photos to show to the world!",
+        "Self hostable platform where you can host your photos to show the world!",
       langs: ["svelte", "typescript", "docker", "python"],
     },
     {

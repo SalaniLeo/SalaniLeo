@@ -31,7 +31,7 @@
       }}
     >
       I study computer science at IIS Copernico. I plan on going to university
-      to study computer engineering
+      to study computer engineering. On track to graduate on june 6 2025!.
     </p>
     <!-- <a
       class="button"
