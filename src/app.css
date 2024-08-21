@@ -31,7 +31,7 @@
 
     --background-primary-color: #ffffff;
     --background-secondary-color: #ffffff;
-    --background-terthiary-color: #ffffff00;
+    --background-terthiary-color: #d2d2d2;
 
     --hover-color: #1a1a1a;
 
@@ -247,6 +247,10 @@ h2 {
     align-items: center;
 }
 
+.card {
+    transition-duration: 0.25ss;
+}
+
 .cardimage {
     width: 240px;
     height: auto;
@@ -270,6 +274,7 @@ h2 {
     padding-right: 0.5rem !important;
     padding: 5px;
     color: var(--text-inverted-color);
+    box-shadow: var(--box-shadow);
     /* border: 2px solid var(--border-secondary-color) */
 }
 
