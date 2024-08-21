@@ -22,9 +22,6 @@
         right: 1rem;
         z-index: 22111;
     }
-    i {
-        color: white !important;
-    }
     .fa-regular {
         font-size: 1.5rem;
     }

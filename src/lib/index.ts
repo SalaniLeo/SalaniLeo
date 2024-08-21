@@ -13,7 +13,3 @@ export function scrollIntoView({ target }) {
 }
 
 export const enableScroll = writable(true)
-
-enableScroll.subscribe((v) => {
-    console.log(v)
-})

@@ -12,6 +12,7 @@
     --background-terthiary-color: #131315;
 
     --hover-color: #1a1a1a;
+    --text-hover-color: #ffffff;
 
     --background-blurry: #24242469;
     --border-color: #363331;
@@ -34,7 +35,7 @@
 
     --hover-color: #1a1a1a;
 
-    --background-blurry: #24242469;
+    --background-blurry: #24242434;
     --border-color: rgb(0, 0, 0);
     --border-secondary-color: #5c5c5c;
 
@@ -189,6 +190,7 @@ h2 {
 
 .button:hover {
     background-color: var(--hover-color);
+    color: var(--text-hover-color);
 }
 
 .header {
