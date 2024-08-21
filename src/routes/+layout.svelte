@@ -1,4 +1,5 @@
 <script>
-    import "../app.css"
+	import ThemeChanger from './../lib/svelteComponents/themeChanger.svelte';
 </script>
+
 <slot></slot>

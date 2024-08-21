@@ -1,14 +1,14 @@
 <script lang="ts">
   import Passions from "./../lib/HomeElements/passions.svelte";
   import Experience from "./../lib/HomeElements/experience.svelte";
-  import Footer from "$lib/footer.svelte";
   import Projects from "$lib/HomeElements/projects.svelte";
-  import Navbar from "$lib/navbar.svelte";
+  import Navbar from "$lib/svelteComponents/navbar.svelte";
   import Home from "$lib/HomeElements/home.svelte";
   import viewport from "$lib/useViewportAction";
 
   import { enableScroll, scrollIntoView } from "$lib";
   import School from "$lib/HomeElements/school.svelte";
+	import Footer from "$lib/svelteComponents/footer.svelte";
 
   let tmpY: number;
   let pageY: number;
