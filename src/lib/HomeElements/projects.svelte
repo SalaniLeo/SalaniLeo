@@ -2,7 +2,7 @@
   import salanileo from "$lib/assets/salanileodotdev.png";
   import forecast from "$lib/assets/forecast.png";
   import weathy from "$lib/assets/weathy.png";
-  import photopallery from "$lib/assets/photogallery.png";
+  import photogallery from "$lib/assets/photogallery.png";
   import viewport from "$lib/useViewportAction";
 
   let prView = false;
@@ -12,7 +12,8 @@
     card3 = false,
     card4 = false,
     card5 = false,
-    card6 = false;
+    card6 = false,
+    card7 = false;
 
   let cards = [
     {
@@ -46,7 +47,7 @@
       id: card4,
       title: "PhotoGallery",
       subtitle: "Photo hosting",
-      image: photopallery,
+      image: photogallery,
       description:
         "Self hostable platform where you can host your photos to show the world!",
       langs: ["svelte", "typescript", "docker", "python"],
@@ -55,7 +56,7 @@
       id: card5,
       title: "Dotfiles",
       subtitle: "My Arch Linux",
-      image: photopallery,
+      image: undefined,
       description:
         "Config files made by me for my Lenovo notebook",
       langs: [],
@@ -64,10 +65,19 @@
       id: card6,
       title: "ImgPush",
       subtitle: "An ImgPush fork",
-      image: photopallery,
+      image: undefined,
       description:
         "A modified version of imgpush for my needs",
       langs: ["python"],
+    },
+    {
+      id: card7,
+      title: "Platforms",
+      subtitle: "A LinkTree-like website",
+      image: undefined,
+      description:
+        "A website where all my socials are in one place",
+      langs: ["svelte"],
     },
   ];
 </script>

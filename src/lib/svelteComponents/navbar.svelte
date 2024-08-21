@@ -8,6 +8,7 @@
   let pageY: number;
 
   import { scrollIntoView } from "$lib";
+	import ThemeChanger from "./themeChanger.svelte";
 
   let open = false;
   let opened = false;
@@ -150,6 +151,7 @@
         ></i></a
       >
     </div>
+    <ThemeChanger></ThemeChanger>
     <!-- <a class="loadanim link" style="animation: loadText 1s 0.3s forwards;" href="/about">About</a> -->
   </div>
 </nav>
@@ -164,7 +166,6 @@
   }
 
   * {
-    color: white;
     text-decoration: none;
   }
 
@@ -209,6 +210,7 @@
     gap: 1rem;
     padding-right: 5rem;
     flex-grow: 1;
+    /* margin-right: 2rem; */
   }
 
   nav .show {
@@ -223,8 +225,8 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    margin-right: 2rem;
     margin-left: 2rem;
+    margin-right: 1rem;
   }
 
   #contacts > * {

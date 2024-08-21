@@ -1,35 +1,32 @@
 <script lang="ts">
-  import Passions from "./../lib/HomeElements/passions.svelte";
   import Experience from "./../lib/HomeElements/experience.svelte";
-  import Footer from "$lib/footer.svelte";
   import Projects from "$lib/HomeElements/projects.svelte";
-  import Navbar from "$lib/navbar.svelte";
+  import Navbar from "$lib/svelteComponents/navbar.svelte";
   import Home from "$lib/HomeElements/home.svelte";
-  import viewport from "$lib/useViewportAction";
 
-  import { enableScroll, scrollIntoView } from "$lib";
+  import { enableScroll } from "$lib";
   import School from "$lib/HomeElements/school.svelte";
+	import Footer from "$lib/svelteComponents/footer.svelte";
+	import ThemeChanger from "$lib/svelteComponents/themeChanger.svelte";
 
   let tmpY: number;
   let pageY: number;
-  let angle = 0;
-  let passView = false;
+  let hideThemeChanger = false;
+  let scale:number;
 
   $: outerWidth = 0;
   $: innerWidth = 0;
   $: outerHeight = 0;
   $: innerHeight = 0;
 
-  function updateValues() {
-    angle = Math.max(-25, Math.min(25, pageY / 100));
-  }
-
   function handleScroll() {
-    updateValues();
     tmpY = pageY;
-
-    if (pageY > innerHeight * 2) {
-      console.log("CIAO");
+    scale = (innerHeight / (pageY + innerHeight)) * 100;
+    console.log(scale)
+    if (scale < 95) {
+      hideThemeChanger = true
+    } else {
+      hideThemeChanger = false
     }
   }
 </script>
@@ -45,7 +42,10 @@
 
 <div class="root">
   <div class="full"></div>
-  <div id="home" style="scale: {((innerHeight / (pageY + innerHeight)) * 100)}%;2">
+  <div id="home" style="scale: {scale}%;2">
+    <div id="themeChanger-wrapper" class:hide={hideThemeChanger}>
+      <ThemeChanger></ThemeChanger>
+    </div>
     <Home></Home>
   </div>
   <Navbar></Navbar>
@@ -74,23 +74,32 @@
 {/if}
 
 <style>
-  /* .connected {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 50%;
-    border-image: linear-gradient(140deg, #3ad0d500 80%, #1e2239 100%) 1;
-    border-radius: 100%;
-    border-width: 4px;
-    border-style: solid;
-  } */
+   #themeChanger-wrapper {
+    position: fixed;
+    color: var(--text-primary-color) !important;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    animation: 4s rotate infinite;
+   }
+  .hide {
+    opacity: 0;
+  }
   .wrapper-backdrop {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.12);
     display: flex;
     top: 0;
   }
-  * {
-    color: white !important;
+  @keyframes rotate {
+    0% {
+      rotate: 45deg
+    }
+    50% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 45deg
+    }
   }
 </style>

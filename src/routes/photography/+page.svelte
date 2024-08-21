@@ -1,5 +1,5 @@
 <script>
-  import Navbar from "$lib/navbar.svelte";
+  import Navbar from "$lib/svelteComponents/navbar.svelte";
   import bg from "$lib/assets/astroBG.jpg";
 </script>
 
