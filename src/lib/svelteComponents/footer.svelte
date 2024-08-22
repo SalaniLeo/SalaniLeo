@@ -3,7 +3,7 @@
     <div class="left" id="aboutbox">
       <h2>About</h2>
       <div class="content">
-        <p><i class="fa-solid fa-location-dot"></i> From Ferrara, italy</p>
+        <p><i class="fa-solid fa-location-dot"></i> From Ferrara, Italy</p>
         <p><i class="fa-solid fa-star"></i> 17 Years Old</p>
         <p><i class="fa-brands fa-linux"></i> Linux user for about 3 years</p>
       </div>

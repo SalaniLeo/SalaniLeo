@@ -40,7 +40,7 @@
       subtitle: "Weather website",
       image: weathy,
       description:
-        "A weather website I use as a collection of useful maps for italy and a bit of europe.",
+        "A weather website I use as a collection of useful maps for Italy and a bit of Europe.",
       langs: ["svelte", "typescript"],
     },
     {

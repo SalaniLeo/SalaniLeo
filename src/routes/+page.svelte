@@ -22,7 +22,6 @@
   function handleScroll() {
     tmpY = pageY;
     scale = (innerHeight / (pageY + innerHeight)) * 100;
-    console.log(scale)
     if (scale < 95) {
       hideThemeChanger = true
     } else {
