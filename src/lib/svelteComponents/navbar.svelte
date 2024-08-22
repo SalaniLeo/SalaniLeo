@@ -160,7 +160,6 @@
   .non-expanded {
     width: 95%;
     transform: translateX(2.5%);
-    transition-duration: 0.5s !important;
     border-radius: 1rem;
     border: 2px solid var(--border-color);
   }
@@ -170,7 +169,6 @@
   }
 
   nav {
-    transition-duration: 0.5s !important;
     font-size: 1.5rem;
     font-family: "Metrophobic", sans-serif;
     background-color: var(--background-blurry);
@@ -183,7 +181,6 @@
     position: -webkit-sticky;
     top: 0;
     width: calc(100%);
-
     border-radius: unset;
     border: unset;
     border-bottom: 2px solid var(--border-color);
@@ -212,14 +209,15 @@
     flex-grow: 1;
     /* margin-right: 2rem; */
   }
-
   nav .show {
     opacity: 0;
     display: none;
   }
-
   nav a:hover {
     animation: liftText forwards;
+  }
+  nav * {
+    transition-duration: 0s !important;
   }
   #contacts {
     display: flex;
@@ -228,20 +226,13 @@
     margin-left: 2rem;
     margin-right: 1rem;
   }
-
   #contacts > * {
     max-height: 20px;
     text-decoration: none;    width: calc(100% - 4px);
 
   }
-
   .contact {
     font-size: 1.5rem;
-  }
-
-  .contact,
-  .contact i {
-    transition-duration: 0.25s;
   }
 
   #email:hover i {
@@ -287,8 +278,9 @@
     nav {
       width: 100vw !important;
       transform: unset !important;
-      border-radius: 0;
-      border: unset;
+      border-radius: 0 !important;
+      border-right: unset !important;
+      border-left: unset !important;
       border-bottom: 2px solid var(--border-color);
 
     }

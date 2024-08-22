@@ -14,7 +14,8 @@
       Software Developer
     </h2>
     <a
-      style="animation: loadText 1s 0.3s forwards;"
+      style="animation: loadText 1s 0.3s forwards;
+      margin-top: 3rem"
       class="button margin hidden"
       href="#work"
       on:click|preventDefault={scrollIntoView}>Click!</a

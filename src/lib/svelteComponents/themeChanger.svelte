@@ -6,7 +6,7 @@
     {#if $currentTheme == 'light'}
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <i class="fa-regular fa-moon themer" on:click={() => setTheme('dark', true)}></i>
+        <i class="fa-regular fa-moon themer" on:click={() => setTheme('dark', true) }></i>
     {:else}
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-static-element-interactions -->
