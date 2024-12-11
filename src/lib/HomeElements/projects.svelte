@@ -8,12 +8,13 @@
   let prView = false;
 
   let card1 = false,
-    card2 = false,
-    card3 = false,
-    card4 = false,
-    card5 = false,
-    card6 = false,
-    card7 = false;
+      card2 = false,
+      card3 = false,
+      card4 = false,
+      card5 = false,
+      card6 = false,
+      card7 = false,
+      card8 = false;
 
   let cards = [
     {
@@ -51,6 +52,15 @@
       description:
         "Self hostable platform where you can host your photos to show the world!",
       langs: ["svelte", "typescript", "docker", "python"],
+    },
+    {
+      id: card8,
+      title: "SalaniLeo's Classeviva",
+      subtitle: "A Classeviva frontend",
+      image: undefined,
+      description:
+        "A frontend for Spaggiari Classeviva, the most used italian register",
+      langs: ["svelte", "typescript", "docker"],
     },
     {
       id: card5,
@@ -135,6 +145,12 @@
 </div>
 
 <style>
+  .header {
+    align-items: start;
+  }
+  h1 {
+    line-height: 2.5rem;
+  }
   .card {
     width: fit-content;
     max-width: 350px;
