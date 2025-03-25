@@ -130,7 +130,7 @@
         class="loadanim contact"
         style="animation: loadText 1s 0.225s forwards;"
         id="email"
-        href="mailto:leonardo07.salani@gmail.com"
+        href="mailto:leonardo@salanileo.dev"
         ><i style="transform: translateY(-25%);" class="fa-solid fa-envelope"
         ></i></a
       >
