@@ -5,20 +5,10 @@
   import photogallery from "$lib/assets/photogallery.png";
   import viewport from "$lib/useViewportAction";
 
-  let prView = false;
+  let prView = $state(false);
 
-  let card1 = false,
-      card2 = false,
-      card3 = false,
-      card4 = false,
-      card5 = false,
-      card6 = false,
-      card7 = false,
-      card8 = false;
-
-  let cards = [
+  let cards = $state([
     {
-      id: card1,
       title: "SalaniLeo",
       subtitle: "This exact website",
       image: salanileo,
@@ -27,7 +17,6 @@
       langs: ["svelte", "typescript"],
     },
     {
-      id: card2,
       title: "Forecast",
       subtitle: "Weather app",
       image: forecast,
@@ -36,7 +25,6 @@
       langs: ["python"],
     },
     {
-      id: card3,
       title: "Weathy",
       subtitle: "Weather website",
       image: weathy,
@@ -45,16 +33,22 @@
       langs: ["svelte", "typescript"],
     },
     {
-      id: card4,
+      title: "SweatyRSS",
+      subtitle: "RSS reader",
+      image: undefined,
+      description:
+        "A self-hostable rss reader with basic functionality.",
+      langs: ["python", "svelte", "typescript", "docker"],
+    },
+    {
       title: "PhotoGallery",
       subtitle: "Photo hosting",
       image: photogallery,
       description:
-        "Self hostable platform where you can host your photos to show the world!",
+        "This project is no longer maintained. I worked on it to learn flask, so it's trash :D",
       langs: ["svelte", "typescript", "docker", "python"],
     },
     {
-      id: card8,
       title: "SalaniLeo's Classeviva",
       subtitle: "A Classeviva frontend",
       image: undefined,
@@ -63,25 +57,6 @@
       langs: ["svelte", "typescript", "docker"],
     },
     {
-      id: card5,
-      title: "Dotfiles",
-      subtitle: "My Arch Linux",
-      image: undefined,
-      description:
-        "Config files made by me for my Lenovo notebook",
-      langs: [],
-    },
-    {
-      id: card6,
-      title: "ImgPush",
-      subtitle: "An ImgPush fork",
-      image: undefined,
-      description:
-        "A modified version of imgpush for my needs",
-      langs: ["python"],
-    },
-    {
-      id: card7,
       title: "Platforms",
       subtitle: "A LinkTree-like website",
       image: undefined,
@@ -89,7 +64,23 @@
         "A website where all my socials are in one place",
       langs: ["svelte"],
     },
-  ];
+    {
+      title: "Dotfiles",
+      subtitle: "My Arch Linux",
+      image: undefined,
+      description:
+        "I no longer use them, but here they are",
+      langs: ["linux"],
+    }
+  ]);
+
+  $effect(() => {
+    let i = 0;
+    for (let card of cards) {
+      card.id = "card" + i;
+      i++;
+    }
+  })
 </script>
 
 <div id="projectslink">
@@ -97,10 +88,10 @@
     class="hidden header"
     class:show={prView}
     use:viewport
-    on:enterViewport={() => {
+    onenterViewport={() => {
       prView = true;
     }}
-    on:exitViewport={() => {
+    onexitViewport={() => {
       prView = false;
     }}
   ><i class="fa-solid fa-circle-dot"></i>
@@ -113,10 +104,10 @@
           class="card hidden"
           class:show={card.id}
           use:viewport
-          on:enterViewport={() => {
+          onenterViewport={() => {
             card.id = true;
           }}
-          on:exitViewport={() => {
+          onexitViewport={() => {
             card.id = false;
           }}
         >

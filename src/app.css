@@ -280,6 +280,10 @@ h2 {
     flex-wrap: wrap;
 }
 
+#linux {
+    background-color: #6e6e6e;
+}
+
 #svelte {
     background-color: #f73c00;
 }

@@ -1,17 +1,23 @@
 <script lang="ts">
+  import { preventDefault, handlers } from 'svelte/legacy';
+
   import { enableScroll } from "$lib";
 
-  $: outerWidth = 0;
-  $: innerWidth = 0;
-  $: outerHeight = 0;
-  $: innerHeight = 0;
-  let pageY: number;
+  let outerWidth = $state(0);
+  
+  let innerWidth = $state(0);
+  
+  let outerHeight = $state(0);
+  
+  let innerHeight = $state(0);
+  
+  let pageY: number = $state();
 
   import { scrollIntoView } from "$lib";
 	import ThemeChanger from "./themeChanger.svelte";
 
   let open = false;
-  let opened = false;
+  let opened = $state(false);
 
   function openNavMenu() {
     if (window.pageYOffset < window.innerHeight) {
@@ -31,8 +37,8 @@
     }
   }
 
-  let scrollable = true;
-  let clickedAtLeastOnce = false;
+  let scrollable = $state(true);
+  let clickedAtLeastOnce = $state(false);
 
   const wheel = (node: any, options: any) => {
     let { scrollable } = options;
@@ -80,32 +86,28 @@
       > -->
     <div class="links">
         <a
-        on:click={changeValues}
+        onclick={handlers(changeValues, preventDefault(scrollIntoView))}
         class="loadanim link"
         style="animation: loadText 1s 0s forwards;"
-        href="#experience"
-        on:click|preventDefault={scrollIntoView}>Experience</a
+        href="#experience">Experience</a
       >
       <a
-        on:click={changeValues}
+        onclick={handlers(changeValues, preventDefault(scrollIntoView))}
         class="loadanim link"
         style="animation: loadText 1s 0s forwards;"
-        href="#school"
-        on:click|preventDefault={scrollIntoView}>School</a
+        href="#school">School</a
       >
       <a
-        on:click={changeValues}
+        onclick={handlers(changeValues, preventDefault(scrollIntoView))}
         class="loadanim link"
         style="animation: loadText 1s 0.025s forwards;"
-        href="#projectslink"
-        on:click|preventDefault={scrollIntoView}>Projects</a
+        href="#projectslink">Projects</a
       >
       <a
-        on:click={changeValues}
+        onclick={handlers(changeValues, preventDefault(scrollIntoView))}
         class="loadanim link"
         style="animation: loadText 1s 0.05s forwards;"
-        href="#footer"
-        on:click|preventDefault={scrollIntoView}>Contact</a
+        href="#footer">Contact</a
       >
     </div>
     </div>
@@ -113,7 +115,7 @@
       class="show"
       id="btnmenu"
       style="animation: loadText 1s 0.025s forwards;"
-      on:click={openNavMenu}><i class="fa-solid fa-bars"></i></button
+      onclick={openNavMenu}><i class="fa-solid fa-bars"></i></button
     >
   </div>
   <div class="right">

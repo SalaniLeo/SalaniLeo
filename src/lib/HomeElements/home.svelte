@@ -1,4 +1,6 @@
 <script>
+  import { preventDefault } from 'svelte/legacy';
+
   import { scrollIntoView } from "$lib";
 </script>
 
@@ -18,7 +20,7 @@
       margin-top: 3rem"
       class="button margin hidden"
       href="#work"
-      on:click|preventDefault={scrollIntoView}>Click!</a
+      onclick={preventDefault(scrollIntoView)}>Click!</a
     >
   </div>
 </div>

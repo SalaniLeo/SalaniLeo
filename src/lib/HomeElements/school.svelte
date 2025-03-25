@@ -1,7 +1,7 @@
 <script>
   import viewport from "$lib/useViewportAction";
-  let view1 = false,
-    view2 = false;
+  let view1 = $state(false),
+    view2 = $state(false);
 </script>
 
 <div id="school">
@@ -9,10 +9,10 @@
     class="hidden header"
     class:show={view1}
     use:viewport
-    on:enterViewport={() => {
+    onenterViewport={() => {
       view1 = true;
     }}
-    on:exitViewport={() => {
+    onexitViewport={() => {
       view1 = false;
     }}
   ><i class="fa-solid fa-circle-dot"></i>
@@ -23,10 +23,10 @@
       class="hidden"
       class:show={view2}
       use:viewport
-      on:enterViewport={() => {
+      onenterViewport={() => {
         view2 = true;
       }}
-      on:exitViewport={() => {
+      onexitViewport={() => {
         view2 = false;
       }}
     >

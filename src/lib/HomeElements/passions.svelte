@@ -4,8 +4,8 @@
   let card1 = false,
     card2 = false;
 
-  let passView = false;
-  let passions = [
+  let passView = $state(false);
+  let passions = $state([
     {
       id: card1,
       title: "Photography",
@@ -22,7 +22,7 @@
       bg: astrobg,
       link: "coding",
     },
-  ];
+  ]);
 </script>
 
 <div id="passions">
@@ -30,10 +30,10 @@
     class="hidden"
     class:show={passView}
     use:viewport
-    on:enterViewport={() => {
+    onenterViewport={() => {
       passView = true;
     }}
-    on:exitViewport={() => {
+    onexitViewport={() => {
       passView = false;
     }}
   >
@@ -45,10 +45,10 @@
         class="fullcard hidden"
         class:show={passion.id}
         use:viewport
-        on:enterViewport={() => {
+        onenterViewport={() => {
           passion.id = true;
         }}
-        on:exitViewport={() => {
+        onexitViewport={() => {
           passion.id = false;
         }}
       >
