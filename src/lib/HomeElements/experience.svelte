@@ -1,9 +1,11 @@
 <script>
+  import { preventDefault } from 'svelte/legacy';
+
   import { scrollIntoView } from "$lib";
   import viewport from "$lib/useViewportAction";
 
-  let view1 = false,
-    view2 = false;
+  let view1 = $state(false),
+    view2 = $state(false);
 
 </script>
 
@@ -12,10 +14,10 @@
     class="hidden header"
     class:show={view1}
     use:viewport
-    on:enterViewport={() => {
+    onenterViewport={() => {
       view1 = true;
     }}
-    on:exitViewport={() => {
+    onexitViewport={() => {
       view1 = false;
     }}
   ><i class="fa-solid fa-circle-dot"></i>
@@ -25,16 +27,16 @@
       class="hidden"
       class:show={view2}
       use:viewport
-      on:enterViewport={() => {
+      onenterViewport={() => {
         view2 = true;
       }}
-      on:exitViewport={() => {
+      onexitViewport={() => {
         view2 = false;
       }}
     >
         I don't have any work experience yet (I hope it will change soon). To see what I've published you can head over to the <a
         href="#projects"
-        on:click|preventDefault={scrollIntoView}>Projects</a
+        onclick={preventDefault(scrollIntoView)}>Projects</a
       > section, otherwise all my projects are on <a href="https://github.com/salanileo">GitHub</a>, including the unfinished ones.
     </p>
   </div>

@@ -10,14 +10,18 @@
 	import ThemeChanger from "$lib/svelteComponents/themeChanger.svelte";
 
   let tmpY: number;
-  let pageY: number;
-  let hideThemeChanger = false;
-  let scale:number;
+  let pageY: number = $state();
+  let hideThemeChanger = $state(false);
+  let scale:number = $state();
 
-  $: outerWidth = 0;
-  $: innerWidth = 0;
-  $: outerHeight = 0;
-  $: innerHeight = 0;
+  let outerWidth = $state(0);
+  
+  let innerWidth = $state(0);
+  
+  let outerHeight = $state(0);
+  
+  let innerHeight = $state(0);
+  
 
   function handleScroll() {
     tmpY = pageY;
@@ -31,7 +35,7 @@
 </script>
 
 <svelte:window
-  on:scroll={handleScroll}
+  onscroll={handleScroll}
   bind:scrollY={pageY}
   bind:innerWidth
   bind:outerWidth
