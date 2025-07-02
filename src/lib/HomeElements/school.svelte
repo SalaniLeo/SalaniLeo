@@ -30,7 +30,7 @@
         view2 = false;
       }}
     >
-      I study IT at Unife, I am currently in my fist year of university. 
+      I study IT at Unife, I am currently in my first year of university. 
     </p>
     <!-- <a
       class="button"
