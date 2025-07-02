@@ -30,8 +30,7 @@
         view2 = false;
       }}
     >
-      I study computer science at IIS Copernico, Italy. I plan on going to university
-      to study computer engineering. On track to graduate on june 6 2025!
+      I study IT at Unife, I am currently in my fist year of university. 
     </p>
     <!-- <a
       class="button"

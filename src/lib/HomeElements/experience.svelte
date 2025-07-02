@@ -34,7 +34,9 @@
         view2 = false;
       }}
     >
-        I don't have any work experience yet (I hope it will change soon). To see what I've published you can head over to the <a
+
+        I don't have any work experience yet. To see my projects you can head over to the 
+        <a
         href="#projects"
         onclick={preventDefault(scrollIntoView)}>Projects</a
       > section, otherwise all my projects are on <a href="https://github.com/salanileo">GitHub</a>, including the unfinished ones.

@@ -12,7 +12,7 @@
   let tmpY: number;
   let pageY: number = $state();
   let hideThemeChanger = $state(false);
-  let scale:number = $state();
+  let scale: number = $state();
 
   let outerWidth = $state(0);
   
