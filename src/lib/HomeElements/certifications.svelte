@@ -3,15 +3,9 @@
 	
     let { showdocuments = $bindable() } = $props()
 
-    let showModal = $state(showdocuments);
-
-    $effect(() => {
-        showModal = showdocuments
-    })
-
 </script>
 
-<Modal bind:showModal>
+<Modal bind:showModal={showdocuments}>
 	{#snippet header()}
 		<h2>
 			Documents

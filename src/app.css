@@ -187,6 +187,7 @@ h2 {
     flex-direction: column;
     text-decoration: none;
     user-select: none;
+    cursor: pointer;
 }
 
 .button:hover {

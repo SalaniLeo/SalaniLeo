@@ -70,7 +70,7 @@
   bind:outerHeight
 />
 
-<nav class:non-expanded={pageY <= innerHeight} class:showdocuments={showdocuments}>
+<nav class:non-expanded={pageY <= innerHeight}>
   <div class="left">
     <!-- <div class="open"></div> -->
     <div
@@ -116,7 +116,7 @@
         onclick={() => {showdocuments = !showdocuments}}
         class="loadanim link"
         style="animation: loadText 1s 0.4s forwards; cursor: pointer;"
-        >Certificates</p
+        >Documents</p
       >
     </div>
     </div>
