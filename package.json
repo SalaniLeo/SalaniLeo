@@ -2,10 +2,14 @@
 	"name": "SalaniLeo",
 	"version": "0.1.0",
 	"private": true,
+	"engines": {
+		"node": ">=22.0.0"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"version": "node -v",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
