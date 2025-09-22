@@ -11,10 +11,11 @@
   
   let innerHeight = $state(0);
   
-  let pageY: number = $state();
+  let pageY : any = $state();
 
   import { scrollIntoView } from "$lib";
 	import ThemeChanger from "./themeChanger.svelte";
+  let { showdocuments = $bindable() } = $props()
 
   let open = false;
   let opened = $state(false);
@@ -84,6 +85,7 @@
         href="#work"
         on:click|preventDefault={scrollIntoView}>Home</a
       > -->
+    <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
     <div class="links">
         <a
         onclick={handlers(changeValues, preventDefault(scrollIntoView))}
@@ -94,23 +96,31 @@
       <a
         onclick={handlers(changeValues, preventDefault(scrollIntoView))}
         class="loadanim link"
-        style="animation: loadText 1s 0s forwards;"
+        style="animation: loadText 1s 0.1s forwards;"
         href="#school">School</a
       >
       <a
         onclick={handlers(changeValues, preventDefault(scrollIntoView))}
         class="loadanim link"
-        style="animation: loadText 1s 0.025s forwards;"
+        style="animation: loadText 1s 0.2s forwards;"
         href="#projectslink">Projects</a
       >
       <a
         onclick={handlers(changeValues, preventDefault(scrollIntoView))}
         class="loadanim link"
-        style="animation: loadText 1s 0.05s forwards;"
+        style="animation: loadText 1s 0.3s forwards;"
         href="#footer">Contact</a
+      >
+      <!-- svelte-ignore a11y_click_events_have_key_events -->
+      <p
+        onclick={() => {showdocuments = !showdocuments}}
+        class="loadanim link"
+        style="animation: loadText 1s 0.4s forwards; cursor: pointer;"
+        >Documents</p
       >
     </div>
     </div>
+    <!-- svelte-ignore a11y_consider_explicit_label -->
     <button
       class="show"
       id="btnmenu"
@@ -118,6 +128,7 @@
       onclick={openNavMenu}><i class="fa-solid fa-bars"></i></button
     >
   </div>
+  <!-- svelte-ignore a11y_consider_explicit_label -->
   <div class="right">
     <div id="contacts">
       <a

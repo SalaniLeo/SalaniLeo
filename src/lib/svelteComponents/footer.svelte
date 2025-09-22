@@ -4,7 +4,7 @@
       <h2>About</h2>
       <div class="content">
         <p><i class="fa-solid fa-location-dot"></i> From Ferrara, Italy</p>
-        <p><i class="fa-solid fa-star"></i> 18 Years Old</p>
+        <p><i class="fa-solid fa-star"></i> 18 Year Old</p>
         <p><i class="fa-brands fa-linux"></i> Linux user for more than 4 years!</p>
       </div>
     </div>
