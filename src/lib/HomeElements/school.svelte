@@ -35,7 +35,7 @@
         view2 = false;
       }}
     >
-      I study IT at <a href="https://www.unife.it/" target="_blank">Unife</a>, currently in my fist year of university.
+      I study IT at <a href="https://www.unife.it/" target="_blank">Unife</a>, currently in my first year of university.
       <!-- svelte-ignore a11y_click_events_have_key_events -->
       To see my certifications, cv and other documents click <span style="text-decoration: underline; cursor: pointer;" onclick={() => {
         showdocuments = !showdocuments;
