@@ -1,8 +1,7 @@
 import { writable } from "svelte/store";
 
 export function scrollIntoView({ target }) {
-    const el = document.querySelector(target.getAttribute('href'));
-    if (!el) return;
+    let el = document.querySelector(target.getAttribute('href'));
 
     const offsetTop = el.getBoundingClientRect().top + window.scrollY - 75;
 

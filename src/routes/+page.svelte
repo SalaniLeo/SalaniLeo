@@ -4,10 +4,10 @@
   import Navbar from "$lib/svelteComponents/navbar.svelte";
   import Home from "$lib/HomeElements/home.svelte";
 
-  import { enableScroll } from "$lib";
   import School from "$lib/HomeElements/school.svelte";
 	import Footer from "$lib/svelteComponents/footer.svelte";
 	import ThemeChanger from "$lib/svelteComponents/themeChanger.svelte";
+	import Certifications from '../lib/HomeElements/certifications.svelte';
 
   let tmpY: number;
   let pageY: number = $state();
@@ -32,6 +32,9 @@
       hideThemeChanger = false
     }
   }
+
+  let showdocuments = $state(false);
+
 </script>
 
 <svelte:window
@@ -51,32 +54,26 @@
     </div>
     <Home></Home>
   </div>
-  <Navbar></Navbar>
+  <Navbar bind:showdocuments={showdocuments}></Navbar>
   <div class="wrapper-backdrop">
     <div class="tleft wrapper" id="work">
 
       <Experience></Experience>
 
-      <School></School>
-  
+      <School bind:showdocuments={showdocuments}></School>
+
       <Projects></Projects>
 
-      <!-- <Passions></Passions> -->
     </div>
   </div>
 
   <Footer></Footer>
 </div>
 
-{#if !$enableScroll}
-  <style>
-    body {
-      overflow-y: hidden;
-    }
-  </style>
-{/if}
+<Certifications bind:showdocuments></Certifications>
 
 <style>
+  
    #themeChanger-wrapper {
     position: fixed;
     color: var(--text-primary-color) !important;

@@ -1,8 +1,4 @@
-<script>
-  import salanileo from "$lib/assets/salanileodotdev.png";
-  import forecast from "$lib/assets/forecast.png";
-  import weathy from "$lib/assets/weathy.png";
-  import photogallery from "$lib/assets/photogallery.png";
+<script lang=ts>
   import viewport from "$lib/useViewportAction";
 
   let prView = $state(false);
@@ -11,7 +7,6 @@
     {
       title: "SalaniLeo",
       subtitle: "This exact website",
-      image: salanileo,
       description:
         "The website you are currently on. I made it using sveltekit.",
       langs: ["svelte", "typescript"],
@@ -19,7 +14,6 @@
     {
       title: "Forecast",
       subtitle: "Weather app",
-      image: forecast,
       description:
         "A weather app for linux. I use it every time I need to watch the weather.",
       langs: ["python"],
@@ -27,7 +21,6 @@
     {
       title: "Weathy",
       subtitle: "Weather website",
-      image: weathy,
       description:
         "A weather website I use as a collection of useful maps for Italy and a bit of Europe.",
       langs: ["svelte", "typescript"],
@@ -43,7 +36,6 @@
     {
       title: "PhotoGallery",
       subtitle: "Photo hosting",
-      image: photogallery,
       description:
         "This project is no longer maintained. I worked on it to learn flask, so it's trash :D",
       langs: ["svelte", "typescript", "docker", "python"],
@@ -144,7 +136,7 @@
   }
   .card {
     width: fit-content;
-    max-width: 350px;
+    /* max-width: 350px; */
     padding: 1rem;
     border-radius: 10px;
     background-color: var(--background-terthiary-color);
@@ -166,6 +158,12 @@
     gap: 1rem;
   }
   @media only screen and (max-width: 720px) {
+    h1 {
+      font-size: 34px !important;
+    }
+    h2 {
+      font-size: 26px !important;
+    }
     #projects{ 
         padding: 0rem;
         padding-top: 2rem;
