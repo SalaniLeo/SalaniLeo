@@ -19,10 +19,10 @@
       langs: ["python"],
     },
     {
-      title: "Weathy",
+      title: "metsa",
       subtitle: "Weather website",
       description:
-        "A weather website I use as a collection of useful maps for Italy and a bit of Europe.",
+        "Made with openmeteo and exclusively for Ferrara, italy.",
       langs: ["svelte", "typescript"],
     },
     {
