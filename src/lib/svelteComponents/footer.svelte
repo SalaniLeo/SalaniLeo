@@ -21,7 +21,7 @@
           href="https://www.instagram.com/leonardo.salanii/"
           ><i class="fa-brands fa-instagram"></i> Instagram</a
         >
-        <!-- <a class="contact" id="email"     href="mailto:leonardo07.salani@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a> -->
+        <a class="contact" id="email"     href="mailto:leonardo@salanileo.dev"><i class="fa-solid fa-envelope"></i> Email</a>
         <a class="contact" id="telegram" href="https://t.me/sudatoLeo"
           ><i class="fa-brands fa-telegram"></i> Telegram</a
         >
