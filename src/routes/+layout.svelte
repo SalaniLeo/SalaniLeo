@@ -1,10 +1,23 @@
 <script lang="ts">
-	import ThemeChanger from './../lib/svelteComponents/themeChanger.svelte';
-	interface Props {
-		children?: import('svelte').Snippet;
-	}
+	import favicon from '$lib/assets/favicon.svg';
 
-	let { children }: Props = $props();
+	let { children } = $props();
 </script>
 
-{@render children?.()}
+<svelte:head>
+	<link rel="icon" href={favicon} />
+</svelte:head>
+
+<div id="layout">
+	{@render children()}
+</div>
+
+<style>
+
+    /* @media screen and (max-width: 1035px) {
+        #layout {
+            padding-bottom: 60px;
+        }
+    } */
+
+</style>

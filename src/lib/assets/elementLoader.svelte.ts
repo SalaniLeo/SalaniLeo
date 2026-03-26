@@ -1,0 +1,1 @@
+export const animate = (n: number) => `animation: show 0.5s ease-out ${(n) * 0.05}s both;`
