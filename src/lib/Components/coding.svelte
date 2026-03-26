@@ -5,7 +5,7 @@
     let projects = [
         {
             name: "Well, myself",
-            description: "A curious human being from Ferrara, Italy. Currently studying at Unife. Shoutout to the ones who created me.",
+            description: "A curious human being from Ferrara, Italy, currently studying at Unife. Big shoutout to the ones who created me!",
             date: "2007 - now",
             langs: ['Italian', 'English']
         },
