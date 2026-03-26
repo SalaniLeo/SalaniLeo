@@ -4,10 +4,6 @@
 	let { children } = $props();
 </script>
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-</svelte:head>
-
 <div id="layout">
 	{@render children()}
 </div>
