@@ -14,10 +14,10 @@
 
 <style>
 
-    /* @media screen and (max-width: 1035px) {
+    @media screen and (max-width: 1035px) {
         #layout {
-            padding-bottom: 60px;
+            padding-bottom: 65px;
         }
-    } */
+    }
 
 </style>

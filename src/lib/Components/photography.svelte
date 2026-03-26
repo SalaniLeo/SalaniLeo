@@ -18,9 +18,9 @@
         font-size: 1.5rem;
     }
 
-    #photography {
+    /* #photography {
         height: 100vh;
-    }
+    } */
 
     :global(html) {
         scroll-behavior: smooth;

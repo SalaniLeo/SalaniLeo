@@ -86,7 +86,7 @@
             overflow: scroll;
         }
         .hero-title  {
-            min-height: 100vh !important;
+            min-height: 50vh !important;
         }
         .hero-section {
             gap: unset !important;
